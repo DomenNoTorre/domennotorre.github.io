@@ -1,7 +1,27 @@
+html 
+{
+    font-size: 16px; /* 1rem = 16px */
+}
+
 @font-face
 {
     font-family: "Jura";
     src: url("../fonts/Jura/static/Jura-Light.ttf");
+}
+
+::-webkit-scrollbar 
+{
+    width: 0.3125rem;
+}
+  
+::-webkit-scrollbar-track 
+{
+    background-color: black;
+}
+  
+::-webkit-scrollbar-thumb 
+{
+    background-color: white;
 }
 
 body
@@ -12,11 +32,26 @@ body
     font-family: "Jura";
 }
 
+main
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr auto auto auto auto;
+    height: auto;
+}
+
 header
 {
     background-color: black;
     color: white;
-    height: 115px;
+    height: 7.1875rem;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    position: sticky;
+    top: 0; /* 👈 belangrijk voor sticky */
+    z-index: 1000;
+    transition: transform 0.3s ease; /* smooth animatie */
+    letter-spacing: 0.15em;
 }
 
 .headerList
@@ -28,7 +63,7 @@ header
     padding-top: 1em;
     margin: 0;
     gap: 33%;   
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 .headerItems 
@@ -37,11 +72,83 @@ header
     text-decoration: none;
 }
 
+.headerList li 
+{
+    position: relative;
+}
+
+/* Dropdown-menu zelf */
+.dropdownMenu 
+{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -0.625rem);
+    width: 15.625rem;
+    background-color: black;
+    list-style: none;
+    padding: 0.5rem 0;
+    text-align: center;
+    z-index: 1100;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: transform .3s ease, opacity .3s ease, max-height .3s ease, visibility 0s linear .3s;
+}
+
+/* Links in het dropdown-menu */
+.dropdownMenu li a 
+{
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    font-size: 2.25rem;
+}
+
+.dropdownMenu li a:hover 
+{
+    background: black;
+}
+
+/* Hover (desktop) */
+@media (hover: hover) and (pointer: fine) 
+{
+  .dropdown:hover .dropdownMenu {
+    transform: translate(-50%, 0);
+    max-height: 31.25rem;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform .3s ease, opacity .3s ease, max-height .3s ease, visibility 0s;
+  }
+}
+
+/* Open-state voor klik (mobiel) */
+.dropdownMenu.open 
+{
+  transform: translate(-50%, 0);
+  max-height: 31.25rem;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform .3s ease, opacity .3s ease, max-height .3s ease, visibility 0s;
+}
+
+header.hidden 
+{
+    transform: translateY(-100%); /* header naar boven weg */
+}
+
 .title
 {
     color: black;
     text-align: center;
-    font-size: 128px;
+    font-size: 8rem;
     font-weight: normal;
     position: absolute;
     top: 30%;
@@ -49,10 +156,171 @@ header
     transform: translate(-50%, -50%); /* Perfect horizontal centering */
     z-index: 10;         /* Ensure it's above other elements */
     letter-spacing: 0.15em;
+    grid-column: 1/5;
+    grid-row: 2/3;
 }
 
-.bgImg
+.middleBlock
+{
+    grid-column: 1/5;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 10rem;
+}
+
+.secondTitle
+{
+    grid-column: 1/6;
+    grid-row: 1/2;
+    color: white;
+    text-align: center;
+    font-size: 6.25rem;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+}
+
+.bookStack {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  position: relative;
+  width: 16.6875rem;
+  height: auto;
+  min-height: 26.0625rem;
+  margin: 0 auto;
+}
+
+.bookStack a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease, z-index 0s ease 0.5s;
+}
+
+.bookOneCover {
+  position: relative; /* bepaalt container grootte */
+  z-index: 3;         /* voorste boek altijd boven */
+  transform: scale(1) translateX(0) translateY(0);
+}
+
+.bookTwoCover {
+  position: absolute;
+  z-index: 2;
+  transform: scale(0.9) translateX(0) translateY(0);
+}
+
+.bookThreeCover {
+  position: absolute;
+  z-index: 1;
+  transform: scale(0.8) translateX(0) translateY(0);
+}
+
+/* Hover-effect op stack: schuiven naar rechts */
+.bookStack:hover .bookOneCover {
+  transform: scale(1) translateX(0) translateY(0);
+}
+
+.bookStack:hover .bookTwoCover {
+  transform: scale(0.85) translateX(5rem) translateY(0.3125rem);
+}
+
+.bookStack:hover .bookThreeCover {
+  transform: scale(0.75) translateX(10rem) translateY(0.625rem);
+}
+
+.bookStack img {
+  width: 100%;
+  display: block;
+}
+
+/* Silent Stories */
+.bookStack.ss {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+/* Lost Pages */
+.bookStack.lp {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.msText
+{
+    grid-column: 2/3;
+    grid-row: 3/4; 
+
+}
+
+.ssText
+{
+    grid-column: 3/4;
+    grid-row: 3/4; 
+}
+
+.lpText
+{
+    grid-column: 4/5;
+    grid-row: 3/4; 
+}
+
+.lpText, .ssText, .msText
+{ 
+    text-align: center;
+    color:white;
+    text-decoration: none;
+    font-size: 2.25rem;
+    letter-spacing: 0.05em;
+}
+
+.headerImg
 {
     width: 100%;
     position: relative;
+    grid-column: 1/5;
+    grid-row: 2/3;
+}
+
+footer
+{
+    grid-column: 1/5;
+    grid-row: 5/6;
+    color: white;
+    text-align: right;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    font-size: 1.5rem;
+}
+
+.footerTekst
+{
+    position: absolute;
+    right: 0.625rem;
+    z-index: 1;
+    margin: 0;
+    color: white;
+    max-width: 50%;
+}
+
+.footerImg
+{
+    width: 100%;
+    display: block;
+}
+
+
+.footerContainer 
+{
+    position: relative;
+    grid-column: 1 / 5;
+    grid-row: 5 / 6;
+}
+
+.dcLogo
+{
+    height: 4rem;
+    width: auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
 }
