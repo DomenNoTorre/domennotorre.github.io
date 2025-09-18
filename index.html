@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindbound</title>
+    <link rel="stylesheet" href="css/mainpage.css" type="text/css">
+    <!-- <link rel="icon" type="image/x-icon" href="../img/saturn.png"> -->
+</head>
+<body>
+    <main>
+        <header> 
+            <ul class="headerList">
+                <li class="dropdown">
+                    <a class="info" href="#">Info</a>
+                    <ul class="dropdownMenu">
+                        <li><a href="webpages/nations.html">Nations</a></li>
+                        <li><a href="webpages/storyInfo.html">Story</a></li>
+                    </ul>
+                </li>
+                <li class="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                </li>
+                <li><a class="aboutUs" href="webpages/aboutUs.html">About Us</a></li>  
+            </ul>
+        </header>
+
+        <h1 class="title">Mindbound</h1>
+        <img src="img/headerImg.png" alt="headerImage" class="headerImg">
+
+        <div class="middleBlock">
+            
+            <h2 class="secondTitle">Our books</h2>
+
+            <!-- Main Series -->
+            <div class="bookStack">
+                <a href="https://www.wattpad.com/story/368390914-mindbound-inaugurate" class="bookOneCover">
+                    <img src="img/bookCover.png" alt="msbookOneCover">
+                </a>
+
+                <a href="#" class="bookTwoCover">
+                    <img src="img/bookCover.png" alt="msbookTwoCover">
+                </a>
+
+                <a href="#" class="bookThreeCover">
+                    <img src="img/bookCover.png" alt="msbookThreeCover">
+                </a>
+            </div>
+
+            <a class="msText" href="https://www.wattpad.com/story/368390914-mindbound-inaugurate">
+                <p>Main Series</p>
+            </a>
+
+            <!-- Silent Stories -->
+            <div class="bookStack ss">
+                <a href="#" class="bookOneCover">
+                    <img src="img/bookCover.png" alt="ssBookOneCover">
+                </a>
+
+                <a href="#" class="bookTwoCover">
+                    <img src="img/bookCover.png" alt="ssBookTwoCover">
+                </a>
+
+                <a href="#" class="bookThreeCover">
+                    <img src="img/bookCover.png" alt="ssBookThreeCover">
+                </a>
+            </div>
+
+            <a class="ssText" href="https://www.wattpad.com/story/368390914-mindbound-inaugurate">
+                <p>Silent Stories</p>
+            </a>
+
+            <!-- Lost Pages -->
+            <div class="bookStack lp">
+                <a href="#" class="bookOneCover">
+                    <img src="img/bookCover.png" alt="lpBookOneCover">
+                </a>
+
+                <a href="#" class="bookTwoCover">
+                    <img src="img/bookCover.png" alt="lpBookTwoCover">
+                </a>
+
+                <a href="#" class="bookThreeCover">
+                    <img src="img/bookCover.png" alt="lpBookThreeCover">
+                </a>
+            </div>
+
+            <a class="lpText" href="https://www.wattpad.com/story/368390914-mindbound-inaugurate">
+                <p>Lost Pages</p>
+            </a>
+
+        </div>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerTekst">
+                    <a href="https://discord.gg/Aw5rpJ3DN6">
+                        <img src="img/dcLogo.png" alt="discordLogo" class="dcLogo">
+                    </a>
+                </div>
+                <img src="img/footerImg.png" alt="footerImage" class="footerImg">
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
+
+<script>
+// ====================
+// SearchMap
+// ====================
+const searchMap = 
+{
+  // Altipiani characters
+  "cario": "nationPages/altipianiPages/castPages/cario.html",
+  "nicolas": "nationPages/altipianiPages/castPages/nicolas.html",
+  "reve": "nationPages/altipianiPages/castPages/reve.html",
+  "valerio": "nationPages/altipianiPages/castPages/valerio.html",
+
+  // Nations
+  "altipiani": "nationPages/altipianiPages/altipianiMainpage.html",
+  "zloyvor": "nationPages/zloyvorPages/zloyvorMainpage.html"
+};
+
+// ====================
+// Scroll hide header
+// ====================
+const header = document.querySelector("header");
+if (header) 
+{
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => 
+  {
+    if (window.scrollY > lastScrollY) 
+    {
+      header.classList.add("hidden");
+    } else {
+      header.classList.remove("hidden");
+    }
+    lastScrollY = window.scrollY;
+  });
+}
+
+// ====================
+// Dropdown menu
+// ====================
+document.querySelectorAll('.dropdown > a').forEach(link => 
+{
+  link.addEventListener('click', e => 
+  {
+    e.preventDefault();
+    const menu = link.nextElementSibling;
+    if (menu) menu.classList.toggle('open');
+  });
+});
+
+document.addEventListener('click', e => 
+{
+  document.querySelectorAll('.dropdownMenu.open').forEach(menu => 
+  {
+    if (!menu.parentElement.contains(e.target)) 
+    {
+      menu.classList.remove('open');
+    }
+  });
+});
+
+// ====================
+// Search input
+// ====================
+const searchInput = document.getElementById("searchInput");
+if (searchInput) 
+{
+  searchInput.addEventListener("keypress", function(e) 
+  {
+    if (e.key === "Enter") 
+    {
+      e.preventDefault();
+      let query = this.value.toLowerCase().trim();
+
+      if (searchMap[query]) 
+      {
+        window.location.href = searchMap[query];
+      } 
+      
+      else 
+      {
+        alert("No results found for: " + query);
+      }
+    }
+  });
+}
+</script>
