@@ -199,7 +199,7 @@ header.hidden
   z-index: 10;
 }
 
-.title 
+.mainTitle 
 { 
   color: black; 
   text-align: center; 
@@ -228,14 +228,14 @@ header.hidden
   grid-column: 1/5;
   grid-row: 3/4;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   column-gap: 10rem;
 }
 
 .secondTitle
 {
-  grid-column: 1/6;
+  grid-column: 1/5;
   grid-row: 1/2;
   color: white;
   text-align: center;
@@ -246,7 +246,7 @@ header.hidden
 
 .aboutUsText
 {
-  grid-column: 1/6;
+  grid-column: 1/5;
   grid-row: 2/3;
   color: white;
   text-align: center;
@@ -258,7 +258,7 @@ header.hidden
 
 .gooberKai
 {
-  grid-column: 2/5;
+  grid-column: 2/4;
   text-align: center;
   grid-row: 3/4;
   height: 10rem;

@@ -1,1 +1,172 @@
-<h1>Altipiani page OwO</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindbound</title>
+    <link rel="stylesheet" href="../nation.css" type="text/css">
+    <!-- <link rel="icon" type="image/x-icon" href="../img/saturn.png"> -->
+</head>
+<body>
+    <main>
+        <header> 
+            <ul class="headerList">
+                <li class="dropdown">
+                    <a class="info" href="#">Info</a>
+                    <ul class="dropdownMenu">
+                        <li><a href="../nations.html">Nations</a></li>
+                        <li><a href="webpages/storyInfo.html">Story</a></li>
+                        <li><a href="../../index.html">Books</a></li>
+                    </ul>
+                </li>
+                <li class="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                </li>
+                <li><a class="aboutUs" href="../../webpages/aboutUs.html">About Us</a></li>  
+            </ul>
+        </header>
+
+        <h1 class="mainTitleWhite">Mindbound</h1>
+        
+        <img src="altipianiImg/altipianiHeader.png" alt="headerImage" class="headerImg">
+
+        <div class="middleBlock">
+
+            <a href="javascript:history.back()" class="backButton">&lt;Back</a>
+            
+            <h2 class="secondTitle">Altipiani</h2>
+
+            <p class="nationText">Known for it's futuristic architecture and technology, Altipiani 
+              is one of the most advanced nations in Eperilet. Its people worship the god of space, also known as Dio del Vuoto or Vicenci. 
+              Though, this god does not rule the nation, an Emperor is in charge of such. The Emperor's home is located in the capital, 
+              Peaselio. One might expect a grand palace, but instead will encounter a towering skyscraper that dominates the skyline, 
+              the Imperial Edifice. Here Imperial matters are discussed among the Emperor and his 5 advisors.
+            </p>
+
+            <h2 class="thirdTitle">Cast</h2>
+
+            <!-- Reve -->
+            <a href="./castPages/reve.html" class="castCoverOne">
+                <img src="altipianiImg/placeholder.png" alt="reveCover">
+            </a>
+
+            <a class="castTextOne" href="./castPages/reve.html">
+                <p>Reve</p>
+            </a>
+
+            <!-- Cario -->
+            <a href="./castPages/viviana.html" class="castCoverTwo">
+                <img src="altipianiImg/placeholder.png" alt="carioCover">
+            </a>
+
+            <a class="castTextTwo" href="./castPages/cario.html">
+                <p>Cario</p>
+            </a>
+
+            <!-- Valerio -->
+            <a href="./castPages/valerio.html" class="castCoverThree">
+                <img src="altipianiImg/placeholder.png" alt="valerioCover">
+            </a>
+
+            <a class="castTextThree" href="./castPages/valerio.html">
+                <p>Valerio</p>
+            </a>
+
+            <!-- Viviana -->
+            <a href="./castPages/viviana.html" class="castCoverFour">
+                <img src="altipianiImg/placeholder.png" alt="reveCover">
+            </a>
+
+            <a class="castTextFour" href="./castPages/viviana.html">
+                <p>Viviana</p>
+            </a>
+
+        </div>
+
+        </div>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerTekst">
+                    <a href="https://discord.gg/Aw5rpJ3DN6">
+                        <img src="../../img/dcLogo.png" alt="discordLogo" class="dcLogo">
+                    </a>
+                </div>
+                <img src="altipianiImg/altipianiFooter.png" alt="footerImage" class="footerImg">
+            </div>
+        </footer>
+    </main>
+
+<script src="functions/searchMap.js"></script>
+
+<script>
+// ====================
+// Scroll hide header
+// ====================
+const header = document.querySelector("header");
+if (header) 
+{
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => 
+  {
+    if (window.scrollY > lastScrollY) 
+    {
+      header.classList.add("hidden");
+    } 
+    
+    else 
+    {
+      header.classList.remove("hidden");
+    }
+    lastScrollY = window.scrollY;
+  });
+}
+
+// ====================
+// Dropdown menu
+// ====================
+document.querySelectorAll('.dropdown > a').forEach(link => 
+{
+  link.addEventListener('click', e => 
+  {
+    e.preventDefault();
+    const menu = link.nextElementSibling;
+    if (menu) menu.classList.toggle('open');
+  });
+});
+
+document.addEventListener('click', e => 
+{
+  document.querySelectorAll('.dropdownMenu.open').forEach(menu => 
+  {
+    if (!menu.parentElement.contains(e.target)) 
+    {
+      menu.classList.remove('open');
+    }
+  });
+});
+
+// ====================
+// Search input
+// ====================
+searchInput.addEventListener("keydown", function(e) 
+{
+  if (e.key === "Enter") 
+  {
+    e.preventDefault();
+    const query = this.value.toLowerCase().trim();
+
+    if (searchMap[query]) 
+    {
+      window.location.href = searchMap[query];
+    } 
+    
+    else 
+    {
+      alert("No results found for: " + query);
+    }
+  }
+});
+</script>
+</body>
+</html>

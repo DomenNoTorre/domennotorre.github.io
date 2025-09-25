@@ -183,20 +183,36 @@ header.hidden
   transform: translateY(-100%);
 }
 
-.mainTitle
-{
-  color: black;
-  text-align: center;
-  font-size: 8rem;
-  font-weight: normal;
-  position: absolute;
-  top: 30%;
-  left: 50%;           
-  transform: translate(-50%, -50%); 
-  z-index: 10;         
-  letter-spacing: 0.15em;
-  grid-column: 1/5;
-  grid-row: 2/3;
+.backButton
+{ 
+  color: white; 
+  background-color: black; 
+  text-align: center; 
+  font-size: 2.25rem; 
+  font-weight: normal; 
+  letter-spacing: 0.15em; 
+  grid-column: 1/2; 
+  grid-row: 1/2; 
+  text-decoration: none; 
+  justify-self: center;
+  align-self: center; 
+  z-index: 10;
+}
+
+.mainTitle 
+{ 
+  color: black; 
+  text-align: center; 
+  font-size: 8rem; 
+  font-weight: normal; 
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 10; 
+  letter-spacing: 0.15em; 
+  grid-column: 1/5; 
+  grid-row: 2/3; 
 }
 
 .headerImg
@@ -212,14 +228,14 @@ header.hidden
   grid-column: 1/5;
   grid-row: 3/4;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   column-gap: 10rem;
 }
 
 .secondTitle
 {
-  grid-column: 1/6;
+  grid-column: 1/5;
   grid-row: 1/2;
   color: white;
   text-align: center;
@@ -228,106 +244,81 @@ header.hidden
   letter-spacing: 0.15em;
 }
 
-.bookStack 
+.shortText
 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  position: relative;
-  width: 17rem;
-  height: auto;
-  min-height: 26.0625rem;
-  margin: 0 auto;
-}
-
-.bookStack a 
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.5s ease, z-index 0s ease 0.5s;
-}
-
-.bookOneCover 
-{
-  position: relative; 
-  z-index: 3;         
-  transform: scale(1) translateX(0) translateY(0);
-}
-
-.bookTwoCover 
-{
-  position: absolute;
-  z-index: 2;
-  transform: scale(0.9) translateX(0) translateY(0);
-}
-
-.bookThreeCover 
-{
-  position: absolute;
-  z-index: 1;
-  transform: scale(0.8) translateX(0) translateY(0);
-}
-
-.bookStack:hover .bookOneCover 
-{
-  transform: scale(1) translateX(0) translateY(0);
-}
-
-.bookStack:hover .bookTwoCover 
-{
-  transform: scale(0.85) translateX(5rem) translateY(0.3125rem);
-}
-
-.bookStack:hover .bookThreeCover 
-{
-  transform: scale(0.75) translateX(10rem) translateY(0.625rem);
-}
-
-.bookStack img 
-{
-  width: 100%;
-  display: block;
-}
-
-/* Silent Stories */
-.bookStack.ss 
-{
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
-/* Lost Pages */
-.bookStack.lp 
-{
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
-}
-
-.msText
-{
-  grid-column: 2/3;
-  grid-row: 3/4; 
-}
-
-.ssText
-{
-  grid-column: 3/4;
-  grid-row: 3/4; 
-}
-
-.lpText
-{
-  grid-column: 4/5;
-  grid-row: 3/4; 
-}
-
-.lpText, .ssText, .msText
-{ 
+  grid-column: 1/5;
+  grid-row: 2/3;
+  color: white;
   text-align: center;
-  color:white;
+  font-size: 3rem;
+}
+
+.nationListLeft, 
+.nationListLeft a, 
+.nationListLeft ul, 
+.nationListRight, 
+.nationListRight a, 
+.nationListRight ul
+{
+  grid-row: 3/4;
+  color: white;
+  text-align: center;
+  font-size: 3.438rem;
+  font-weight: normal;
   text-decoration: none;
-  font-size: 2.25rem;
-  letter-spacing: 0.05em;
+  list-style: none;
+}
+
+.nationListLeft
+{
+  grid-column: 1/3;
+  padding-left: 5rem;
+}
+
+.nationListRight
+{
+  grid-column: 3/5;
+  padding-right: 5rem;
+}
+
+.altipiani:hover
+{
+  color: purple;
+}
+
+.altanawue:hover
+{
+  color: orange;
+}
+
+.celerracion:hover
+{
+  color: pink;
+}
+
+.chuma:hover
+{
+  color: crimson;
+}
+
+.farostia:hover
+{
+  color: greenyellow;
+}
+
+.granskog:hover
+{
+  color: green;
+}
+
+.riimut:hover
+{
+  color: gray;
+}
+
+.leidrubreich:hover
+{
+  color: blue;
 }
 
 footer

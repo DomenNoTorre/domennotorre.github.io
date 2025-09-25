@@ -14,18 +14,19 @@
                 <li class="dropdown">
                     <a class="info" href="#">Info</a>
                     <ul class="dropdownMenu">
-                        <li><a href="webpages/nations.html">Nations</a></li>
+                        <li><a href="../nationPages/nations.html">Nations</a></li>
                         <li><a href="webpages/storyInfo.html">Story</a></li>
+                        <li><a href="../index.html">Books</a></li>
                     </ul>
                 </li>
                 <li class="searchBar">
                     <input type="text" id="searchInput" placeholder="Search..." />
                 </li>
-                <li><a class="aboutUs" href="webpages/aboutUs.html">About Us</a></li>  
+                <li><a class="aboutUs" href="aboutUs.html">About Us</a></li>  
             </ul>
         </header>
 
-        <h1 class="title">Mindbound</h1>
+        <h1 class="mainTitle">Mindbound</h1>
         
         <img src="../img/headerImg.png" alt="headerImage" class="headerImg">
 
@@ -58,26 +59,10 @@
             </div>
         </footer>
     </main>
-</body>
-</html>
+
+<script src="functions/searchMap.js"></script>
 
 <script>
-// ====================
-// SearchMap
-// ====================
-const searchMap = 
-{
-  // Altipiani characters
-  "cario": "../nationPages/altipianiPages/castPages/cario.html",
-  "nicolas": "../nationPages/altipianiPages/castPages/nicolas.html",
-  "reve": "../nationPages/altipianiPages/castPages/reve.html",
-  "valerio": "../nationPages/altipianiPages/castPages/valerio.html",
-
-  // Nations
-  "altipiani": "../nationPages/altipianiPages/altipianiMainpage.html",
-  "zloyvor": "../nationPages/zloyvorPages/zloyvorMainpage.html"
-};
-
 // ====================
 // Scroll hide header
 // ====================
@@ -127,26 +112,24 @@ document.addEventListener('click', e =>
 // ====================
 // Search input
 // ====================
-const searchInput = document.getElementById("searchInput");
-if (searchInput) 
+searchInput.addEventListener("keydown", function(e) 
 {
-  searchInput.addEventListener("keypress", function(e) 
+  if (e.key === "Enter") 
   {
-    if (e.key === "Enter") 
-    {
-      e.preventDefault();
-      let query = this.value.toLowerCase().trim();
+    e.preventDefault();
+    const query = this.value.toLowerCase().trim();
 
-      if (searchMap[query]) 
-      {
-        window.location.href = searchMap[query];
-      } 
-      
-      else 
-      {
-        alert("No results found for: " + query);
-      }
+    if (searchMap[query]) 
+    {
+      window.location.href = searchMap[query];
+    } 
+    
+    else 
+    {
+      alert("No results found for: " + query);
     }
-  });
-}
+  }
+});
 </script>
+</body>
+</html>
