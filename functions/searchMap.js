@@ -1,9 +1,9 @@
 const searchMap = 
 {
   // Altipiani characters
-  "camilla": "//nationPages/altipianiPages/castPages/camilla.html",
-  "cario": "//nationPages/altipianiPages/castPages/cario.html",
-  "cosmo": "//nationPages/altipianiPages/castPages/cosmo.html",
+  "camilla": "/nationPages/altipianiPages/castPages/camilla.html",
+  "cario": "/nationPages/altipianiPages/castPages/cario.html",
+  "cosmo": "/nationPages/altipianiPages/castPages/cosmo.html",
   "dio del vuoto": "/nationPages/altipianiPages/castPages/vicenci.html",
   "nathan": "/nationPages/altipianiPages/castPages/nathan.html",
   "nicolas": "/nationPages/altipianiPages/castPages/nicolas.html",
@@ -79,9 +79,9 @@ const searchMap =
   "zloyvor": "/nationPages/zloyvorPages/zloyvorMainpage.html",
 
   // General stuff
-  "about us": "webpages/aboutus.html",
-  "books": "index.html",
-  "home": "index.html",
-  "mainpage": "index.html",
+  "about us": "/webpages/aboutus.html",
+  "books": "/index.html",
+  "home": "/index.html",
+  "mainpage": "/index.html",
   "nations": "/nationPages/nations.html",
 };
