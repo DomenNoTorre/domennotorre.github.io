@@ -89,6 +89,7 @@ header
 {
   grid-column: 2 / 3;
   align-items: center;
+  position: relative;
 }
 
 .aboutUs 
@@ -113,6 +114,34 @@ header
 {
   color: white;
   opacity: 0.5;
+}
+
+/* Suggestion box */
+
+.suggestions 
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-family: "Jura";
+  z-index: 100;
+  width: 100%;
+}
+
+.suggestions li 
+{
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestions li:hover 
+{
+  background-color: #222222;
+  color: white;  
 }
 
 /* Dropdown-menu */
@@ -275,6 +304,13 @@ header.hidden
   justify-self: center;
   align-self: center; 
   z-index: 10;
+}
+
+.footerCastImg
+{
+  grid-column: 1/5; 
+  grid-row: 4/5;
+  width: 100%;
 }
 
 footer

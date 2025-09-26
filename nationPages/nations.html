@@ -19,8 +19,9 @@
                         <li><a href="../index.html">Books</a></li>
                     </ul>
                 </li>
-                <li class="searchBar">
+              <li class="searchBar">
                     <input type="text" id="searchInput" placeholder="Search..." />
+                    <ul id="suggestions" class="suggestions"></ul>
                 </li>
                 <li><a class="aboutUs" href="../webpages/aboutUs.html">About Us</a></li>  
             </ul>
@@ -74,7 +75,7 @@
         </footer>
     </main>
 
-<script src="functions/searchMap.js"></script>
+<script src="../functions/searchMap.js"></script>
 
 <script>
 // ====================
@@ -143,6 +144,32 @@ searchInput.addEventListener("keydown", function(e)
       alert("No results found for: " + query);
     }
   }
+});
+
+// ====================
+// Search suggestions
+// ====================
+
+const input = document.getElementById('searchInput');
+const suggestions = document.getElementById('suggestions');
+
+input.addEventListener('input', () => 
+{
+    const value = input.value.toLowerCase();
+    suggestions.innerHTML = '';
+    if (value) 
+    {
+        const filtered = Object.keys(searchMap).filter(name => name.startsWith(value));
+        filtered.forEach(name => 
+        {
+            const li = document.createElement('li');
+            li.textContent = name;
+            li.addEventListener('click', () => {
+                window.location.href = searchMap[name];
+            });
+            suggestions.appendChild(li);
+        });
+    }
 });
 </script>
 </body>
