@@ -79,7 +79,7 @@ const searchMap =
   "zloyvor": "/nationPages/zloyvorPages/zloyvorMainpage.html",
 
   // General stuff
-  "about us": "/webpages/aboutus.html",
+  "about us": "/webpages/aboutUs.html",
   "books": "/index.html",
   "home": "/index.html",
   "mainpage": "/index.html",
