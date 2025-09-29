@@ -312,42 +312,82 @@ header.hidden
 
 .altipiani:hover
 {
-  color: purple;
+  color: #673BB7;
 }
 
 .altanawue:hover
 {
-  color: orange;
+  color: #FF8E01;
 }
 
 .celerracion:hover
 {
-  color: pink;
+  color: #C62827;
 }
 
 .chuma:hover
 {
-  color: crimson;
+  color: #E57373;
 }
 
 .farostia:hover
 {
-  color: greenyellow;
+  color: #004C3F;
 }
 
 .granskog:hover
 {
-  color: green;
+  color: #00887A;
 }
 
 .riimut:hover
 {
-  color: gray;
+  color: #BFC1CC;
 }
 
 .leidrubreich:hover
 {
-  color: blue;
+  color: #1A237E;
+}
+
+.midprot:hover
+{
+  color: #4CB050;
+}
+
+.nesgen:hover
+{
+  color: #8C6E63;
+}
+
+.kokka:hover
+{
+  color: #EC407A;
+}
+
+.sothleigh:hover
+{
+  color: #FFA827;
+}
+
+.terpayatre:hover
+{
+  color: #548B2E;
+}
+
+.wasteland:hover
+{
+  color: #757575;
+}
+
+.vriesland:hover
+{
+  color: #00E5FF;
+}
+
+.zloyvor:hover
+{
+  color: #515151;
 }
 
 footer
