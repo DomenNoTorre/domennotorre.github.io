@@ -102,7 +102,7 @@ header
   padding: 0.4rem 2em;
   font-size: 2.25rem;
   text-align: center;
-  border: 0.1rem solid white !important;
+  border: 0.1rem solid white;
   border-radius: 0.5rem;
   outline: none;
   background-color: black;
@@ -114,6 +114,17 @@ header
 {
   color: white;
   opacity: 0.5;
+}
+
+.searchBar input,
+.searchBar input:focus,
+.searchBar input:hover,
+.searchBar input:active,
+.searchBar input:-webkit-autofill 
+{
+    border-color: white;
+    background-color: black;
+    color: white;
 }
 
 /* Suggestion box */
@@ -214,7 +225,7 @@ header.hidden
 
 .mainTitle
 {
-  color: black !important;
+  color: black;
   text-align: center;
   font-size: 8rem;
   font-weight: normal;
@@ -406,13 +417,13 @@ footer
 {
   .mainTitle 
   {
-    position: relative;      /* niet meer absolute */
+    position: relative;     
     top: auto;
     left: auto;
     transform: none;
     text-align: center;
-    font-size: 3rem;         /* eventueel kleiner */
-    margin: 3rem 0;          /* ruimte boven en onder */
+    font-size: 3rem;        
+    margin: 3rem 0;       
   }
 
   .secondTitle 
@@ -491,6 +502,7 @@ footer
   {
     height: 2rem;
     width: auto;
+    padding: 0;
   }
 
   .footerTekst 
@@ -499,6 +511,7 @@ footer
     text-align: center;
     right: auto;
     left: 50%;
+    top: 10%;
     transform: translateX(-50%);
   }
 
@@ -508,4 +521,20 @@ footer
     height: auto;
     text-align: center;
   }
+}
+
+@media (prefers-color-scheme: dark),
+       (prefers-color-scheme: light) 
+{
+    .mainTitle 
+    {
+      color: black !important;
+    }
+
+    .searchBar input 
+    {
+      border-color: white !important;
+      background-color: black !important;
+      color: white !important;
+    }
 }
