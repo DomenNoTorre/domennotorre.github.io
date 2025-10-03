@@ -102,7 +102,7 @@ header
   padding: 0.4rem 2em;
   font-size: 2.25rem;
   text-align: center;
-    border: 0.1rem solid white !important;;
+    border: 0.1rem solid white;
   border-radius: 0.5rem;
   outline: none;
   background-color: black;
@@ -214,7 +214,7 @@ header.hidden
 
 .mainTitle 
 { 
-  color: black !important;
+  color: black;
   text-align: center; 
   font-size: 8rem; 
   font-weight: normal; 
@@ -230,7 +230,7 @@ header.hidden
 
 .mainTitleWhite 
 { 
-  color: white !important; 
+  color: white; 
   text-align: center; 
   font-size: 8rem; 
   font-weight: normal; 
