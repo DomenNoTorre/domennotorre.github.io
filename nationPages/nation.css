@@ -437,3 +437,117 @@ footer
   padding-left: 1rem;
   padding-top: 1rem;
 }
+
+@media (max-width: 768px) 
+{
+  .mainTitle 
+  {
+    position: relative;     
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    font-size: 3rem;        
+    margin: 3rem 0;  
+    color: black !important;     
+  }
+
+  .mainTitleWhite 
+  {
+    position: relative;     
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    font-size: 3rem;        
+    margin: 3rem 0;  
+    color: white !important;     
+  }
+
+  .secondTitle 
+  {
+    font-size: 3rem;
+  }
+
+  .thirdTitle
+  {
+    font-size: 3rem;
+  }
+
+  .middleBlock 
+  {
+    display: flex;
+    flex-direction: column;  
+    gap: 2rem;             
+    align-items: center;
+  }
+
+  header 
+  {
+    height: auto;
+  }
+
+  .headerList 
+  {
+    font-size: 1rem;
+  }
+
+  .dropdownMenu li a 
+  {
+    font-size: 1rem;
+  }
+
+  .dropdownMenu 
+  {
+    width: 6rem; 
+    padding: 0.5rem 0;
+  }
+
+  .searchBar input 
+  {
+    font-size: 1rem;
+    width: 50%;
+  }
+
+  .nationText
+  {
+    font-size: 1.5rem;
+  }
+
+  .castCoverOne, 
+  .castCoverTwo, 
+  .castCoverThree, 
+  .castCoverFour,
+  .castTextOne, 
+  .castTextTwo, 
+  .castTextThree, 
+  .castTextFour
+  {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+  .dcLogo 
+  {
+    height: 2rem;
+    width: auto;
+    padding: 0;
+  }
+
+  .footerTekst 
+  {
+    max-width: 100%;
+    text-align: center;
+    right: auto;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+  }
+
+  .footerImg 
+  {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+}
