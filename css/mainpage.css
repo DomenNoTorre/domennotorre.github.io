@@ -481,12 +481,38 @@ footer
     padding: 0.5rem 0;
   }
 
-  .searchBar input 
+  .searchBar 
   {
-    font-size: 1rem;
-    width: 50%;
+    position: relative;
+    margin: 0 auto; 
   }
-  
+
+  .searchBar input
+  {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 1em;
+    font-size: 1rem;
+    display: block;
+  }
+
+  .searchBar .suggestions 
+  {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; 
+  }
+
+  .searchBar .suggestions li 
+  {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    letter-spacing: 0;
+    padding-top: 0.5rem;
+  }
+ 
   .dcLogo 
   {
     height: 2rem;
