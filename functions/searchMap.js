@@ -55,6 +55,9 @@ const searchMap =
   "irina": "/nationPages/zloyvorPages/castPages/irina.html",  
   "mnemos": "/nationPages/zloyvorPages/castPages/mnemos.html",
 
+  // Random characters
+  "aurum": "/nationPages/altipianiPages/castPages/reve.html",
+  "luna": "/nationPages/zloyvorPages/castPages/mnemos.html",
 
   // Nations
   "altipiani": "/nationPages/altipianiPages/altipianiMainpage.html",
@@ -84,4 +87,6 @@ const searchMap =
   "home": "/index.html",
   "mainpage": "/index.html",
   "nations": "/nationPages/nations.html",
+  "projects": "/webpages/projects.html",
+  "other projects": "/webpages/projects.html",
 };

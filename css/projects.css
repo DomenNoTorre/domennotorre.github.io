@@ -102,7 +102,7 @@ header
   padding: 0.4rem 2em;
   font-size: 2.25rem;
   text-align: center;
-    border: 0.1rem solid white;
+  border: 0.1rem solid white;
   border-radius: 0.5rem;
   outline: none;
   background-color: black;
@@ -244,22 +244,6 @@ header.hidden
   grid-row: 2/3; 
 }
 
-.mainTitleWhite 
-{ 
-  color: white; 
-  text-align: center; 
-  font-size: 8rem; 
-  font-weight: normal; 
-  position: absolute; 
-  top: 30%; 
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  z-index: 10; 
-  letter-spacing: 0.15em; 
-  grid-column: 1/5; 
-  grid-row: 2/3; 
-}
-
 .headerImg
 {
   width: 100%;
@@ -278,13 +262,13 @@ header.hidden
 
 .middleBlockLowerContent
 {
-  grid-column: 1/4;
+  grid-column: 1/5;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto;
-  column-gap: 10rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: auto auto auto auto;
+  column-gap: 2.875rem;
+  margin-left: 2.875rem;
+  margin-right: 2.875rem;
 }
 
 .secondTitle
@@ -298,98 +282,110 @@ header.hidden
   letter-spacing: 0.15em;
 }
 
-.nationText
-{
-  grid-column: 1/5;
-  grid-row: 2/3;
-  color: white;
-  text-align: center;
-  font-size: 2.25rem;
-  font-weight: normal;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.thirdTitle
-{
-  grid-column: 1/5;
-  grid-row: 3/4;
-  color: white;
-  text-align: center;
-  font-size: 6.25rem;
-  font-weight: normal;
-  letter-spacing: 0.15em;
-}
-
-/* Covers */
-
-.castCoverOne, 
-.castCoverTwo, 
-.castCoverThree, 
-.castCoverFour
-{
-  text-align: center;
-}
-
-.castCoverOne
-{
-  grid-column: 1/2;
-  grid-row: 4/5;
-}
-
-.castCoverTwo
-{
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
-
-.castCoverThree
-{
-  grid-column: 3/4;
-  grid-row: 4/5;
-}
-
-.castCoverFour
-{
-  grid-column: 4/5;
-  grid-row: 4/5;
-}
-
 /* Text */
 
-.castTextOne, 
-.castTextTwo, 
-.castTextThree, 
-.castTextFour
+.projectsTextOne a,
+.projectsTextTwo a,
+.projectsTextThree a,
+.projectsTextFour a,
+.projectsTextOne,
+.projectsTextTwo,
+.projectsTextThree,
+.projectsTextFour
 {
-  text-decoration: none;
-  text-align: center;
   color: white;
+  text-align: center;
   font-size: 2.25rem;
+  font-weight: normal;
+  text-decoration: none;
+  padding-bottom: 1.563rem;
+  padding-top: 0.625rem;
 }
 
-.castTextOne
+.projectsTextOne
 {
   grid-column: 1/2;
-  grid-row: 5/6;
+  grid-row: 2/3;
 }
 
-.castTextTwo
+.projectsTextTwo
 {
   grid-column: 2/3;
-  grid-row: 5/6;
+  grid-row: 2/3;
 }
 
-.castTextThree
+.projectsTextThree
+{
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+.projectsTextFour
+{
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+/* Images */
+
+.projectsImgOne,
+.projectsImgTwo,
+.projectsImgThree,
+.projectsImgFour
+{
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.projectsImgOne
+{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.projectsImgTwo
+{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.projectsImgThree
+{
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.projectsImgFour
+{
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+/* Update log */
+
+.projectsUpdate
 {
   grid-column: 3/4;
-  grid-row: 5/6;
+  grid-row: 1/5;
+  border: 0.1rem solid white;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
 }
 
-.castTextFour
+.projectsUpdate h2
 {
-  grid-column: 4/5;
-  grid-row: 5/6;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+}
+
+.updateLog
+{
+  font-size: 1.5rem;
 }
 
 footer
@@ -449,24 +445,7 @@ footer
     color: black !important;     
   }
 
-  .mainTitleWhite 
-  {
-    position: relative;     
-    top: auto;
-    left: auto;
-    transform: none;
-    text-align: center;
-    font-size: 3rem;        
-    margin: 3rem 0;  
-    color: white !important;     
-  }
-
   .secondTitle 
-  {
-    font-size: 3rem;
-  }
-
-  .thirdTitle
   {
     font-size: 3rem;
   }
@@ -532,22 +511,68 @@ footer
     padding-top: 0.5rem;
   }
 
-  .nationText
+  .projectsUpdate 
+  {
+    grid-column: 1 / -1;     
+    grid-row: auto;           
+    width: 100%;                 
+    margin: 1rem auto;          
+    font-size: 1.25rem;         
+    display: block;            
+    border: 0.1rem solid white;
+    padding: 0.5rem;            
+    box-sizing: border-box;
+  }
+
+  .projectsUpdate h2 
   {
     font-size: 1.5rem;
   }
 
-  .castCoverOne, 
-  .castCoverTwo, 
-  .castCoverThree, 
-  .castCoverFour,
-  .castTextOne, 
-  .castTextTwo, 
-  .castTextThree, 
-  .castTextFour
+  .updateLog 
   {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .projectsTextOne,
+  .projectsTextTwo,
+  .projectsTextThree,
+  .projectsTextFour,
+  .projectsImgOne,
+  .projectsImgTwo,
+  .projectsImgThree,
+  .projectsImgFour 
+  {
+    grid-column: 1 / -1;      
+    grid-row: auto;            
+    width: 90%;                
+    margin: 0.1rem auto;         
+    text-align: center;        
+  }
+
+  .projectsTextOne a,
+  .projectsTextTwo a,
+  .projectsTextThree a,
+  .projectsTextFour a,
+  .projectsTextOne,
+  .projectsTextTwo,
+  .projectsTextThree,
+  .projectsTextFour 
+  {
+    font-size: 1.25rem;        
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+  }
+
+  .projectsImgOne,
+  .projectsImgTwo,
+  .projectsImgThree,
+  .projectsImgFour 
+  {
+    width: 100%;
+    height: auto;
   }
   
   .dcLogo 

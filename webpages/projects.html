@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us - Mindbound</title>
-    <link rel="stylesheet" href="../css/aboutUs.css" type="text/css">
+    <title>Projects - Mindbound</title>
+    <link rel="stylesheet" href="../css/projects.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../img/favi.png">
 </head>
 <body>
@@ -36,38 +36,107 @@
 
             <a href="javascript:history.back()" class="backButton">&lt;Back</a>
             
-            <h2 class="secondTitle">About us</h2>
+            <h2 class="secondTitle">Our Projects</h2>
 
-            <div class="aboutUsText">
-              <p>Heya! We're Kyara and Kai and we are the creators of Mindbound! We're currently still students 
-              and we always try to write more for Mindbound in between deadlines and exams. So we apologize in advance for the slow updates :')
-              </p>
+          <div class="middleBlockLowerContent">
 
-              <p>
-              Anyways! We're working hard on the main series of Mindbound, though, we're also working on some side stories as we speak! 
-              This will be a series we call The Silent Stories, and will focus on things outside of the main series which are canon, just not 
-              written about in detail. For example the infamous rune war, or what happened before the main story! We have a bunch of ideas, 
-              but we just need to work them all out haha.
-              </p>
+            <!-- Updates -->
+            <div class="projectsUpdate">
+              <h2>Project Updates</h2>
 
-              <p>
-              A little fun fact about Mindbound actually, this all started out as a simple minecraft server! We were messing around with 
-              lore until we came up with what is now the story we're writing. We didn't expect to eventually post it online though, nor did 
-              we expect the support we got from fans! We're gradually expanding this little universe of ours, starting with this website and our 
-              discord server! (Which you can join by clicking the button at the end of the page!) We'll keep this site updated, adding new 
-              characters, lore, maybe even some easter eggs here and there.
-              </p>
+              <hr style="border: 0; height: 0.1rem; background-color: white; width: 75%; margin: 0px auto;">
 
-              <p>
-              For now, this is just a fun project for us to work on in our free time and it means a lot to us that so many of you liked it so far. 
-              We'd like to thank all our fans who stick around as we write, even if new chapters may take a while to finish haha.
-              </p>
+              <p class="updateLog">Added the new projects page and new character pages!</p>
+
+              <hr style="border: 0; height: 0.1rem; background-color: white; width: 75%; margin: 0px auto;">
+              
+              <p id="updateInfo">Loading...</p>
+
             </div>
 
-            <a class="gooberKai" href="https://www.instagram.com/domennotorre?igsh=MWF6YWVoZnZ4OXhwNg==">
-            <img class="gooberKai" src="../img/gooberKai.png" alt="KaiSprite">
-            </a>
+            <script>
+            document.addEventListener("DOMContentLoaded", () => 
+            {
+            const lastModified = new Date(document.lastModified);
+            const now = new Date();
+            const diffMs = now - lastModified;
 
+            const diffMinutes = Math.floor(diffMs / (1000 * 60));
+            const diffHours = Math.floor(diffMinutes / 60);
+            const diffDays = Math.floor(diffHours / 24);
+
+            let text;
+
+            if (diffDays >= 1) 
+            {
+              text = `Updated ${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
+            } 
+            
+            else if (diffHours >= 1) 
+            {
+              text = `Updated ${diffHours} hour${diffHours !== 1 ? "s" : ""} ago`;
+            } 
+            
+            else 
+            {
+              text = `Updated ${diffMinutes} minute${diffMinutes !== 1 ? "s" : ""} ago`;
+            }
+
+            document.getElementById("updateInfo").textContent = text;
+          });
+            </script>
+
+            <!-- Website -->
+            <div class="projectsImgOne">
+              <!-- <a href="projects/websiteProject.html"> -->
+                <a href="https://domennotorre.github.io/index.html">
+                <img src="../img/placeholderProjectImg.png" alt="websiteProjectImg" class="projectsImgOne">
+              </a>
+            </div>
+
+            <div class="projectsTextOne">
+              <!-- <a href="projects/websiteProject.html">Website</a> -->
+               <a href="https://domennotorre.github.io/index.html">Website</a>
+            </div>
+
+            <!-- Story -->
+            <div class="projectsImgTwo">
+              <!-- <a href="projects/storyProject.html"> -->
+                <a href="https://www.wattpad.com/user/Domen-No-Torre">
+                <img src="../img/placeholderProjectImg.png" alt="storyProjectImg" class="projectsImgTwo">
+              </a>
+            </div>
+
+            <div class="projectsTextTwo">
+              <!-- <a href="projects/storyProject.html">Story</a> -->
+               <a href="https://www.wattpad.com/user/Domen-No-Torre">Story</a>
+            </div>
+
+            <!-- Skins -->
+            <div class="projectsImgThree">
+              <!-- <a href="projects/skinsProject.html"> -->
+                <a href="https://www.minecraftskins.com/profile/8549244/domennotorre">
+                <img src="../img/placeholderProjectImg.png" alt="skinsProjectImg" class="projectsImgThree">
+              </a>
+            </div>
+
+            <div class="projectsTextThree">
+              <!-- <a href="projects/skinsProject.html">Skins</a> -->
+               <a href="https://www.minecraftskins.com/profile/8549244/domennotorre">Skins</a>
+            </div>
+
+            <!-- Game -->
+            <div class="projectsImgFour">
+              <a href="projects/gameProject.html">
+                <img src="../img/placeholderProjectImg.png" alt="gameProjectImg" class="projectsImgFour">
+              </a>
+            </div>
+
+            <div class="projectsTextFour">
+              <a href="projects/gameProject.html">Game(WIP)</a>
+            </div>
+
+          </div>
         </div>
 
         <footer>
