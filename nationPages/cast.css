@@ -271,7 +271,7 @@ header.hidden
 
 .secondTitle
 {
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 1/2;
   color: white;
   text-align: center;
@@ -282,14 +282,14 @@ header.hidden
 
 .castText
 {
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 2/3;
   color: white;
   text-align: center;
   font-size: 2.25rem;
   font-weight: normal;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .backButton
@@ -306,6 +306,7 @@ header.hidden
   justify-self: center;
   align-self: center; 
   z-index: 10;
+  padding-bottom: 1.563rem;
 }
 
 .footerCastImg
@@ -326,7 +327,7 @@ footer
   font-size: 1.5rem;
 }
 
-.footerTekst
+.footerText
 {
   position: absolute;
   right: 0.625rem;
@@ -341,7 +342,6 @@ footer
   width: 100%;
   display: block;
 }
-
 
 .footerContainer 
 {
@@ -468,7 +468,7 @@ footer
     padding: 0;
   }
 
-  .footerTekst 
+  .footerText 
   {
     max-width: 100%;
     text-align: center;

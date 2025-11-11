@@ -281,8 +281,8 @@ header.hidden
   text-align: center;
   font-size: 2.25rem;
   font-weight: normal;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .gooberKai
@@ -305,7 +305,7 @@ footer
   font-size: 1.5rem;
 }
 
-.footerTekst
+.footerText
 {
   position: absolute;
   right: 0.625rem;
@@ -445,7 +445,7 @@ footer
     padding: 0;
   }
 
-  .footerTekst 
+  .footerText 
   {
     max-width: 100%;
     text-align: center;

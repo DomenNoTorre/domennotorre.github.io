@@ -375,7 +375,7 @@ footer
   font-size: 1.5rem;
 }
 
-.footerTekst
+.footerText
 {
   position: absolute;
   right: 0.625rem;
@@ -520,7 +520,7 @@ footer
     padding: 0;
   }
 
-  .footerTekst 
+  .footerText 
   {
     max-width: 100%;
     text-align: center;
