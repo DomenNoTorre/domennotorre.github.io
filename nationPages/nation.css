@@ -278,7 +278,7 @@ header.hidden
 
 .middleBlockLowerContent
 {
-  grid-column: 1/4;
+  grid-column: 1/5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
@@ -472,6 +472,14 @@ footer
   }
 
   .middleBlock 
+  {
+    display: flex;
+    flex-direction: column;  
+    gap: 2rem;             
+    align-items: center;
+  }
+
+  .middleBlockLowerContent
   {
     display: flex;
     flex-direction: column;  
