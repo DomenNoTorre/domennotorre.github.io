@@ -1,0 +1,516 @@
+html 
+{
+  font-size: 16px; /* 1rem = 16px */
+}
+
+@font-face
+{
+  font-family: "Jura";
+  src: url("../fonts/Jura/static/Jura-Light.ttf");
+}
+
+::-webkit-scrollbar 
+{
+  width: 0.3125rem;
+}
+  
+::-webkit-scrollbar-track 
+{
+  background-color: black;
+}
+  
+::-webkit-scrollbar-thumb 
+{
+  background-color: white;
+}
+
+body
+{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: "Jura";
+}
+
+main
+{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr auto auto auto auto;
+  height: auto;
+}
+
+header 
+{
+  background-color: black;
+  height: 7.1875rem;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.headerList 
+{     
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 2.25rem;
+  display: contents;
+}
+
+.headerList li 
+{
+  position: relative;
+  text-align: center;
+}
+
+.info,
+.aboutUs,
+.searchBar 
+{
+  color: white;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+}
+
+.info 
+{
+  grid-column: 1 / 2;
+}
+
+.searchBar 
+{
+  grid-column: 2 / 3;
+  align-items: center;
+  position: relative;
+}
+
+.aboutUs 
+{
+  grid-column: 3 / 4;
+}
+
+.searchBar input 
+{
+  padding: 0.4rem 2em;
+  font-size: 2.25rem;
+  text-align: center;
+    border: 0.1rem solid white;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: black;
+  color: white;
+  font-family: "Jura";
+}
+
+.searchBar input::placeholder 
+{
+  color: white;
+  opacity: 0.5;
+}
+
+/* Suggestion box */
+
+.suggestions 
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-family: "Jura";
+  z-index: 100;
+  width: 100%;
+}
+
+.suggestions li 
+{
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestions li:hover 
+{
+  background-color: #222222;
+  color: white;  
+}
+
+/* Dropdown-menu */
+.dropdownMenu 
+{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -0.625rem);
+  width: 15.625rem; 
+  background-color: black;
+  list-style: none;
+  padding: 0.5rem 0;
+  text-align: center;
+  z-index: 1100;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: transform .3s ease, opacity .3s ease, max-height .3s ease, visibility 0s linear .3s;
+}
+
+/* Links in dropdown-menu */
+.dropdownMenu li a 
+{
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
+  font-size: 2.25rem;
+}
+
+.dropdownMenu li a:hover 
+{
+  background: black;
+}
+
+/* Hover (desktop) */
+@media (hover: hover) and (pointer: fine) 
+{
+  .dropdown:hover .dropdownMenu 
+  {
+    transform: translate(-50%, 0);
+    max-height: 31.25rem;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform .3s ease, opacity .3s ease, max-height .3s ease, visibility 0s;
+  }
+}
+
+/* Open-state (mobiel) */
+.dropdownMenu.open 
+{
+  transform: translate(-50%, 0);
+  max-height: 31.25rem;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform .3s ease, opacity .3s ease, max-height .3s ease, visibility 0s;
+}
+
+header.hidden 
+{
+  transform: translateY(-100%);
+}
+
+.mainTitle 
+{ 
+  color: black;
+  text-align: center; 
+  font-size: 8rem; 
+  font-weight: normal; 
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 10; 
+  letter-spacing: 0.15em; 
+  grid-column: 1/5; 
+  grid-row: 2/3; 
+}
+
+.headerImg
+{
+  width: 100%;
+  position: relative;
+  grid-column: 1/5;
+  grid-row: 2/3;
+}
+
+.middleBlock
+{
+  grid-column: 1/5;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  column-gap: 10rem;
+}
+
+.middleBlockLowerContent
+{
+  grid-column: 1/5;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: auto 2fr;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.bookCoverImgOne
+{
+  grid-column: 1/2;
+  grid-row: 2/6;
+  height: 100%;
+  width: auto;
+  padding-left: 2rem;
+}
+
+.secondTitle
+{
+  grid-column: 1/5;
+  grid-row: 1/2;
+  color: white;
+  text-align: center;
+  font-size: 6.25rem;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+}
+
+.bookTitleOne
+{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-size: 6rem;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+}
+
+.infoTextOne
+{
+  grid-column: 2/3;
+  grid-row: 3/4;
+  color: white;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: normal;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.whereToReadOne
+{
+  grid-column: 2/3;
+  grid-row: 5/6;
+  color: white;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.whereToReadOne a
+{
+  color: white;
+  text-decoration: none; 
+}
+
+.whereToReadOne a:hover
+{
+  color: #FF500A;
+}
+
+.backButton
+{ 
+  color: white; 
+  background-color: black; 
+  text-align: center; 
+  font-size: 2.25rem; 
+  font-weight: normal; 
+  letter-spacing: 0.15em; 
+  grid-column: 1/2; 
+  grid-row: 1/2; 
+  text-decoration: none; 
+  justify-self: center;
+  align-self: center; 
+  z-index: 10;
+}
+
+.footerCastImg
+{
+  grid-column: 1/5; 
+  grid-row: 4/5;
+  width: 100%;
+}
+
+footer
+{
+  grid-column: 1/5;
+  grid-row: 5/6;
+  color: white;
+  text-align: right;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  font-size: 1.5rem;
+}
+
+.footerText
+{
+  position: absolute;
+  right: 0.625rem;
+  z-index: 1;
+  margin: 0;
+  color: white;
+  max-width: 50%;
+}
+
+.footerImg
+{
+  width: 100%;
+  display: block;
+}
+
+.footerContainer 
+{
+  position: relative;
+  grid-column: 1 / 5;
+  grid-row: 5 / 6;
+}
+
+.dcLogo
+{
+  height: 4rem;
+  width: auto;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) 
+{
+  .mainTitle 
+  {
+    position: relative;     
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    font-size: 3rem;        
+    margin: 3rem 0;  
+    color: black !important;     
+  }
+
+  .mainTitleWhite 
+  {
+    position: relative;     
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    font-size: 3rem;        
+    margin: 3rem 0;  
+    color: white !important;     
+  }
+
+  .secondTitle 
+  {
+    font-size: 3rem;
+  }
+
+  .middleBlock 
+  {
+    display: flex;
+    flex-direction: column;  
+    gap: 2rem;             
+    align-items: center;
+  }
+
+  header 
+  {
+    height: auto;
+  }
+
+  .headerList 
+  {
+    font-size: 1rem;
+  }
+
+  .dropdownMenu li a 
+  {
+    font-size: 1rem;
+  }
+
+  .dropdownMenu 
+  {
+    width: 6rem; 
+    padding: 0.5rem 0;
+  }
+
+    .searchBar 
+  {
+    position: relative;
+    margin: 0 auto; 
+  }
+
+  .searchBar input
+  {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 1em;
+    font-size: 1rem;
+    display: block;
+  }
+
+  .searchBar .suggestions 
+  {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; 
+  }
+
+  .searchBar .suggestions li 
+  {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    letter-spacing: 0;
+    padding-top: 0.5rem;
+  }
+
+  .castText
+  {
+    font-size: 1.5rem;
+  }
+
+  .sideCastImg
+  {
+    height: auto;
+    width: 75%;
+  }
+  
+  .dcLogo 
+  {
+    height: 2rem;
+    width: auto;
+    padding: 0;
+  }
+
+  .footerText 
+  {
+    max-width: 100%;
+    text-align: center;
+    right: auto;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+  }
+
+  .footerImg 
+  {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+}

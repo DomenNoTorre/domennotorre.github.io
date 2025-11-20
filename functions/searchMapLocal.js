@@ -16,6 +16,7 @@ const searchMap =
   "viviana": "nationPages/altipianiPages/castPages/viviana.html",
   
   // 'Ard altanawue characters
+  "isaac": "nationPages/altanawuePages/castPages/isaac.html",
 
   // Celerración characters
 
@@ -84,6 +85,8 @@ const searchMap =
   // General stuff
   "about us": "webpages/aboutUs.html",
   "books": "index.html",
+  "inaugurate": "webpages/msInfo.html",
+  "main series": "webpages/msInfo.html",
   "home": "index.html",
   "mainpage": "index.html",
   "nations": "nationPages/nations.html",

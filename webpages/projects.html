@@ -39,102 +39,101 @@
 
           <div class="middleBlockLowerContent">
 
-            <!-- Updates -->
-            <div class="projectsUpdate">
-              <h2>Project Updates</h2>
+              <!-- Updates -->
+              <div class="projectsUpdate">
+                <h2>Project Updates</h2>
 
-              <hr style="border: 0; border-top: 0.1rem solid white; width: 75%; margin: 0px auto;">
+                <hr style="border: 0; border-top: 0.1rem solid white; width: 75%; margin: 0px auto;">
 
-              <p class="updateLog">Adjusted the font size on some pages and added extra styling.</p>
+                <p class="updateLog">Added new project pictures and book page, will fix mobile version later.</p>
 
-              <hr style="border: 0; border-top: 0.1rem solid white; width: 75%; margin: 0px auto;">
+                <hr style="border: 0; border-top: 0.1rem solid white; width: 75%; margin: 0px auto;">
+                
+                <p id="updateInfo">Loading...</p>
+
+              </div>
+
+              <script>
+              document.addEventListener("DOMContentLoaded", () => 
+              {
+              const lastModified = new Date(document.lastModified);
+              const now = new Date();
+              const diffMs = now - lastModified;
+
+              const diffMinutes = Math.floor(diffMs / (1000 * 60));
+              const diffHours = Math.floor(diffMinutes / 60);
+              const diffDays = Math.floor(diffHours / 24);
+
+              let text;
+
+              if (diffDays >= 1) 
+              {
+                text = `Updated ${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
+              } 
               
-              <p id="updateInfo">Loading...</p>
+              else if (diffHours >= 1) 
+              {
+                text = `Updated ${diffHours} hour${diffHours !== 1 ? "s" : ""} ago`;
+              } 
+              
+              else 
+              {
+                text = `Updated ${diffMinutes} minute${diffMinutes !== 1 ? "s" : ""} ago`;
+              }
 
-            </div>
+              document.getElementById("updateInfo").textContent = text;
+            });
+              </script>
 
-            <script>
-            document.addEventListener("DOMContentLoaded", () => 
-            {
-            const lastModified = new Date(document.lastModified);
-            const now = new Date();
-            const diffMs = now - lastModified;
+              <!-- Website -->
+              <div class="projectsImgOne">
+                <!-- <a href="projects/websiteProject.html"> -->
+                  <a href="https://domennotorre.github.io/index.html">
+                  <img src="../img/placeholderProjectImg.png" alt="websiteProjectImg" class="projectsImgOne">
+                </a>
+              </div>
 
-            const diffMinutes = Math.floor(diffMs / (1000 * 60));
-            const diffHours = Math.floor(diffMinutes / 60);
-            const diffDays = Math.floor(diffHours / 24);
+              <div class="projectsTextOne">
+                <!-- <a href="projects/websiteProject.html">Website</a> -->
+                <a href="https://domennotorre.github.io/index.html">Website</a>
+              </div>
 
-            let text;
+              <!-- Story -->
+              <div class="projectsImgTwo">
+                <!-- <a href="projects/storyProject.html"> -->
+                  <a href="https://www.wattpad.com/user/Domen-No-Torre">
+                  <img src="../img/storyProjectImg.png" alt="storyProjectImg" class="projectsImgTwo">
+                </a>
+              </div>
 
-            if (diffDays >= 1) 
-            {
-              text = `Updated ${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
-            } 
-            
-            else if (diffHours >= 1) 
-            {
-              text = `Updated ${diffHours} hour${diffHours !== 1 ? "s" : ""} ago`;
-            } 
-            
-            else 
-            {
-              text = `Updated ${diffMinutes} minute${diffMinutes !== 1 ? "s" : ""} ago`;
-            }
+              <div class="projectsTextTwo">
+                <!-- <a href="projects/storyProject.html">Story</a> -->
+                <a href="https://www.wattpad.com/user/Domen-No-Torre">Story</a>
+              </div>
 
-            document.getElementById("updateInfo").textContent = text;
-          });
-            </script>
+              <!-- Skins -->
+              <div class="projectsImgThree">
+                <!-- <a href="projects/skinsProject.html"> -->
+                  <a href="https://www.minecraftskins.com/profile/8549244/domennotorre">
+                  <img src="../img/skinsProjectImg.png" alt="skinsProjectImg" class="projectsImgThree">
+                </a>
+              </div>
 
-            <!-- Website -->
-            <div class="projectsImgOne">
-              <!-- <a href="projects/websiteProject.html"> -->
-                <a href="https://domennotorre.github.io/index.html">
-                <img src="../img/placeholderProjectImg.png" alt="websiteProjectImg" class="projectsImgOne">
-              </a>
-            </div>
+              <div class="projectsTextThree">
+                <!-- <a href="projects/skinsProject.html">Skins</a> -->
+                <a href="https://www.minecraftskins.com/profile/8549244/domennotorre">Skins</a>
+              </div>
 
-            <div class="projectsTextOne">
-              <!-- <a href="projects/websiteProject.html">Website</a> -->
-               <a href="https://domennotorre.github.io/index.html">Website</a>
-            </div>
+              <!-- Game -->
+              <div class="projectsImgFour">
+                <a href="projects/gameProject.html">
+                  <img src="../img/placeholderProjectImg.png" alt="gameProjectImg" class="projectsImgFour">
+                </a>
+              </div>
 
-            <!-- Story -->
-            <div class="projectsImgTwo">
-              <!-- <a href="projects/storyProject.html"> -->
-                <a href="https://www.wattpad.com/user/Domen-No-Torre">
-                <img src="../img/placeholderProjectImg.png" alt="storyProjectImg" class="projectsImgTwo">
-              </a>
-            </div>
-
-            <div class="projectsTextTwo">
-              <!-- <a href="projects/storyProject.html">Story</a> -->
-               <a href="https://www.wattpad.com/user/Domen-No-Torre">Story</a>
-            </div>
-
-            <!-- Skins -->
-            <div class="projectsImgThree">
-              <!-- <a href="projects/skinsProject.html"> -->
-                <a href="https://www.minecraftskins.com/profile/8549244/domennotorre">
-                <img src="../img/placeholderProjectImg.png" alt="skinsProjectImg" class="projectsImgThree">
-              </a>
-            </div>
-
-            <div class="projectsTextThree">
-              <!-- <a href="projects/skinsProject.html">Skins</a> -->
-               <a href="https://www.minecraftskins.com/profile/8549244/domennotorre">Skins</a>
-            </div>
-
-            <!-- Game -->
-            <div class="projectsImgFour">
-              <a href="projects/gameProject.html">
-                <img src="../img/placeholderProjectImg.png" alt="gameProjectImg" class="projectsImgFour">
-              </a>
-            </div>
-
-            <div class="projectsTextFour">
-              <a href="projects/gameProject.html">Game(WIP)</a>
-            </div>
-
+              <div class="projectsTextFour">
+                <a href="projects/gameProject.html">Game(WIP)</a>
+              </div>
           </div>
         </div>
 

@@ -84,6 +84,8 @@ const searchMap =
   // General stuff
   "about us": "/webpages/aboutUs.html",
   "books": "/index.html",
+  "inaugurate": "/webpages/msInfo.html",
+  "main series": "/webpages/msInfo.html",
   "home": "/index.html",
   "mainpage": "/index.html",
   "nations": "/nationPages/nations.html",
