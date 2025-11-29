@@ -190,7 +190,7 @@
               <!-- Mystery -->
               <div class="character"
                 data-name="Ariya"
-                data-nation="Granskog"
+                data-nation="Altipiani"
                 data-role="unused"
                 data-book="none">
                 Ariya
@@ -710,7 +710,8 @@ input.addEventListener('input', () =>
         {
             const li = document.createElement('li');
             li.textContent = name;
-            li.addEventListener('click', () => {
+            li.addEventListener('click', () => 
+            {
                 window.location.href = searchMap[name];
             });
             suggestions.appendChild(li);
@@ -721,7 +722,8 @@ input.addEventListener('input', () =>
 // ====================
 // Character Filter
 // ====================
-const activeFilters = {
+const activeFilters = 
+{
   letter: null,
   role: null,
   nation: null,
@@ -731,13 +733,15 @@ const activeFilters = {
 // ================================
 // MAPPING
 // ================================
-const roleMap = {
+const roleMap = 
+{
   "Main Characters": "main",
   "Side Characters": "side",
   "Unused Characters": "unused"
 };
 
-const bookMap = {
+const bookMap = 
+{
   "Main Series": "main",
   "Silent Stories": "silent",
   "None": "none"
@@ -747,27 +751,35 @@ const bookMap = {
 // FILTER FUNCTIONS
 // ================================
 
-function setLetter(letter) {
+function setLetter(letter) 
+{
   activeFilters.letter = letter;
   applyFilters();
 }
 
-function toggleBook(bookText) {
+function toggleBook(bookText) 
+{
   const book = bookMap[bookText];
-  if (activeFilters.books.includes(book)) {
+  if (activeFilters.books.includes(book)) 
+  {
     activeFilters.books = activeFilters.books.filter(b => b !== book);
-  } else {
+  } 
+
+  else 
+  {
     activeFilters.books.push(book);
   }
   applyFilters();
 }
 
-function setRole(roleText) {
+function setRole(roleText) 
+{
   activeFilters.role = roleMap[roleText];
   applyFilters();
 }
 
-function setNation(nation) {
+function setNation(nation) 
+{
   activeFilters.nation = nation;
   applyFilters();
 }
@@ -775,27 +787,32 @@ function setNation(nation) {
 // ================================
 // CENTRALE FILTER FUNCTION
 // ================================
-function applyFilters() {
+function applyFilters() 
+{
   document.querySelectorAll(".character").forEach(char => {
     let visible = true;
 
     // Letter filter
-    if (activeFilters.letter) {
+    if (activeFilters.letter) 
+    {
       if (!char.dataset.name.startsWith(activeFilters.letter)) visible = false;
     }
 
     // Role filter
-    if (activeFilters.role) {
+    if (activeFilters.role) 
+    {
       if (char.dataset.role !== activeFilters.role) visible = false;
     }
 
     // Nation filter
-    if (activeFilters.nation && activeFilters.nation !== "all") {
+    if (activeFilters.nation && activeFilters.nation !== "all") 
+    {
       if (char.dataset.nation !== activeFilters.nation) visible = false;
     }
 
     // Book filter (multiple)
-    if (activeFilters.books.length > 0) {
+    if (activeFilters.books.length > 0) 
+    {
       let characterBooks = char.dataset.book.split(",").map(b => b.trim());
       let matches = activeFilters.books.some(book => characterBooks.includes(book));
       if (!matches) visible = false;
@@ -809,13 +826,19 @@ function applyFilters() {
 // ACTIVE CLASS MANAGEMENT
 // ================================
 
-// Letters (1 actief)
-document.querySelectorAll(".letter").forEach(letterEl => {
-  letterEl.addEventListener("click", () => {
-    if (letterEl.classList.contains("active")) {
+// Letters
+document.querySelectorAll(".letter").forEach(letterEl => 
+{
+  letterEl.addEventListener("click", () => 
+  {
+    if (letterEl.classList.contains("active")) 
+    {
       letterEl.classList.remove("active");
       setLetter(null);
-    } else {
+    } 
+    
+    else 
+    {
       document.querySelectorAll(".letter").forEach(l => l.classList.remove("active"));
       letterEl.classList.add("active");
       setLetter(letterEl.textContent);
@@ -823,11 +846,12 @@ document.querySelectorAll(".letter").forEach(letterEl => {
   });
 });
 
-document.querySelectorAll(".subLetter").forEach(sub => {
-  sub.addEventListener("click", () => {
+document.querySelectorAll(".subLetter").forEach(sub => 
+{
+  sub.addEventListener("click", () => 
+  {
     setLetter(sub.textContent.trim());
 
-    // active state fix
     document.querySelectorAll(".letter, .subLetter").forEach(el => 
       el.classList.remove("active")
     );
@@ -836,21 +860,29 @@ document.querySelectorAll(".subLetter").forEach(sub => {
 });
 
 
-// Books (meerdere tegelijk)
-document.querySelectorAll("#books .filterOption").forEach(bookEl => {
-  bookEl.addEventListener("click", () => {
+// Books 
+document.querySelectorAll("#books .filterOption").forEach(bookEl => 
+{
+  bookEl.addEventListener("click", () => 
+  {
     bookEl.classList.toggle("active");
     toggleBook(bookEl.textContent.trim());
   });
 });
 
-// Roles (1 actief)
-document.querySelectorAll("#roles .filterOption").forEach(roleEl => {
-  roleEl.addEventListener("click", () => {
-    if (roleEl.classList.contains("active")) {
+// Roles
+document.querySelectorAll("#roles .filterOption").forEach(roleEl => 
+{
+  roleEl.addEventListener("click", () => 
+  {
+    if (roleEl.classList.contains("active")) 
+    {
       roleEl.classList.remove("active");
       setRole(null); 
-    } else {
+    } 
+
+    else 
+    {
       document.querySelectorAll("#roles .filterOption").forEach(r => r.classList.remove("active"));
       roleEl.classList.add("active");
       setRole(roleEl.textContent.trim());
@@ -859,22 +891,24 @@ document.querySelectorAll("#roles .filterOption").forEach(roleEl => {
 });
 
 
-// Nations (1 actief)
-document.querySelectorAll(".nationDropdownMenu li").forEach(nationEl => {
+// Nations
+document.querySelectorAll(".nationDropdownMenu li").forEach(nationEl => 
+{
   nationEl.addEventListener("click", () => {
-    if (nationEl.classList.contains("active")) {
-      // Deselected
+    if (nationEl.classList.contains("active")) 
+    {
       nationEl.classList.remove("active");
-      setNation("all"); // geen nation filter meer
-    } else {
-      // Selecteer deze en deselecteer de rest
+      setNation("all");
+    } 
+    
+    else 
+    {
       document.querySelectorAll(".nationDropdownMenu li").forEach(n => n.classList.remove("active"));
       nationEl.classList.add("active");
       setNation(nationEl.textContent.trim());
     }
   });
 });
-
 
 </script>
 </body>

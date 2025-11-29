@@ -196,7 +196,7 @@ header
   }
 }
 
-/* Open-state (mobiel) */
+/* Open-state (mobile) */
 .dropdownMenu.open 
 {
   transform: translate(-50%, 0);
@@ -584,6 +584,23 @@ footer
   .filterOption
   {
     font-size: 1rem;
+  }
+
+  #books, #roles
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #books span, #roles span
+  {
+    margin: 0.2rem 0;
+  }
+
+  #books span:not(.filterOption), #roles span:not(.filterOption)
+  {
+    display: none;
   }
 
   .letters
