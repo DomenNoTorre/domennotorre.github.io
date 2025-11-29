@@ -258,7 +258,7 @@ header.hidden
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   column-gap: 10rem;
 }
 
@@ -390,6 +390,17 @@ header.hidden
 .zloyvor:hover
 {
   color: #515151;
+}
+
+.allCharLink
+{
+  grid-column: 1/5;
+  grid-row: 4/5;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 2rem;
+  font-size: 3rem;
 }
 
 footer
@@ -535,6 +546,12 @@ footer
   {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .allCharLink
+  {
+    padding-bottom: 2rem;
+    font-size: 2rem;
   }
   
   .dcLogo 

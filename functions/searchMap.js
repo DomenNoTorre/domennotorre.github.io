@@ -15,17 +15,17 @@ const searchMap =
   "vicenci": "/nationPages/altipianiPages/castPages/vicenci.html",
   "viviana": "/nationPages/altipianiPages/castPages/viviana.html",
   
-  // 'Ard altanawue characters
+  // 'Ard Altanawue characters
 
   // Celerración characters
 
-  // Chuma baidisha characters
+  // Chuma Baidisha characters
 
   // Farostia characters
 
   // Granskog characters
 
-  // Jäädytetyt riimut characters
+  // Jäädytetyt Riimut characters
   "åse": "/nationPages/riimutPages/castPages/ase.html",
   "ase": "/nationPages/riimutPages/castPages/ase.html",
   "runemaster": "/nationPages/riimutPages/castPages/ase.html",
@@ -37,14 +37,14 @@ const searchMap =
   // Nesgen characters
   "osvaldo": "/nationPages/nesgenPages/castPages/osvaldo.html",
 
-  // Shokuminchi kokka characters
+  // Shokuminchi Kokka characters
 
   // Sothleigh characters
   "mycroft": "/nationPages/sothleighPages/castPages/mycroft.html",
 
   // Terpayâtre characters
 
-  // The wasteland Characters
+  // The Wasteland Characters
   "noah": "/nationPages/wastelandPages/castPages/noah.html",
 
   // Vriesland characters
@@ -84,11 +84,13 @@ const searchMap =
   // General stuff
   "about us": "/webpages/aboutUs.html",
   "books": "/index.html",
-  "inaugurate": "/webpages/msInfo.html",
-  "main series": "/webpages/msInfo.html",
   "home": "/index.html",
   "mainpage": "/index.html",
   "nations": "/nationPages/nations.html",
   "projects": "/webpages/projects.html",
   "other projects": "/webpages/projects.html",
+
+  // Books
+  "inaugurate": "/webpages/msInfo.html#bookOne",
+  "main series": "/webpages/msInfo.html"
 };

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters - Mindbound</title>
+    <link rel="stylesheet" href="../css/allCharacters.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="../img/favi.png">
+</head>
+<body>
+    <main>
+        <header> 
+            <ul class="headerList">
+                <li class="dropdown">
+                    <a class="info" href="#">Info</a>
+                    <ul class="dropdownMenu">
+                        <li><a href="../nationPages/nations.html">Nations</a></li>
+                        <li><a href="../index.html">Books</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </li>
+              <li class="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                    <ul id="suggestions" class="suggestions"></ul>
+                </li>
+                <li><a class="aboutUs" href="aboutUs.html">About Us</a></li>  
+            </ul>
+        </header>
+
+        <h1 class="mainTitle">Mindbound</h1>
+        
+        <img src="../img/headerImg.png" alt="headerImage" class="headerImg">
+
+        <div class="middleBlock">
+
+            <a href="javascript:history.back()" class="backButton">&lt;Back</a>
+            
+            <h2 class="secondTitle">All Characters</h2>
+
+            <span class="charFilters">
+
+              <hr style="border: 0; border-top: 0.1rem solid white; width: 90%; margin: 0px auto;">
+
+                <!-- Filter: Name -->
+                <div class="filterGroup">
+                  <p class="filterTitle">Name starts with:</p>
+                  <div class="letters">
+                    <div class="letterDropdown">
+                      <span class="letter mainLetter">A</span>
+                      <div class="letterDropdownMenu">
+                        <span class="subLetter">Á</span>
+                        <span class="subLetter">Å</span>
+                      </div>
+                    </div>
+                    <span class="letter">B</span>
+                    <span class="letter">C</span>
+                    <span class="letter">D</span>
+                    <span class="letter">E</span>
+                    <span class="letter">F</span>
+                    <span class="letter">G</span>
+                    <span class="letter">H</span>
+                    <span class="letter">I</span>
+                    <span class="letter">J</span>
+                    <span class="letter">K</span>
+                    <span class="letter">L</span>
+                    <span class="letter">M</span>
+                    <span class="letter">N</span>
+                    <span class="letter">O</span>
+                    <span class="letter">P</span>
+                    <span class="letter">Q</span>
+                    <span class="letter">R</span>
+                    <span class="letter">S</span>
+                    <span class="letter">T</span>
+                    <span class="letter">U</span>
+                    <span class="letter">V</span>
+                    <span class="letter">W</span>
+                    <span class="letter">X</span>
+                    <span class="letter">Y</span>
+                    <span class="letter">Z</span>
+                  </div>
+                </div>
+
+                <!-- Filter: Book -->
+                <div class="filterGroup" id="books">
+                  <p class="filterTitle">Series:</p>
+                  <span class="filterOption">Main Series</span>
+                  <span>-</span>
+                  <span class="filterOption">Silent Stories</span>
+                  <span>-</span>
+                  <span class="filterOption">None</span>
+                </div>
+
+                <!-- Filter: Role -->
+                <div class="filterGroup" id="roles">
+                  <p class="filterTitle">Role:</p>
+                  <span class="filterOption">Main Characters</span>
+                  <span>-</span>
+                  <span class="filterOption">Side Characters</span>
+                  <span>-</span>
+                  <span class="filterOption">Unused Characters</span>
+                </div>
+
+                <!-- Dropdown: Nation -->
+                <div class="nationDropdown">
+                  <p class="filterTitle">Nation:</p>
+                  <ul class="nationDropdownMenu">
+                    <li>Altipiani</li>
+                    <li>'Ard Altanawue</li>
+                    <li>Celerración</li>
+                    <li>Chuma Baidisha</li>
+                    <li>Farostia</li>
+                    <li>Granskog</li>
+                    <li>Jäädytetyt Riimut</li>
+                    <li>Leidrübreich</li>
+
+                    <li>Midprot</li>
+                    <li>Nesgen</li>
+                    <li>Shokuminchi Kokka</li>
+                    <li>Sothleigh</li>
+                    <li>Terpayâtre</li>
+                    <li>The Wasteland</li>
+                    <li>Vriesland</li>
+                    <li>Zloyvor</li>
+                  </ul>
+                </div>
+
+              <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 2rem auto;">
+            </span> 
+            
+            <div id="charactersContainer"></div>
+
+            <div class="charGrid">
+
+              <div class="character"
+                data-name="Alphonso Raffaelli"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main,silent">
+                Alphonso Raffaelli
+              </div>
+
+              <div class="character"
+                data-name="Alvatr"
+                data-nation="Granskog"
+                data-role="unused"
+                data-book="none">
+                Alvatr
+              </div>
+
+              <div class="character"
+                data-name="Amo Santone"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="silent">
+                Amo Santone
+              </div>
+
+              <div class="character"
+                data-name="Anastasia"
+                data-nation="Zloyvor"
+                data-role="main"
+                data-book="main">
+                Anastasia
+              </div>
+
+              <div class="character"
+                data-name="Allan Onslow"
+                data-nation="Chuma Baidisha"
+                data-role="side"
+                data-book="main">
+                Allan Onslow
+              </div>
+
+              <div class="character"
+                data-name="Annely Gudmundsson"
+                data-nation="Granskog"
+                data-role="side"
+                data-book="none">
+                Annely Gudmundsson
+              </div>
+
+              <div class="character"
+                data-name="Annely Gudmundsson"
+                data-nation="Granskog"
+                data-role="side"
+                data-book="none">
+                Annina Gudmundsson
+              </div>
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Ariya"
+                data-nation="Granskog"
+                data-role="unused"
+                data-book="none">
+                Ariya
+              </div>
+
+              <div class="character"
+                data-name="Ashley Sylvan"
+                data-nation="Granskog"
+                data-role="side"
+                data-book="main">
+                Ashley Sylvan
+              </div>
+
+              <div class="character"
+                data-name="Avery"
+                data-nation="The Wasteland"
+                data-role="main"
+                data-book="main">
+                Avery
+              </div>
+
+              <div class="character"
+                data-name="Azathoth"
+                data-nation="The Wasteland"
+                data-role="unused"
+                data-book="none">
+                Azathoth
+              </div>
+
+              <div class="character"
+                data-name="Bella Raffaelli"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main,silent">
+                Bella Raffaelli
+              </div>
+
+              <div class="character"
+                data-name="Camilla Accardi"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main">
+                Camilla Accardi
+              </div>
+
+              <div class="character"
+                data-name="Cario Vesco"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main,silent">
+                Cario Vesco
+              </div>
+
+              <div class="character"
+                data-name="CoSMo.DA"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main,silent">
+                CoSMo.DA
+              </div>
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Charles"
+                data-nation="Sothleigh"
+                data-role="unused"
+                data-book="none">
+                Charles
+              </div>
+
+              <!-- Mystery -->
+              <div class="character" 
+                data-name="Cowboy"
+                data-nation="The Wasteland"
+                data-role="unused"
+                data-book="none">
+                Cowboy
+              </div>
+
+              <div class="character" 
+                data-name="Daniel Zhdan"
+                data-nation="Zloyvor"
+                data-role="side"
+                data-book="main">
+                Daniel Zhdan
+              </div>
+
+              <div class="character"
+                data-name="Didrik Gudmundsson"
+                data-nation="Granskog"
+                data-role="side"
+                data-book="none">
+                Didrik Gudmundsson
+              </div>
+
+              <div class="character"
+                data-name="Elixrún"
+                data-nation="Granskog"
+                data-role="unused"
+                data-book="none">
+                Elixrún
+              </div>
+
+              <div class="character"
+                data-name="Eliza Dahl"
+                data-nation="Nesgen"
+                data-role="side"
+                data-book="silent">
+                Eliza Dahl
+              </div>
+
+              <div class="character"
+                data-name="Farida"
+                data-nation="'Ard Altanawue"
+                data-role="side"
+                data-book="none">
+                Farida
+              </div>
+
+              <div class="character"
+                data-name="Felix Sjöberg"
+                data-nation="Granskog"
+                data-role="unused"
+                data-book="none">
+                Felix Sjöberg
+              </div>
+
+              <div class="character"
+                data-name="Fosco Demonte"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="silent">
+                Fosco Demonte
+              </div>
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Gaute"
+                data-nation="Granskog"
+                data-role="unused"
+                data-book="none">
+                Gaute
+              </div>
+
+              <div class="character"
+                data-name="Gebhard"
+                data-nation="Leidrübreich"
+                data-role="unused"
+                data-book="none">
+                Gebhard
+              </div>
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Henry"
+                data-nation="Sothleigh"
+                data-role="unused"
+                data-book="none">
+                Henry
+              </div>
+
+              <div class="character"
+                data-name="Irina"
+                data-nation="Zloyvor"
+                data-role="side"
+                data-book="silent">
+                Irina
+              </div>
+
+              <div class="character"
+                data-name="Isolde Demonte"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="silent">
+                Isolde Demonte
+              </div>
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Jacob Murphy"
+                data-nation="Midprot"
+                data-role="unused"
+                data-book="none">
+                Jacob Murphy
+              </div>
+
+              <div class="character"
+                data-name="Jalib Alnaar"
+                data-nation="'Ard Altanawue"
+                data-role="unused"
+                data-book="none">
+                Jalib Alnaar
+              </div>
+
+              <div class="character"
+                data-name="Julia van Versinge"
+                data-nation="Vriesland"
+                data-role="side"
+                data-book="main">
+                Julia van Versinge
+              </div>
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Kaito"
+                data-nation="Shokuminchi Kokka"
+                data-role="unused"
+                data-book="none">
+                Kaito
+              </div>
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Kevin"
+                data-nation="Sothleigh"
+                data-role="unused"
+                data-book="none">
+                Kevin
+              </div>
+
+              <div class="character"
+                data-name="Mirwa"
+                data-nation="Vriesland"
+                data-role="unused"
+                data-book="none">
+                Mirwa
+              </div>
+
+              <div class="character"
+                data-name="Mnemos Craven"
+                data-nation="Zloyvor"
+                data-role="side"
+                data-book="main,silent">
+                Mnemos Craven
+              </div>
+
+              <div class="character"
+                data-name="Mohammed"
+                data-nation="'Ard Altanawue"
+                data-role="unused"
+                data-book="none">
+                Mohammed
+              </div>
+
+              <div class="character"
+                data-name="Mycroft Stemworth"
+                data-nation="Sothleigh"
+                data-role="side"
+                data-book="main">
+                Mycroft Stemworth
+              </div>
+
+              <div class="character"
+                data-name="Nathan van Leeuwe"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main">
+                Nathan van Leeuwe
+              </div>
+
+              <div class="character"
+                data-name="Nicolas Raffaelli"
+                data-nation="Altipiani"
+                data-role="main"
+                data-book="main,silent">
+                Nicolas Raffaelli
+              </div>
+
+              <div class="character"
+                data-name="Noah"
+                data-nation="The Wasteland"
+                data-role="side"
+                data-book="main">
+                Noah
+              </div>
+
+              <div class="character"
+                data-name="Nyakhtohu"
+                data-nation="Zloyvor"
+                data-role="unused"
+                data-book="none">
+                Nyakhtohu
+              </div>
+
+              <div class="character"
+                data-name="Osvaldo Lucido"
+                data-nation="Nesgen"
+                data-role="side"
+                data-book="silent">
+                Osvaldo Lucido
+              </div>
+
+              <div class="character"
+                data-name="Penelope Floros"
+                data-nation="Chuma Baidisha"
+                data-role="unused"
+                data-book="none">
+                Penelope Floros
+              </div>
+
+              <div class="character"
+                data-name="Philon Floros"
+                data-nation="Chuma Baidisha"
+                data-role="unused"
+                data-book="none">
+                Philon Floros
+              </div>
+
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Rasmus"
+                data-nation="Jäädytetyt Riimut"
+                data-role="unused"
+                data-book="none">
+                Rasmus
+              </div>
+
+              <div class="character"
+                data-name="Reve Craven"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main,silent">
+                Reve Craven
+              </div>
+
+              <div class="character"
+                data-name="Rocco Demonte"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main,silent">
+                Rocco Demonte
+              </div>
+
+              <div class="character"
+                data-name="Salvo Porfiotri"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main">
+                Salvo Porfiotri
+              </div>
+
+              <!-- Mystery -->
+              <div class="character"
+                data-name="Scarlett"
+                data-nation="Sothleigh"
+                data-role="unused"
+                data-book="none">
+                Scarlett
+              </div>
+
+              <div class="character"
+                data-name="Sophia Zanotti"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main,silent">
+                Sophia Zanotti
+              </div>
+
+              <div class="character"
+                data-name="Thandiea"
+                data-nation="Chuma Baidisha"
+                data-role="side"
+                data-book="silent">
+                Thandiea
+              </div>
+
+              <div class="character"
+                data-name="Valerio Demonte"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main,silent">
+                Valerio Demonte
+              </div>
+
+              <div class="character"
+                data-name="Vicenci"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="none">
+                Vicenci
+              </div>
+
+              <div class="character"
+                data-name="Viviana Querin"
+                data-nation="Altipiani"
+                data-role="side"
+                data-book="main">
+                Viviana Querin
+              </div>
+
+              <div class="character"
+                data-name="Zharosol"
+                data-nation="Zloyvor"
+                data-role="unused"
+                data-book="none">
+                Zharosol
+              </div>
+
+              <div class="character"
+                data-name="Ásgeir"
+                data-nation="Jäädytetyt Riimut"
+                data-role="unused"
+                data-book="none">
+                Ásgeir
+              </div>
+              
+              <div class="character"
+                data-name="Åse"
+                data-nation="Jäädytetyt Riimut"
+                data-role="main"
+                data-book="main">
+                Åse
+              </div>
+              
+            </div>
+        </div>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerText">
+                    <a href="https://discord.gg/Aw5rpJ3DN6">
+                        <img src="../img/dcLogo.png" alt="discordLogo" class="dcLogo">
+                    </a>
+                </div>
+                <img src="../img/footerImg.png" alt="footerImage" class="footerImg">
+            </div>
+        </footer>
+    </main>
+
+<script src="../functions/searchMap.js"></script>
+
+<script>
+// ====================
+// Scroll hide header
+// ====================
+const header = document.querySelector("header");
+if (header) 
+{
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => 
+  {
+    if (window.scrollY > lastScrollY) 
+    {
+      header.classList.add("hidden");
+    } 
+    
+    else 
+    {
+      header.classList.remove("hidden");
+    }
+    lastScrollY = window.scrollY;
+  });
+}
+
+// ====================
+// Dropdown menu
+// ====================
+document.querySelectorAll('.dropdown > a').forEach(link => 
+{
+  link.addEventListener('click', e => 
+  {
+    e.preventDefault();
+    const menu = link.nextElementSibling;
+    if (menu) menu.classList.toggle('open');
+  });
+});
+
+document.addEventListener('click', e => 
+{
+  document.querySelectorAll('.dropdownMenu.open').forEach(menu => 
+  {
+    if (!menu.parentElement.contains(e.target)) 
+    {
+      menu.classList.remove('open');
+    }
+  });
+});
+
+// ====================
+// Search input
+// ====================
+searchInput.addEventListener("keydown", function(e) 
+{
+  if (e.key === "Enter") 
+  {
+    e.preventDefault();
+    const query = this.value.toLowerCase().trim();
+
+    if (searchMap[query]) 
+    {
+      window.location.href = searchMap[query];
+    } 
+    
+    else 
+    {
+      alert("No results found for: " + query);
+    }
+  }
+});
+
+// ====================
+// Search suggestions
+// ====================
+
+const input = document.getElementById('searchInput');
+const suggestions = document.getElementById('suggestions');
+
+input.addEventListener('input', () => 
+{
+    const value = input.value.toLowerCase();
+    suggestions.innerHTML = '';
+    if (value) 
+    {
+        const filtered = Object.keys(searchMap).filter(name => name.startsWith(value));
+        filtered.forEach(name => 
+        {
+            const li = document.createElement('li');
+            li.textContent = name;
+            li.addEventListener('click', () => {
+                window.location.href = searchMap[name];
+            });
+            suggestions.appendChild(li);
+        });
+    }
+});
+
+// ====================
+// Character Filter
+// ====================
+const activeFilters = {
+  letter: null,
+  role: null,
+  nation: null,
+  books: []
+};
+
+// ================================
+// MAPPING
+// ================================
+const roleMap = {
+  "Main Characters": "main",
+  "Side Characters": "side",
+  "Unused Characters": "unused"
+};
+
+const bookMap = {
+  "Main Series": "main",
+  "Silent Stories": "silent",
+  "None": "none"
+};
+
+// ================================
+// FILTER FUNCTIONS
+// ================================
+
+function setLetter(letter) {
+  activeFilters.letter = letter;
+  applyFilters();
+}
+
+function toggleBook(bookText) {
+  const book = bookMap[bookText];
+  if (activeFilters.books.includes(book)) {
+    activeFilters.books = activeFilters.books.filter(b => b !== book);
+  } else {
+    activeFilters.books.push(book);
+  }
+  applyFilters();
+}
+
+function setRole(roleText) {
+  activeFilters.role = roleMap[roleText];
+  applyFilters();
+}
+
+function setNation(nation) {
+  activeFilters.nation = nation;
+  applyFilters();
+}
+
+// ================================
+// CENTRALE FILTER FUNCTION
+// ================================
+function applyFilters() {
+  document.querySelectorAll(".character").forEach(char => {
+    let visible = true;
+
+    // Letter filter
+    if (activeFilters.letter) {
+      if (!char.dataset.name.startsWith(activeFilters.letter)) visible = false;
+    }
+
+    // Role filter
+    if (activeFilters.role) {
+      if (char.dataset.role !== activeFilters.role) visible = false;
+    }
+
+    // Nation filter
+    if (activeFilters.nation && activeFilters.nation !== "all") {
+      if (char.dataset.nation !== activeFilters.nation) visible = false;
+    }
+
+    // Book filter (multiple)
+    if (activeFilters.books.length > 0) {
+      let characterBooks = char.dataset.book.split(",").map(b => b.trim());
+      let matches = activeFilters.books.some(book => characterBooks.includes(book));
+      if (!matches) visible = false;
+    }
+
+    char.style.display = visible ? "" : "none";
+  });
+}
+
+// ================================
+// ACTIVE CLASS MANAGEMENT
+// ================================
+
+// Letters (1 actief)
+document.querySelectorAll(".letter").forEach(letterEl => {
+  letterEl.addEventListener("click", () => {
+    if (letterEl.classList.contains("active")) {
+      letterEl.classList.remove("active");
+      setLetter(null);
+    } else {
+      document.querySelectorAll(".letter").forEach(l => l.classList.remove("active"));
+      letterEl.classList.add("active");
+      setLetter(letterEl.textContent);
+    }
+  });
+});
+
+document.querySelectorAll(".subLetter").forEach(sub => {
+  sub.addEventListener("click", () => {
+    setLetter(sub.textContent.trim());
+
+    // active state fix
+    document.querySelectorAll(".letter, .subLetter").forEach(el => 
+      el.classList.remove("active")
+    );
+    sub.classList.add("active");
+  });
+});
+
+
+// Books (meerdere tegelijk)
+document.querySelectorAll("#books .filterOption").forEach(bookEl => {
+  bookEl.addEventListener("click", () => {
+    bookEl.classList.toggle("active");
+    toggleBook(bookEl.textContent.trim());
+  });
+});
+
+// Roles (1 actief)
+document.querySelectorAll("#roles .filterOption").forEach(roleEl => {
+  roleEl.addEventListener("click", () => {
+    if (roleEl.classList.contains("active")) {
+      roleEl.classList.remove("active");
+      setRole(null); 
+    } else {
+      document.querySelectorAll("#roles .filterOption").forEach(r => r.classList.remove("active"));
+      roleEl.classList.add("active");
+      setRole(roleEl.textContent.trim());
+    }
+  });
+});
+
+
+// Nations (1 actief)
+document.querySelectorAll(".nationDropdownMenu li").forEach(nationEl => {
+  nationEl.addEventListener("click", () => {
+    if (nationEl.classList.contains("active")) {
+      // Deselected
+      nationEl.classList.remove("active");
+      setNation("all"); // geen nation filter meer
+    } else {
+      // Selecteer deze en deselecteer de rest
+      document.querySelectorAll(".nationDropdownMenu li").forEach(n => n.classList.remove("active"));
+      nationEl.classList.add("active");
+      setNation(nationEl.textContent.trim());
+    }
+  });
+});
+
+
+</script>
+</body>
+</html>

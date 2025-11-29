@@ -1,7 +1,6 @@
 html 
 {
   font-size: 16px; /* 1rem = 16px */
-  scroll-behavior: smooth;
 }
 
 @font-face
@@ -103,7 +102,7 @@ header
   padding: 0.4rem 2em;
   font-size: 2.25rem;
   text-align: center;
-    border: 0.1rem solid white;
+  border: 0.1rem solid white;
   border-radius: 0.5rem;
   outline: none;
   background-color: black;
@@ -213,6 +212,179 @@ header.hidden
   transform: translateY(-100%);
 }
 
+.backButton
+{ 
+  color: white; 
+  background-color: black; 
+  text-align: center; 
+  font-size: 2.25rem; 
+  font-weight: normal; 
+  letter-spacing: 0.15em; 
+  grid-column: 1/2; 
+  grid-row: 1/2; 
+  text-decoration: none; 
+  justify-self: center;
+  align-self: center; 
+  z-index: 10;
+}
+
+/* Character Filter */
+.charFilters 
+{
+  color: white;
+  display: block;
+  text-align: center;
+  font-family: inherit;
+}
+
+.filterGroup 
+{
+  margin: 1rem 0;
+}
+
+.filterTitle 
+{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.letters .letter,
+.filterOption 
+{
+  margin: 0 0.3rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.letter:hover,
+.filterOption:hover,
+.nationDropdownMenu li:hover
+{
+  background-color: #222222;
+}
+
+.letter.active,
+.filterOption.active,
+.nationDropdownMenu li.active
+{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+/*  Extra Letters */
+.letterDropdown 
+{
+  position: relative;
+  display: inline-block;
+}
+
+.letterDropdownMenu 
+{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  border: 2px solid white;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+.letterDropdown:hover .letterDropdownMenu 
+{
+  display: block;
+}
+
+.letterDropdownMenu .subLetter 
+{
+  display: block;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.letterDropdownMenu .subLetter:hover 
+{
+  background: white;
+  color: black;
+}
+
+/* Nation Dropdown */
+.nationDropdown 
+{
+  position: relative;
+  display: inline-block;
+}
+
+.nationDropdownMenu 
+{
+  display: grid;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  margin: 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.nationDropdown:hover .nationDropdownMenu 
+{
+  visibility: visible;
+  opacity: 1;
+  display: grid;
+}
+
+.nationDropdownMenu li 
+{
+  padding: 0.3;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.charGrid 
+{ 
+  grid-column: 1/5;
+  display: grid; 
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.25rem; 
+  padding: 1rem;
+  min-height: 250px;
+} 
+
+.character 
+{ 
+  padding: 0.8rem; 
+  border-radius: 10px; 
+  text-align: center; 
+  color: white; 
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.character:hover 
+{
+  background: rgba(255,255,255,0.1);
+  cursor: pointer;
+}
+
 .mainTitle 
 { 
   color: black;
@@ -243,26 +415,8 @@ header.hidden
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   column-gap: 10rem;
-}
-
-.middleBlockLowerContent
-{
-  grid-column: 1/5;
-  grid-row: 3/4;
-  display: grid;
-  grid-template-columns: auto 2fr;
-  grid-template-rows: auto auto auto auto auto;
-}
-
-.bookCoverImgOne
-{
-  grid-column: 1/2;
-  grid-row: 2/6;
-  height: 100%;
-  width: auto;
-  padding-left: 2rem;
 }
 
 .secondTitle
@@ -276,7 +430,7 @@ header.hidden
   letter-spacing: 0.15em;
 }
 
-.bookDirectors, .bookDirectors a
+.charFilters
 {
   grid-column: 1/5;
   grid-row: 2/3;
@@ -287,74 +441,16 @@ header.hidden
   text-align: center;
 }
 
-.bookTitleOne
+.charTable
 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  color: white;
-  text-align: center;
-  margin: 0;
-  font-size: 6rem;
-  font-weight: normal;
-  letter-spacing: 0.15em;
-}
-
-.infoTextOne
-{
-  grid-column: 2/3;
+  grid-column: 1/5;
   grid-row: 3/4;
   color: white;
-  text-align: left;
+  text-align: center;
   font-size: 2rem;
   font-weight: normal;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-.whereToReadOne
-{
-  grid-column: 2/3;
-  grid-row: 5/6;
-  color: white;
-  text-align: left;
-  font-size: 1.5rem;
-  font-weight: normal;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-.whereToReadOne a
-{
-  color: white;
-  text-decoration: none; 
-}
-
-.whereToReadOne a:hover
-{
-  color: #FF500A;
-}
-
-.backButton
-{ 
-  color: white; 
-  background-color: black; 
-  text-align: center; 
-  font-size: 2.25rem; 
-  font-weight: normal; 
-  letter-spacing: 0.15em; 
-  grid-column: 1/2; 
-  grid-row: 1/2; 
-  text-decoration: none; 
-  justify-self: center;
-  align-self: center; 
-  z-index: 10;
-}
-
-.footerCastImg
-{
-  grid-column: 1/5; 
-  grid-row: 4/5;
-  width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 footer
@@ -383,6 +479,7 @@ footer
   width: 100%;
   display: block;
 }
+
 
 .footerContainer 
 {
@@ -413,37 +510,12 @@ footer
     color: black !important;     
   }
 
-  .mainTitleWhite 
-  {
-    position: relative;     
-    top: auto;
-    left: auto;
-    transform: none;
-    text-align: center;
-    font-size: 3rem;        
-    margin: 3rem 0;  
-    color: white !important;     
-  }
-
   .secondTitle 
   {
     font-size: 3rem;
   }
 
-  .bookTitleOne
-  {
-    font-size: 3rem;
-  }
-
   .middleBlock 
-  {
-    display: flex;
-    flex-direction: column;  
-    gap: 2rem;             
-    align-items: center;
-  }
-
-  .middleBlockLowerContent 
   {
     display: flex;
     flex-direction: column;  
@@ -504,22 +576,43 @@ footer
     padding-top: 0.5rem;
   }
 
-  .bookDirectors, .bookDirectors a
-  {
-    font-size: 1.25rem;
-  }
-
-  .infoTextOne
+  .filterTitle
   {
     font-size: 1.5rem;
   }
 
-  .bookCoverImgOne
+  .filterOption
   {
-    height: auto;
-    width: 75%;
-    padding: 0;
+    font-size: 1rem;
   }
+
+  .letters
+  {
+    font-size: 1rem;
+  }
+
+  .nationDropdownMenu 
+  {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .nationDropdownMenu li
+  {
+    font-size: 1rem;
+  }
+
+  .character 
+  { 
+    font-size: 1rem; 
+  }
+
+  .charGrid 
+  { 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem; 
+    padding: 1rem;
+    min-height: 250px;
+  } 
   
   .dcLogo 
   {
