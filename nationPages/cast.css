@@ -258,13 +258,13 @@ header.hidden
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
 }
 
 .sideCastImg
 {
   grid-column: 1/2;
-  grid-row: 1/4;
+  grid-row: 1/5;
   height: 100%;
   width: auto;
 }
@@ -278,18 +278,34 @@ header.hidden
   font-size: 6.25rem;
   font-weight: normal;
   letter-spacing: 0.15em;
+  margin-bottom: 0;
+}
+
+.creditList
+{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .castText
 {
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 3/4;
   color: white;
   text-align: center;
   font-size: 2rem;
   font-weight: normal;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .backButton
@@ -301,7 +317,7 @@ header.hidden
   font-weight: normal; 
   letter-spacing: 0.15em; 
   grid-column: 2/4; 
-  grid-row: 3/4; 
+  grid-row: 4/5; 
   text-decoration: none; 
   justify-self: center;
   align-self: center; 
@@ -312,7 +328,7 @@ header.hidden
 .footerCastImg
 {
   grid-column: 1/5; 
-  grid-row: 4/5;
+  grid-row: 5/6;
   width: 100%;
 }
 
@@ -418,7 +434,7 @@ footer
     padding: 0.5rem 0;
   }
 
-    .searchBar 
+  .searchBar 
   {
     position: relative;
     margin: 0 auto; 
@@ -450,9 +466,22 @@ footer
     padding-top: 0.5rem;
   }
 
+  .creditList 
+  {
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .creditList span 
+  {
+    display: none;
+  }
+
   .castText
   {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .sideCastImg

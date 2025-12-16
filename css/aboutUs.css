@@ -282,6 +282,8 @@ header.hidden
   letter-spacing: 0.15em;
   text-decoration: none;
   text-align: center;
+  transition-property: color;
+  transition-duration: 0.250s;
 }
 
 .wpLink:hover

@@ -310,6 +310,15 @@ header.hidden
 {
   grid-column: 3/5;
   padding-right: 5rem;
+  transition-property: color;
+  transition-duration: 0.750s;
+}
+
+.nationListRight a,
+.nationListLeft a
+{
+  transition-property: color;
+  transition-duration: 0.250s;
 }
 
 .altipiani:hover
@@ -394,13 +403,36 @@ header.hidden
 
 .allCharLink
 {
-  grid-column: 1/5;
+  grid-column: 2/4;
   grid-row: 4/5;
   color: white;
   text-align: center;
-  text-decoration: none;
+  text-decoration:none;
   padding-bottom: 2rem;
   font-size: 3rem;
+  position: relative;
+  display: inline-block;  
+  justify-self: center;
+}
+
+.allCharLink::after
+{
+  content: "";
+  left: 50%;
+  bottom: 1.5rem;
+  position: absolute;
+
+  width: 0;
+  height: 3px;
+  background-color: white;
+
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.allCharLink:hover::after
+{
+  width: 100%;
+  left: 0;
 }
 
 footer

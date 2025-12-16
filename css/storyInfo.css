@@ -103,7 +103,7 @@ header
   padding: 0.4rem 2em;
   font-size: 2.25rem;
   text-align: center;
-    border: 0.1rem solid white;
+  border: 0.1rem solid white;
   border-radius: 0.5rem;
   outline: none;
   background-color: black;
@@ -287,6 +287,33 @@ header.hidden
   text-align: center;
 }
 
+.bookOneDirector, .bookTwoDirector
+{
+  position: relative;
+  display: inline-block;  
+  justify-self: center;
+}
+
+.bookOneDirector::after, .bookTwoDirector::after
+{
+  content: "";
+  left: 50%;
+  top: 2.25rem;
+  position: absolute;
+
+  width: 0;
+  height: 3px;
+  background-color: white;
+
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.bookOneDirector:hover::after, .bookTwoDirector:hover::after
+{
+  width: 100%;
+  left: 0;
+}
+
 .bookTitleOne
 {
   grid-column: 2/3;
@@ -327,6 +354,8 @@ header.hidden
 {
   color: white;
   text-decoration: none; 
+  transition-property: color;
+  transition-duration: 0.250s;
 }
 
 .whereToReadOne a:hover

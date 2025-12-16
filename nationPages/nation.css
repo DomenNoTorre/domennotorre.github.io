@@ -298,6 +298,17 @@ header.hidden
   letter-spacing: 0.15em;
 }
 
+.secondTitleRiimut
+{
+  grid-column: 1/5;
+  grid-row: 1/2;
+  color: white;
+  text-align: center;
+  font-size: 5.5rem;
+  font-weight: normal;
+  letter-spacing: 0.10em;
+}
+
 .nationText
 {
   grid-column: 1/5;
