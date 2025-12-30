@@ -584,7 +584,12 @@ footer
     color: white !important;     
   }
 
-  .secondTitle 
+  .secondTitle
+  {
+    font-size: 3rem;
+  }
+
+  .secondTitleRiimut
   {
     font-size: 3rem;
   }
