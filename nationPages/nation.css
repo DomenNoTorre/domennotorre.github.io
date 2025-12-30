@@ -337,7 +337,15 @@ header.hidden
 .castCoverOne, 
 .castCoverTwo, 
 .castCoverThree, 
-.castCoverFour
+.castCoverFour,
+.castCoverFive,
+.castCoverSix,
+.castCoverSeven,
+.castCoverEight,
+.castCoverNine,
+.castCoverTen,
+.castCoverEleven,
+.castCoverTwelve
 {
   text-align: center;
 }
@@ -366,12 +374,68 @@ header.hidden
   grid-row: 4/5;
 }
 
+.castCoverFive
+{
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+
+.castCoverSix
+{
+  grid-column: 2/3;
+  grid-row: 6/7;
+}
+
+.castCoverSeven
+{
+  grid-column: 3/4;
+  grid-row: 6/7;
+}
+
+.castCoverEight
+{
+  grid-column: 4/5;
+  grid-row: 6/7;
+}
+
+.castCoverNine
+{
+  grid-column: 1/2;
+  grid-row: 8/9;
+}
+
+.castCoverTen
+{
+  grid-column: 2/3;
+  grid-row: 8/9;
+}
+
+.castCoverEleven
+{
+  grid-column: 3/4;
+  grid-row: 8/9;
+}
+
+.castCoverTwelve
+{
+  grid-column: 4/5;
+  grid-row: 8/9;
+}
+
 /* Text */
 
 .castTextOne, 
 .castTextTwo, 
 .castTextThree, 
-.castTextFour
+.castTextFour,
+.castTextFive,
+.castTextSix,
+.castTextSeven,
+.castTextEight,
+.castTextNine,
+.castTextTen,
+.castTextEleven,
+.castTextTwelve
 {
   text-decoration: none;
   text-align: center;
@@ -401,6 +465,54 @@ header.hidden
 {
   grid-column: 4/5;
   grid-row: 5/6;
+}
+
+.castTextFive
+{
+  grid-column: 1/2;
+  grid-row: 7/8;
+}
+
+.castTextSix
+{
+  grid-column: 2/3;
+  grid-row: 7/8;
+}
+
+.castTextSeven
+{
+  grid-column: 3/4;
+  grid-row: 7/8;
+}
+
+.castTextEight
+{
+  grid-column: 4/5;
+  grid-row: 7/8;
+}
+
+.castTextNine
+{
+  grid-column: 1/2;
+  grid-row: 9/10;
+}
+
+.castTextTen
+{
+  grid-column: 2/3;
+  grid-row: 9/10;
+}
+
+.castTextEleven
+{
+  grid-column: 3/4;
+  grid-row: 9/10;
+}
+
+.castTextTwelve
+{
+  grid-column: 4/5;
+  grid-row: 9/10;
 }
 
 footer
