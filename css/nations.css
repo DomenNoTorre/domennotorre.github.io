@@ -419,11 +419,11 @@ header.hidden
 {
   content: "";
   left: 50%;
-  bottom: 1.5rem;
+  bottom: 2rem;
   position: absolute;
 
   width: 0;
-  height: 3px;
+  height: 0.1rem;
   background-color: white;
 
   transition: width 0.3s ease, left 0.3s ease;

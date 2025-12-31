@@ -196,7 +196,7 @@ header
   }
 }
 
-/* Open-state (mobiel) */
+/* Open-state (mobile) */
 .dropdownMenu.open 
 {
   transform: translate(-50%, 0);
@@ -274,17 +274,79 @@ header.hidden
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1;
 }
 
 .middleBlockLowerContent
 {
   grid-column: 1/5;
+  grid-row: 4/5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: repeat(3, auto);
   column-gap: 10rem;
   margin-left: 5rem;
   margin-right: 5rem;
+}
+
+.middleBlockOneDivinity,
+.middleBlockTwoDivinity,
+.middleBlockThreeDivinity,
+.middleBlockFourDivinity
+{
+  grid-column: 1/5;
+  grid-row: 6/7;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  column-gap: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.middleBlockOneDivinity
+{
+  grid-template-columns: 1fr;
+}
+
+.middleBlockTwoDivinity
+{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.middleBlockThreeDivinity
+{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.middleBlockFourDivinity
+{
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mentions
+{
+  grid-column: 1/5;
+  grid-row: 8/9;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.mention
+{
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: normal;
+  border-radius: 10px; 
+}
+
+.mention:hover 
+{
+  background: rgba(255,255,255,0.1);
+  cursor: pointer;
 }
 
 .secondTitle
@@ -332,6 +394,94 @@ header.hidden
   letter-spacing: 0.15em;
 }
 
+.divinityTitle
+{
+  grid-column: 1/5;
+  grid-row: 5/6;
+  color: white;
+  text-align: center;
+  font-size: 6.25rem;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+}
+
+.mentionsTitle
+{
+  grid-column: 1/5;
+  grid-row: 7/8;
+  color: white;
+  text-align: center;
+  font-size: 6.25rem;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+}
+
+/* Divinity Covers */
+
+.divinityOneCover,
+.divinityTwoCover,
+.divinityThreeCover,
+.divinityFourCover
+{
+  display: flex;
+  justify-content: center;
+}
+
+.divinityTwoCover
+{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.divinityThreeCover
+{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.divinityFourCover
+{
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+/* Divinity Text */
+
+.divinityOneText,
+.divinityTwoText,
+.divinityThreeText,
+.divinityFourText
+{
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 2.25rem;
+}
+
+.divinityOneText
+{
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.divinityTwoText
+{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.divinityThreeText
+{
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.divinityFourText
+{
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
 /* Covers */
 
 .castCoverOne, 
@@ -347,79 +497,80 @@ header.hidden
 .castCoverEleven,
 .castCoverTwelve
 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .castCoverOne
 {
   grid-column: 1/2;
-  grid-row: 4/5;
+  grid-row: 1/2;
 }
 
 .castCoverTwo
 {
   grid-column: 2/3;
-  grid-row: 4/5;
+  grid-row: 1/2;
 }
 
 .castCoverThree
 {
   grid-column: 3/4;
-  grid-row: 4/5;
+  grid-row: 1/2;
 }
 
 .castCoverFour
 {
   grid-column: 4/5;
-  grid-row: 4/5;
+  grid-row: 1/2;
 }
 
 .castCoverFive
 {
   grid-column: 1/2;
-  grid-row: 6/7;
+  grid-row: 3/4;
 }
 
 .castCoverSix
 {
   grid-column: 2/3;
-  grid-row: 6/7;
+  grid-row: 3/4;
 }
 
 .castCoverSeven
 {
   grid-column: 3/4;
-  grid-row: 6/7;
+  grid-row: 3/4;
 }
 
 .castCoverEight
 {
   grid-column: 4/5;
-  grid-row: 6/7;
+  grid-row: 3/4;
 }
 
 .castCoverNine
 {
   grid-column: 1/2;
-  grid-row: 8/9;
+  grid-row: 5/6;
 }
 
 .castCoverTen
 {
   grid-column: 2/3;
-  grid-row: 8/9;
+  grid-row: 5/6;
 }
 
 .castCoverEleven
 {
   grid-column: 3/4;
-  grid-row: 8/9;
+  grid-row: 5/6;
 }
 
 .castCoverTwelve
 {
   grid-column: 4/5;
-  grid-row: 8/9;
+  grid-row: 5/6;
 }
 
 /* Text */
@@ -446,73 +597,73 @@ header.hidden
 .castTextOne
 {
   grid-column: 1/2;
-  grid-row: 5/6;
+  grid-row: 2/3;
 }
 
 .castTextTwo
 {
   grid-column: 2/3;
-  grid-row: 5/6;
+  grid-row: 2/3;
 }
 
 .castTextThree
 {
   grid-column: 3/4;
-  grid-row: 5/6;
+  grid-row: 2/3;
 }
 
 .castTextFour
 {
   grid-column: 4/5;
-  grid-row: 5/6;
+  grid-row: 2/3;
 }
 
 .castTextFive
 {
   grid-column: 1/2;
-  grid-row: 7/8;
+  grid-row: 4/5;
 }
 
 .castTextSix
 {
   grid-column: 2/3;
-  grid-row: 7/8;
+  grid-row: 4/5;
 }
 
 .castTextSeven
 {
   grid-column: 3/4;
-  grid-row: 7/8;
+  grid-row: 4/5;
 }
 
 .castTextEight
 {
   grid-column: 4/5;
-  grid-row: 7/8;
+  grid-row: 4/5;
 }
 
 .castTextNine
 {
   grid-column: 1/2;
-  grid-row: 9/10;
+  grid-row: 6/7;
 }
 
 .castTextTen
 {
   grid-column: 2/3;
-  grid-row: 9/10;
+  grid-row: 6/7;
 }
 
 .castTextEleven
 {
   grid-column: 3/4;
-  grid-row: 9/10;
+  grid-row: 6/7;
 }
 
 .castTextTwelve
 {
   grid-column: 4/5;
-  grid-row: 9/10;
+  grid-row: 6/7;
 }
 
 footer
@@ -594,7 +745,9 @@ footer
     font-size: 3rem;
   }
 
-  .thirdTitle
+  .thirdTitle,
+  .divinityTitle,
+  .mentionsTitle
   {
     font-size: 3rem;
   }
@@ -609,10 +762,37 @@ footer
 
   .middleBlockLowerContent
   {
-    display: flex;
-    flex-direction: column;  
-    gap: 2rem;             
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    column-gap: 3rem; 
+    row-gap: 1rem;            
     align-items: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .middleBlockTwoDivinity,
+  .middleBlockThreeDivinity,
+  .middleBlockFourDivinity
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    column-gap: 3rem; 
+    row-gap: 1rem;            
+    align-items: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .mentions
+  {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
+
+  .mention
+  {
+    font-size: 1.5rem;
   }
 
   header 
@@ -673,17 +853,196 @@ footer
     font-size: 1.5rem;
   }
 
-  .castCoverOne, 
-  .castCoverTwo, 
-  .castCoverThree, 
-  .castCoverFour,
+  .castCoverOne img, 
+  .castCoverTwo img, 
+  .castCoverThree img, 
+  .castCoverFour img,
+  .castCoverFive img,
+  .castCoverSix img,
+  .castCoverSeven img,
+  .castCoverEight img,
+  .castCoverNine img,
+  .castCoverTen img,
+  .castCoverEleven img,
+  .castCoverTwelve img,
+  /* Divinity */
+  .divinityOneCover img,
+  .divinityTwoCover img,
+  .divinityThreeCover img,
+  .divinityFourCover img
+  {
+    width: 100%;
+    height: auto;
+  }
+
   .castTextOne, 
   .castTextTwo, 
   .castTextThree, 
+  .castTextFour,
+  .castTextFive,
+  .castTextSix,
+  .castTextSeven,
+  .castTextEight,
+  .castTextNine,
+  .castTextTen,
+  .castTextEleven,
+  .castTextTwelve,
+  /* Divinity */
+  .divinityOneText,
+  .divinityTwoText,
+  .divinityThreeText,
+  .divinityFourText
+  {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  /* 1 by 2 alignment img */
+  .castCoverOne
+  {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .castCoverTwo
+  {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .castCoverThree
+  {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .castCoverFour
+  {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .castCoverFive
+  {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+
+  .castCoverSix
+  {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+
+  .castCoverSeven
+  {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+
+  .castCoverEight
+  {
+    grid-column: 2/3;
+    grid-row: 7/8;
+  }
+
+  .castCoverNine
+  {
+    grid-column: 1/2;
+    grid-row: 9/10;
+  }
+
+  .castCoverTen
+  {
+    grid-column: 2/3;
+    grid-row: 9/10;
+  }
+
+  .castCoverEleven
+  {
+    grid-column: 1/2;
+    grid-row: 11/12;
+  }
+
+  .castCoverTwelve
+  {
+    grid-column: 2/3;
+    grid-row: 11/12;
+  }
+
+  /* 1 by 2 alignment text */
+  .castTextOne
+  {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .castTextTwo
+  {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .castTextThree
+  {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
   .castTextFour
   {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .castTextFive
+  {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  .castTextSix
+  {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+
+  .castTextSeven
+  {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+
+  .castTextEight
+  {
+    grid-column: 2/3;
+    grid-row: 8/9;
+  }
+
+  .castTextNine
+  {
+    grid-column: 1/2;
+    grid-row: 10/11;
+  }
+
+  .castTextTen
+  {
+    grid-column: 2/3;
+    grid-row: 10/11;
+  }
+
+  .castTextEleven
+  {
+    grid-column: 1/2;
+    grid-row: 12/13;
+  }
+
+  .castTextTwelve
+  {
+    grid-column: 2/3;
+    grid-row: 12/13;
   }
   
   .dcLogo 
