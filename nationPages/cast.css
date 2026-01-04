@@ -196,7 +196,7 @@ header
   }
 }
 
-/* Open-state (mobiel) */
+/* Open-state (mobile) */
 .dropdownMenu.open 
 {
   transform: translate(-50%, 0);
@@ -299,13 +299,47 @@ header.hidden
   grid-column: 2/3;
   grid-row: 3/4;
   color: white;
-  text-align: center;
-  font-size: 2rem;
+  text-align: left;
+  font-size: 1.75rem;
   font-weight: normal;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   margin-top: 1rem;
   margin-bottom: 0;
+}
+
+.referLink
+{
+  grid-column: 2/3;
+  grid-row: 3/4;
+  color: white;
+  text-align: left;
+  font-weight: normal;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;  
+  justify-self: center;
+  font-style: italic;
+}
+
+.referLink::after
+{
+  content: "";
+  left: 50%;
+  bottom: 0rem;
+  position: absolute;
+
+  width: 0;
+  height: 0.1rem;
+  background-color: white;
+
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.referLink:hover::after
+{
+  width: 100%;
+  left: 0;
 }
 
 .backButton
@@ -322,7 +356,8 @@ header.hidden
   justify-self: center;
   align-self: center; 
   z-index: 10;
-  padding-bottom: 1.563rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .footerCastImg

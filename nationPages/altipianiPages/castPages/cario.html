@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindbound</title>
-    <link rel="stylesheet" href="css/mainpage.css" type="text/css">
-    <link rel="icon" type="image/x-icon" href="img/favi.png">
+    <title>Cario - Mindbound</title>
+    <link rel="stylesheet" href="../../cast.css" type="text/css">
+     <link rel="icon" type="image/x-icon" href="../../../img/favi.png">
 </head>
 <body>
     <main>
@@ -14,83 +14,52 @@
                 <li class="dropdown">
                     <a class="info" href="#">Info</a>
                     <ul class="dropdownMenu">
-                        <li><a href="nationPages/nations.html">Nations</a></li>
-                        <li><a href="index.html">Books</a></li>
-                        <li><a href="webpages/projects.html">Projects</a></li>
+                        <li><a href="../../nations.html">Nations</a></li>
+                        <li><a href="../../../index.html">Books</a></li>
+                        <li><a href="../../../webpages/projects.html">Projects</a></li>
                     </ul>
                 </li>
-                <li class="searchBar">
+              <li class="searchBar">
                     <input type="text" id="searchInput" placeholder="Search..." />
                     <ul id="suggestions" class="suggestions"></ul>
                 </li>
-                <li><a class="aboutUs" href="webpages/aboutUs.html">About Us</a></li>  
+                <li><a class="aboutUs" href="../../../webpages/aboutUs.html">About Us</a></li>  
             </ul>
         </header>
 
-        <h1 class="mainTitle">Mindbound</h1>
+        <h1 class="mainTitleWhite">Mindbound</h1>
         
-        <img src="img/headerImg.png" alt="headerImage" class="headerImg">
+        <img src="../altipianiImg/altipianiHeader.png" alt="headerImage" class="headerImg">
 
         <div class="middleBlock">
+
+          <img src="../altipianiImg/castPlaceholder.png" alt="castImage" class="sideCastImg">
             
-            <h2 class="secondTitle">Our books</h2>
+          <h2 class="secondTitle">Cario Vesco</h2>
 
-            <!-- Main Series -->
-            <div class="bookStack">
-                <a href="webpages/msInfo.html" class="bookOneCover">
-                    <img src="img/bookCover.png" alt="msBookOneCover">
-                </a>
+          <span class="creditList">
 
-                <a href="#" class="bookTwoCover">
-                    <img src="img/bookCover.png" alt="msBookTwoCover">
-                </a>
+            <hr style="border: 0; border-top: 0.1rem solid white; width: 90%; margin: 0px auto;">
 
-                <a href="#" class="bookThreeCover">
-                    <img src="img/bookCover.png" alt="msBookThreeCover">
-                </a>
-            </div>
+            <p>Headshot by: WIP</p>
+            <p>Full body by: WIP</p>
+            <p>Reference sheet by: WIP</p>
+          
+            <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 2rem auto;">
 
-            <a class="msText" href="webpages/msInfo.html">
-                <p>Main Series</p>
-            </a>
+          </span>
 
-            <!-- Silent Stories -->
-            <div class="bookStack ss">
-                <a href="https://www.wattpad.com/story/370999206-mindbound-silent-stories" class="bookOneCover">
-                    <img src="img/bookCover.png" alt="ssBookOneCover">
-                </a>
+          <p class="castText">
+            The Emperor's right hand and trusted first advisor, Cario Vesco. Valerio isn't the first Emperor he's served under,
+             also having served Valerio's father and some claim even his grandfather. He takes his job as advisor very seriously,
+              always making sure everything is going smoothly and assisting the Emperor wherever he can. Other than that,
+               he happens to be his colleague <a class="referLink" href="reve.html">Reve</a>'s favorite person to annoy after meetings, but also one of the few people
+                that manages to get him to shut him up.
+          </p>
 
-                <a href="#" class="bookTwoCover">
-                    <img src="img/bookCover.png" alt="ssBookTwoCover">
-                </a>
+          <a href="javascript:history.back()" class="backButton">&lt;Back</a>
 
-                <a href="#" class="bookThreeCover">
-                    <img src="img/bookCover.png" alt="ssBookThreeCover">
-                </a>
-            </div>
-
-            <a class="ssText" href="https://www.wattpad.com/story/370999206-mindbound-silent-stories">
-                <p>Silent Stories</p>
-            </a>
-
-            <!-- Lost Pages -->
-            <div class="bookStack lp">
-                <a href="#" class="bookOneCover">
-                    <img src="img/bookCover.png" alt="lpBookOneCover">
-                </a>
-
-                <a href="#" class="bookTwoCover">
-                    <img src="img/bookCover.png" alt="lpBookTwoCover">
-                </a>
-
-                <a href="#" class="bookThreeCover">
-                    <img src="img/bookCover.png" alt="lpBookThreeCover">
-                </a>
-            </div>
-
-            <a class="lpText" href="https://www.wattpad.com/story/368390914-mindbound-inaugurate">
-                <p>Lost Pages(WIP)</p>
-            </a>
+          <img src="../altipianiImg/castFooterPlaceholder.png" alt="footerCastImage" class="footerCastImg">
 
         </div>
 
@@ -98,15 +67,15 @@
             <div class="footerContainer">
                 <div class="footerText">
                     <a href="https://discord.gg/Aw5rpJ3DN6">
-                        <img src="img/dcLogo.png" alt="discordLogo" class="dcLogo">
+                        <img src="../../../img/dcLogo.png" alt="discordLogo" class="dcLogo">
                     </a>
                 </div>
-                <img src="img/footerImg.png" alt="footerImage" class="footerImg">
+                <img src="../altipianiImg/altipianiFooter.png" alt="footerImage" class="footerImg">
             </div>
         </footer>
     </main>
 
-<script src="functions/searchMapLocal.js"></script>
+<script src="../../../functions/searchMap.js"></script>
 
 <script>
 // ====================
@@ -121,7 +90,10 @@ if (header)
     if (window.scrollY > lastScrollY) 
     {
       header.classList.add("hidden");
-    } else {
+    } 
+    
+    else 
+    {
       header.classList.remove("hidden");
     }
     lastScrollY = window.scrollY;
@@ -199,8 +171,6 @@ input.addEventListener('input', () =>
         });
     }
 });
-
 </script>
-
 </body>
 </html>

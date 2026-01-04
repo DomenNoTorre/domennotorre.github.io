@@ -310,15 +310,13 @@ header.hidden
 {
   grid-column: 3/5;
   padding-right: 5rem;
-  transition-property: color;
-  transition-duration: 0.750s;
 }
 
 .nationListRight a,
 .nationListLeft a
 {
   transition-property: color;
-  transition-duration: 0.250s;
+  transition-duration: 0.400s;
 }
 
 .altipiani:hover
