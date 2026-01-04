@@ -514,9 +514,17 @@ footer
     display: none;
   }
 
+  .creditList p
+  {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+
   .castText
   {
     font-size: 1.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .sideCastImg
