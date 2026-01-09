@@ -688,7 +688,26 @@ footer
     padding: 0.5rem;
     min-height: 250px;
   } 
-  
+
+  .characterInfo 
+  {
+    width: 7.5rem;
+    padding: 0.5rem;
+    border: 1px solid white;
+  }
+
+  .characterInfo h4
+  {
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem;
+  }
+
+  .characterInfo p
+  {
+    font-size: 0.5rem;
+  }
+
   .dcLogo 
   {
     height: 2rem;
