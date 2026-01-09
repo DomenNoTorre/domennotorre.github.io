@@ -338,6 +338,7 @@ header.hidden
   visibility: hidden;
   opacity: 0;
   transition: 0.2s;
+  z-index: 20;
 }
 
 .nationDropdown:hover .nationDropdownMenu 
@@ -365,6 +366,7 @@ header.hidden
   gap: 0.25rem; 
   padding: 1rem;
   min-height: 250px;
+  overflow: visible;
 } 
 
 .character 
@@ -377,12 +379,68 @@ header.hidden
   display: flex;
   align-items: center;
   justify-content: center; 
+  position: relative;
+  transition-property: background-color;
+  transition-duration: 0.400s;
 }
 
 .character:hover 
 {
-  background: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.1);
   cursor: pointer;
+}
+
+.character:hover .characterInfo:not(.active),
+.characterInfo.active 
+{
+  display: block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.characterInfo 
+{
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateX(0) translateY(-50%);
+
+  width: 20rem;
+  max-width: calc(100vw - 2rem);
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 10;
+  display: none;
+}
+
+.characterInfo h4
+{
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 1.5rem 0.5rem;
+}
+
+.characterInfo a
+{
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: currentColor; 
+  text-decoration-thickness: 0.1rem; 
+}
+
+.characterInfo.flipped 
+{
+  left: auto;
+  right: 100%;
+  transform: translateX(0) translateY(-50%);
 }
 
 .mainTitle 

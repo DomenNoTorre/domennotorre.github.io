@@ -111,6 +111,16 @@
                 <p class="mention">To</p>
                 <p class="mention">be</p>
                 <p class="mention">added</p>
+
+                <!-- <div class="mention">To Be Added
+                    <div class="mentionInfo">
+                        <h4>To Be Added</h4>
+                        
+                        <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                        <p>(WIP)</p>
+                    </div>
+                </div>  -->
              </div>
 
         </div>
@@ -222,6 +232,59 @@ input.addEventListener('input', () =>
             suggestions.appendChild(li);
         });
     }
+});
+
+// ====================
+// Box stays when clicked
+// ====================
+
+document.querySelectorAll('.mention').forEach(mention => {
+  const info = mention.querySelector('.mentionInfo');
+
+  function checkFlip() {
+    if (!info.classList.contains('flipped')) {
+      info.style.visibility = 'visible';
+      const rect = info.getBoundingClientRect();
+      const parentRect = mention.getBoundingClientRect(); 
+     
+      if (rect.right > window.innerWidth - 10) {
+        info.classList.add('flipped');
+      }
+
+      if (!info.classList.contains('active')) {
+        info.style.visibility = '';
+      }
+    }
+  }
+
+  // HOVER
+  mention.addEventListener('mouseenter', () => {
+    checkFlip();
+  });
+
+  // CLICK
+  mention.addEventListener('click', e => {
+    e.stopPropagation();
+
+    // Close other active boxes
+    document.querySelectorAll('.mentionInfo.active').forEach(openInfo => {
+      if (openInfo !== info) openInfo.classList.remove('active');
+    });
+
+    if (info.classList.contains('active')) {
+      info.classList.remove('active');
+    } else {
+      info.classList.add('active');
+      checkFlip();
+    }
+  });
+});
+
+// Close everything else
+document.addEventListener('click', () => {
+  document.querySelectorAll('.mentionInfo.active').forEach(info => {
+    info.classList.remove('active');
+  });
 });
 </script>
 </body>

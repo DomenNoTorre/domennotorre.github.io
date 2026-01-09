@@ -147,13 +147,77 @@
              <h2 class="mentionsTitle">Honorable Mentions</h2>
 
              <div class="mentions">
-                <p class="mention">Alphonso</p> 
-                <p class="mention">Amo</p> 
-                <p class="mention">Bella</p> 
-                <p class="mention">Fosco</p>
-                <p class="mention">Isolde</p>  
-                <p class="mention">Nathan</p> 
-                <p class="mention">Sophia</p>
+                <div class="mention">Alphonso
+
+                    <div class="mentionInfo">
+                        <h4>Alphonso Raffaelli</h4>
+                        
+                        <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                        <p>(WIP)</p>
+                    </div>
+                </div> 
+
+                <div class="mention">Amo
+                    <div class="mentionInfo">
+                        <h4>Amo Santone</h4>
+                        
+                        <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                        <p>(WIP)</p>
+                    </div>
+                </div> 
+                
+                <div class="mention">Bella
+                    <div class="mentionInfo">
+                        <h4>Bella Raffaelli</h4>
+                        
+                        <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                        <p>(WIP)</p>
+                    </div>
+                </div> 
+
+                <div class="mention">Fosco
+                    <div class="mentionInfo">
+                        <h4>Fosco Demonte</h4>
+                        
+                        <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                        <p>(WIP)</p>
+                    </div>
+                </div>
+
+                <div class="mention">Isolde
+                    <div class="mentionInfo">
+                        <h4>Isolde Demonte</h4>
+                        
+                        <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                        <p>(WIP)</p>
+                    </div>
+                </div>  
+
+                <div class="mention">Nathan
+                    <div class="mentionInfo">
+                        <h4>Nathan van Leeuwe</h4>
+                        
+                        <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                        <p>(WIP)</p>
+                    </div>
+                </div> 
+
+                <div class="mention">Sophia
+                    <div class="mentionInfo">
+                        <h4>Sophia Zanotti</h4>
+                        
+                        <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                        <p>(WIP)</p>
+                    </div>
+                </div>
+
              </div>
 
         </div>
@@ -265,6 +329,59 @@ input.addEventListener('input', () =>
             suggestions.appendChild(li);
         });
     }
+});
+
+// ====================
+// Box stays when clicked
+// ====================
+
+document.querySelectorAll('.mention').forEach(mention => {
+  const info = mention.querySelector('.mentionInfo');
+
+  function checkFlip() {
+    if (!info.classList.contains('flipped')) {
+      info.style.visibility = 'visible';
+      const rect = info.getBoundingClientRect();
+      const parentRect = mention.getBoundingClientRect(); 
+     
+      if (rect.right > window.innerWidth - 10) {
+        info.classList.add('flipped');
+      }
+
+      if (!info.classList.contains('active')) {
+        info.style.visibility = '';
+      }
+    }
+  }
+
+  // HOVER
+  mention.addEventListener('mouseenter', () => {
+    checkFlip();
+  });
+
+  // CLICK
+  mention.addEventListener('click', e => {
+    e.stopPropagation();
+
+    // Close other active boxes
+    document.querySelectorAll('.mentionInfo.active').forEach(openInfo => {
+      if (openInfo !== info) openInfo.classList.remove('active');
+    });
+
+    if (info.classList.contains('active')) {
+      info.classList.remove('active');
+    } else {
+      info.classList.add('active');
+      checkFlip();
+    }
+  });
+});
+
+// Close everything else
+document.addEventListener('click', () => {
+  document.querySelectorAll('.mentionInfo.active').forEach(info => {
+    info.classList.remove('active');
+  });
 });
 </script>
 </body>
