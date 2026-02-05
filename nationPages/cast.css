@@ -102,7 +102,7 @@ header
   padding: 0.4rem 2em;
   font-size: 2.25rem;
   text-align: center;
-    border: 0.1rem solid white;
+  border: 0.1rem solid white;
   border-radius: 0.5rem;
   outline: none;
   background-color: black;
@@ -281,17 +281,198 @@ header.hidden
   margin-bottom: 0;
 }
 
-.creditList
+.infoSlider 
 {
   grid-column: 2/3;
   grid-row: 2/3;
-  color: white;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slides 
+{
+  position: relative;
+  min-height: 11rem;
+  width: 100%;
+}
+
+.slide 
+{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
   text-align: center;
+  color: white;
   font-size: 1.5rem;
   font-weight: normal;
   letter-spacing: 0.15em;
+}
+
+.slide.songs ul
+{
   margin-top: 0;
-  margin-bottom: 0;
+}
+
+.slide.songs a
+{
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: white;
+  text-decoration: none;
+  justify-self: center;
+  display: inline-block;
+  position: relative;  
+}
+
+.slide.songs a::after
+{
+  content: "";
+  left: 50%;
+  bottom: 0rem;
+  position: absolute;
+
+  width: 0;
+  height: 0.1rem;
+  background-color: white;
+
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.slide.songs a:hover::after
+{
+  width: 100%;
+  left: 0;
+}
+
+.slide.extraInfo
+{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+
+  padding-left: 8rem;
+  padding-right: 5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.slide.extraInfo p
+{
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.slide h2
+{
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.inspoSongHr
+{
+  border: 0;
+  border-top: 0.1rem solid white;
+  width: 50%;
+  margin: 0.75rem auto;
+}
+
+.slide.active 
+{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.upperHr 
+{
+  border: 0;
+  border-top: 0.1rem solid white;
+  width: 90%;
+  margin: 0.75rem auto;
+}
+
+.scrollWrapper 
+{
+  max-height: 100px;
+  overflow: hidden; 
+  position: relative;
+  padding-right: 10rem;
+}
+
+.scrollable
+{
+  max-height: 100px;   
+  overflow-y: auto;    
+  background-color: black;
+  padding-left: 10rem; 
+  list-style: none;
+}
+
+.scrollable::-webkit-scrollbar 
+{
+  width: 0.3125rem;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 0;  
+}
+  
+.scrollable::-webkit-scrollbar-track 
+{
+  background-color: black;
+}
+
+.scrollable::-webkit-scrollbar-button {
+  display: none;
+}
+
+.lowerHr 
+{
+  border: 0;
+  border-top: 0.1rem solid white;
+  width: 80%;
+  margin: 0.75rem auto;
+}
+
+.sliderBtn 
+{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.75rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.sliderBtn.prev 
+{
+  transform: translateX(5rem);
+}
+
+.sliderBtn.next 
+{
+  transform: translateX(-5rem);
+}
+
+.sliderBtn:hover 
+{
+  opacity: 0.6;
+}
+
+.sliderContent 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .castText
@@ -310,8 +491,6 @@ header.hidden
 
 .referLink
 {
-  grid-column: 2/3;
-  grid-row: 3/4;
   color: white;
   text-align: left;
   font-weight: normal;

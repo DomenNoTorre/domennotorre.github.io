@@ -37,17 +37,55 @@
             
           <h2 class="secondTitle">CoSMo</h2>
 
-          <span class="creditList">
+          <div class="infoSlider">
 
-            <hr style="border: 0; border-top: 0.1rem solid white; width: 90%; margin: 0px auto;">
+            <button class="sliderBtn prev">&lt;</button>
 
-            <p>Headshot by: WIP</p>
-            <p>Full body by: WIP</p>
-            <p>Reference sheet by: WIP</p>
-          
-            <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0px auto;">
+            <div class="sliderContent">
+              <hr class="upperHr">
 
-          </span>
+              <div class="slides">
+
+                <div class="slide active">
+                  <p>Headshot by: WIP</p>
+                  <p>Full body by: WIP</p>
+                  <p>Reference sheet by: WIP</p>
+                </div>
+
+                <div class="slide extraInfo">
+                  <div>
+                    <p><b>Age:</b> 25</p>
+                    <p><b>Gender:</b> Male</p>
+                    <p><b>Species:</b> AI/Hologram</p>
+                    <p><b>Birthday:</b> March 21th</p>
+                  </div>
+
+                  <div>
+                    <p><b>Orientation:</b> N/A</p>
+                    <p><b>Occupation:</b> Assistant</p>
+                    <p><b>Residence:</b> Peaselio, Imporiuno</p>
+                    <p><b>Relationship status:</b> N/A</p>
+                  </div>
+                </div>
+
+                <div class="slide songs">
+                  <h2>Inspired by:</h2>
+                  <hr class="inspoSongHr">
+                  <div class="scrollWrapper">
+                    <ul class="scrollable">
+                      <li><a href="https://www.youtube.com/watch?v=bem_d49NBLc">The Data Stream - The Stupendium</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <hr class="lowerHr">
+            </div>
+
+            <button class="sliderBtn next">&gt;</button>
+
+          </div>
 
           <p class="castText">The Cybernetic Support Mechanism, or more commonly referred to as Cosmo, is an Ai built by 
             none other than<a class="referLink" href="valerio.html">the Emperor</a> himself. He was designed to assist people with mundane tasks like finding information, 
@@ -170,6 +208,34 @@ input.addEventListener('input', () =>
             suggestions.appendChild(li);
         });
     }
+});
+
+// ====================
+// Slider
+// ====================
+
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let current = 0;
+
+function showSlide(index) 
+{
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => 
+{
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+});
+
+nextBtn.addEventListener('click', () => 
+{
+  current = (current + 1) % slides.length;
+  showSlide(current);
 });
 </script>
 </body>

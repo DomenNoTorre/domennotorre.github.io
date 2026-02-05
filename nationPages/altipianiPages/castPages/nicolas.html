@@ -37,17 +37,55 @@
             
           <h2 class="secondTitle">Nicolas Raffaelli</h2>
 
-          <span class="creditList">
+          <div class="infoSlider">
 
-            <hr style="border: 0; border-top: 0.1rem solid white; width: 90%; margin: 0px auto;">
+            <button class="sliderBtn prev">&lt;</button>
 
-            <p>Headshot by: @Ur_Local_Potato_Kai</p>
-            <p>Full body by: WIP</p>
-            <p>Reference sheet by: WIP</p>
-          
-            <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0px auto;">
+            <div class="sliderContent">
+              <hr class="upperHr">
 
-          </span>
+              <div class="slides">
+
+                <div class="slide active">
+                  <p>Headshot by: @Ur_Local_Potato_Kai</p>
+                  <p>Full body by: WIP</p>
+                  <p>Reference sheet by: WIP</p>
+                </div>
+
+                <div class="slide extraInfo">
+                  <div>
+                    <p><b>Age:</b> 43</p>
+                    <p><b>Gender:</b> Male</p>
+                    <p><b>Species:</b> Hybrid</p>
+                    <p><b>Birthday:</b> November 25th</p>
+                  </div>
+
+                  <div>
+                    <p><b>Orientation:</b> Homosexual</p>
+                    <p><b>Occupation:</b> Detective</p>
+                    <p><b>Residence:</b> Peaselio, Imporiuno</p>
+                    <p><b>Relationship status:</b> Married</p>
+                  </div>
+                </div>
+
+                <!-- <div class="slide songs">
+                  <h2>Inspired by:</h2>
+                  <hr class="inspoSongHr">
+                  <div class="scrollWrapper">
+                    <ul class="scrollable">
+                      <li><a href="#">Song - Artist</a></li>
+                    </ul>
+                  </div>
+                </div> -->
+
+              </div>
+
+              <hr class="lowerHr">
+            </div>
+
+            <button class="sliderBtn next">&gt;</button>
+
+          </div>
 
           <p class="castText">
             If you need a detective that might be willing to break a few rules and travel around all of Altipiani 
@@ -170,6 +208,34 @@ input.addEventListener('input', () =>
             suggestions.appendChild(li);
         });
     }
+});
+
+// ====================
+// Slider
+// ====================
+
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let current = 0;
+
+function showSlide(index) 
+{
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => 
+{
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+});
+
+nextBtn.addEventListener('click', () => 
+{
+  current = (current + 1) % slides.length;
+  showSlide(current);
 });
 </script>
 </body>
