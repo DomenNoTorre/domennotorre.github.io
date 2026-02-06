@@ -354,9 +354,10 @@ header.hidden
   display:grid;
   grid-template-columns: 1fr 1fr;
 
-  padding-left: 8rem;
+  padding-left: 5rem;
   padding-right: 5rem;
-  font-size: 1.4rem;
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
   letter-spacing: 0;
   text-align: left;
 }
@@ -374,12 +375,12 @@ header.hidden
   padding: 0;
 }
 
-.inspoSongHr
+.playlistHr
 {
   border: 0;
   border-top: 0.1rem solid white;
   width: 50%;
-  margin: 0.75rem auto;
+  margin: 0.25rem auto;
 }
 
 .slide.active 
@@ -393,23 +394,23 @@ header.hidden
   border: 0;
   border-top: 0.1rem solid white;
   width: 90%;
-  margin: 0.75rem auto;
+  margin: 0.25rem auto;
 }
 
 .scrollWrapper 
 {
-  max-height: 100px;
+  max-height: 130px;
   overflow: hidden; 
   position: relative;
-  padding-right: 10rem;
+  padding-right: 5rem;
 }
 
 .scrollable
 {
-  max-height: 100px;   
+  max-height: 130px;   
   overflow-y: auto;    
   background-color: black;
-  padding-left: 10rem; 
+  padding-left: 5rem; 
   list-style: none;
 }
 
@@ -436,7 +437,7 @@ header.hidden
 {
   border: 0;
   border-top: 0.1rem solid white;
-  width: 80%;
+  width: 90%;
   margin: 0.75rem auto;
 }
 
@@ -485,7 +486,7 @@ header.hidden
   font-weight: normal;
   padding-left: 5rem;
   padding-right: 5rem;
-  margin-top: 1rem;
+  margin-top: 0rem;
   margin-bottom: 0;
 }
 
