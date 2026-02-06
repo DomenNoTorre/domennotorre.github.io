@@ -681,23 +681,68 @@ footer
     padding-top: 0.5rem;
   }
 
-  .creditList 
-  {
-    display: flex;
-    gap: 0.3rem;
-    flex-direction: column;
-    align-items: center;
+  .infoSlider {
+    grid-template-columns: 25rem;
+    gap: 0.5rem;
   }
 
-  .creditList span 
-  {
-    display: none;
+  .sliderBtn {
+    font-size: 2rem;
+    padding: 0.5rem;
   }
 
-  .creditList p
-  {
+  .sliderBtn.prev,
+  .sliderBtn.next {
+    transform: none;
+  }
+
+  .slide {
     font-size: 1rem;
-    margin: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .slides {
+    min-height: 9rem;
+  }
+
+  .creditText
+  {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+  }
+
+  .slide.extraInfo 
+  {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .slide.extraInfo p 
+  {
+    margin-bottom: 1.5rem;
+  }
+
+  .scrollWrapper 
+  {
+    padding-right: 1rem;
+  }
+
+  .scrollable 
+  {
+    padding-left: 1rem;
+    max-height: 110px;
+  }
+
+  .upperHr,
+  .lowerHr {
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+
+  .playlistHr {
+    width: 70%;
   }
 
   .castText
