@@ -188,6 +188,23 @@
               </div>
 
               <div class="character"
+                data-name="Amphon"
+                data-nation="Sothleigh"
+                data-role="side"
+                data-book="main">
+
+                Amphon Fox
+
+                 <div class="characterInfo">
+                  <h4>Amphon Fox</h4>
+                    
+                    <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                    <p>(WIP)</p>
+                </div>
+              </div>
+
+              <div class="character"
                 data-name="Anastasia"
                 data-nation="Zloyvor"
                 data-role="main"
@@ -515,7 +532,7 @@
                     
                     <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
 
-                    <p>(WIP)</p>
+                    <p>[REDACTED]</p>
                 </div>
               </div>
 
@@ -593,23 +610,6 @@
               </div>
 
               <div class="character"
-                data-name="Golewe"
-                data-nation="Chuma Baidisha"
-                data-role="unused"
-                data-book="none">
-
-                Golewe
-
-                <div class="characterInfo">
-                  <h4>Golewe</h4>
-                    
-                    <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
-
-                    <p>(WIP)</p>
-                </div>
-              </div>
-
-              <div class="character"
                 data-name="Gebhard"
                 data-nation="Leidrübreich"
                 data-role="unused"
@@ -619,6 +619,23 @@
 
                 <div class="characterInfo">
                   <h4>Gebhard</h4>
+                    
+                    <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                    <p>(WIP)</p>
+                </div>
+              </div>
+
+               <div class="character"
+                data-name="Golewe"
+                data-nation="Chuma Baidisha"
+                data-role="unused"
+                data-book="none">
+
+                Golewe
+
+                <div class="characterInfo">
+                  <h4>Golewe</h4>
                     
                     <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
 
@@ -887,7 +904,7 @@
 
                     <p>
                       Though originally from Vriesland, after moving to his wife's homeland of Altipiani, he
-                       didn't seem to have that much trouble fitting in, already becoming friends with Nicolas on their first day.
+                       didn't seem to have that much trouble fitting in, already becoming friends with Nicolas on their first day at work.
                     </p>
                 </div>
               </div>
@@ -963,7 +980,7 @@
                     
                     <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
 
-                    <p>(WIP)</p>
+                    <p>[REDACTED]</p>
                 </div>
               </div>
 
@@ -1136,7 +1153,41 @@
                 </div>
               </div>
 
+              <div class="character"
+                data-name="Théana"
+                data-nation="Terpayâtre"
+                data-role="unused"
+                data-book="none">
+
+                Théana
+
+                <div class="characterInfo">
+                  <h4>Théana</h4>
+                    
+                    <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                    <p>(WIP)</p>
+                </div>
+              </div>
+
               <!-- U -->
+
+              <div class="character"
+                data-name="Umthetho"
+                data-nation="Chuma Baidisha"
+                data-role="unused"
+                data-book="none">
+
+                Umthetho
+
+                <div class="characterInfo">
+                  <h4>Umthetho</h4>
+                    
+                    <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 0rem auto;">
+
+                    <p>(WIP)</p>
+                </div>
+              </div>
 
               <!-- V -->
 
@@ -1271,7 +1322,7 @@
         <footer>
             <div class="footerContainer">
                 <div class="footerText">
-                    <a href="https://discord.gg/Aw5rpJ3DN6">
+                    <a href="https://discord.gg/Aw5rpJ3DN6" target="_blank" rel="noopener noreferrer">
                         <img src="../img/dcLogo.png" alt="discordLogo" class="dcLogo">
                     </a>
                 </div>
@@ -1569,7 +1620,9 @@ document.querySelectorAll(".nationDropdownMenu li").forEach(nationEl =>
   });
 });
 
+// ====================
 // Box stays when clicked
+// ====================
 document.querySelectorAll('.character').forEach(character => {
   const info = character.querySelector('.characterInfo');
 
@@ -1577,11 +1630,10 @@ document.querySelectorAll('.character').forEach(character => {
     if (!info.classList.contains('flipped')) {
       info.style.visibility = 'visible';
       const rect = info.getBoundingClientRect();
-      const parentRect = character.getBoundingClientRect(); // character zelf
+      const parentRect = character.getBoundingClientRect();
 
-      // check of de box buiten de viewport valt
       if (rect.right > window.innerWidth - 10) {
-        info.classList.add('flipped'); // flip naar links
+        info.classList.add('flipped');
       }
 
       if (!info.classList.contains('active')) {
@@ -1599,12 +1651,11 @@ document.querySelectorAll('.character').forEach(character => {
   character.addEventListener('click', e => {
     e.stopPropagation();
 
-    // sluit andere actieve boxen
+    // Close other active boxes
     document.querySelectorAll('.characterInfo.active').forEach(openInfo => {
       if (openInfo !== info) openInfo.classList.remove('active');
     });
 
-    // toggle huidige box
     if (info.classList.contains('active')) {
       info.classList.remove('active');
     } else {
@@ -1614,7 +1665,7 @@ document.querySelectorAll('.character').forEach(character => {
   });
 });
 
-// klik buiten alles sluiten
+// Close everything else
 document.addEventListener('click', () => {
   document.querySelectorAll('.characterInfo.active').forEach(info => {
     info.classList.remove('active');
