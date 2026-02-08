@@ -4,15 +4,15 @@ const searchMap =
   "camilla": "nationPages/altipianiPages/castPages/camilla.html",
   "cario": "nationPages/altipianiPages/castPages/cario.html",
   "cosmo": "nationPages/altipianiPages/castPages/cosmo.html",
-  "dio del vuoto": "nationPages/altipianiPages/castPages/vicenci.html",
-  "nathan": "nationPages/altipianiPages/castPages/nathan.html",
+  "dio del vuoto": "nationPages/altipianiPages/godPages/vicenci.html",
+  "nathan": "nationPages/altipianiPages/altipianiMainpage",
   "nicolas": "nationPages/altipianiPages/castPages/nicolas.html",
   "reve": "nationPages/altipianiPages/castPages/reve.html",
   "rocco": "nationPages/altipianiPages/castPages/rocco.html",
   "salvo": "nationPages/altipianiPages/castPages/salvo.html",
-  "sophia": "nationPages/altipianiPages/castPages/sophia.html",
+  "sophia": "nationPages/altipianiPages/altipianiMainpage",
   "valerio": "nationPages/altipianiPages/castPages/valerio.html",
-  "vicenci": "nationPages/altipianiPages/castPages/vicenci.html",
+  "vicenci": "nationPages/altipianiPages/godPages/vicenci.html",
   "viviana": "nationPages/altipianiPages/castPages/viviana.html",
   
   // 'Ard Altanawue characters
@@ -88,8 +88,11 @@ const searchMap =
   "home": "index.html",
   "mainpage": "index.html",
   "nations": "nationPages/nations.html",
-  "other projects": "webpages/projects.html",
   "projects": "webpages/projects.html",
+  "other projects": "webpages/projects.html",
+  "story projects": "projects/storyProject.html",
+  "all characters": "webpages/allCharacters.html",
+  "characters": "webpages/allCharacters.html",
 
   // Books
   "inaugurate": "webpages/msInfo.html#bookOne",

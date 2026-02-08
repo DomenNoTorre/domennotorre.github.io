@@ -196,7 +196,7 @@ header
   }
 }
 
-/* Open-state (mobiel) */
+/* Open-state (mobile) */
 .dropdownMenu.open 
 {
   transform: translate(-50%, 0);

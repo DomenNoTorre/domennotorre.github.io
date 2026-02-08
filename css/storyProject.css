@@ -3,6 +3,11 @@ html
   font-size: 16px; /* 1rem = 16px */
 }
 
+:root 
+{
+  color-scheme: light only;
+}
+
 @font-face
 {
   font-family: "Jura";
@@ -212,249 +217,20 @@ header.hidden
   transform: translateY(-100%);
 }
 
-.backButton
-{ 
-  color: white; 
-  background-color: black; 
-  text-align: center; 
-  font-size: 2.25rem; 
-  font-weight: normal; 
-  letter-spacing: 0.15em; 
-  grid-column: 1/2; 
-  grid-row: 1/2; 
-  text-decoration: none; 
-  justify-self: center;
-  align-self: center; 
-  z-index: 10;
-}
-
-/* Character Filter */
-.charFilters 
+.mainTitle
 {
-  color: white;
-  display: block;
-  text-align: center;
-  font-family: inherit;
-}
-
-.filterGroup 
-{
-  margin: 1rem 0;
-}
-
-.filterTitle 
-{
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.letters .letter,
-.filterOption 
-{
-  margin: 0 0.3rem;
-  cursor: pointer;
-  padding: 0.2rem 0.4rem;
-  border-radius: 5px;
-  transition: 0.2s;
-}
-
-.letter:hover,
-.filterOption:hover,
-.nationDropdownMenu li:hover
-{
-  background-color: #222222;
-}
-
-.letter.active,
-.filterOption.active,
-.nationDropdownMenu li.active
-{
-  background-color: white;
   color: black;
-  font-weight: bold;
-}
-
-/*  Extra Letters */
-.letterDropdown 
-{
-  position: relative;
-  display: inline-block;
-}
-
-.letterDropdownMenu 
-{
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: black;
-  border: 2px solid white;
-  padding: 0.3rem;
-  border-radius: 0.5rem;
-  z-index: 10;
-}
-
-.letterDropdown:hover .letterDropdownMenu 
-{
-  display: block;
-}
-
-.letterDropdownMenu .subLetter 
-{
-  display: block;
-  padding: 0.2rem 0.5rem;
   text-align: center;
-  cursor: pointer;
-}
-
-.letterDropdownMenu .subLetter:hover 
-{
-  background: white;
-  color: black;
-}
-
-/* Nation Dropdown */
-.nationDropdown 
-{
-  position: relative;
-  display: inline-block;
-}
-
-.nationDropdownMenu 
-{
-  display: grid;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background: black;
-  border: 2px solid white;
-  padding: 0.5rem 1rem;
-  list-style: none;
-  margin: 0;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.2s;
-  z-index: 20;
-}
-
-.nationDropdown:hover .nationDropdownMenu 
-{
-  visibility: visible;
-  opacity: 1;
-  display: grid;
-}
-
-.nationDropdownMenu li 
-{
-  padding: 0.3;
-  cursor: pointer;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-}
-
-.charGrid 
-{ 
-  grid-column: 1/5;
-  display: grid; 
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.25rem; 
-  padding: 1rem;
-  min-height: 250px;
-  overflow: visible;
-} 
-
-.character 
-{ 
-  padding: 0.8rem; 
-  border-radius: 10px; 
-  text-align: center; 
-  color: white; 
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  position: relative;
-}
-
-.character:hover .characterInfo:not(.active),
-.characterInfo.active 
-{
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scaleY(1);
-}
-
-.characterInfo 
-{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scaleY(0);
-
-  transform-origin: center;
-
-  width: 15rem;
-  max-width: calc(100vw - 2rem);
-  padding: 0.5rem;
-
-  background-color: black;
-  color: white;
-  border: 2px solid white;
-  font-size: 1.05rem;
-
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  z-index: 10;
-
-  transition:
-  transform 0.5s cubic-bezier(.25,.8,.25,1),
-  opacity 0.2s ease;
-}
-
-.characterInfo h4
-{
+  font-size: 8rem;
   font-weight: normal;
-  font-size: 1.75rem;
-  margin: 1.5rem 0.5rem;
-}
-
-.characterInfo a
-{
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: currentColor; 
-  text-decoration-thickness: 0.1rem; 
-}
-
-.characterInfo.flipped 
-{
-  top: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.mainTitle 
-{ 
-  color: black;
-  text-align: center; 
-  font-size: 8rem; 
-  font-weight: normal; 
-  position: absolute; 
-  top: 30%; 
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  z-index: 10; 
-  letter-spacing: 0.15em; 
-  grid-column: 1/5; 
-  grid-row: 2/3; 
+  position: absolute;
+  top: 30%;
+  left: 50%;           
+  transform: translate(-50%, -50%); 
+  z-index: 10;         
+  letter-spacing: 0.15em;
+  grid-column: 1/5;
+  grid-row: 2/3;
 }
 
 .headerImg
@@ -471,13 +247,13 @@ header.hidden
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  column-gap: 10rem;
+  grid-template-rows: auto auto auto;
+
 }
 
 .secondTitle
 {
-  grid-column: 1/5;
+  grid-column: 1/6;
   grid-row: 1/2;
   color: white;
   text-align: center;
@@ -486,27 +262,165 @@ header.hidden
   letter-spacing: 0.15em;
 }
 
-.charFilters
+.bookStack 
 {
-  grid-column: 1/5;
-  grid-row: 2/3;
-  font-size: 1.75rem;
-  color: white;
-  letter-spacing: 0.15em;
-  text-decoration: none;
-  text-align: center;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  position: relative;
+  width: 17rem;
+  height: auto;
+  min-height: 26.0625rem;
+  margin: 0 auto;
 }
 
-.charTable
+.bookStack a 
 {
-  grid-column: 1/5;
-  grid-row: 3/4;
-  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease, z-index 0s ease 0.5s;
+}
+
+.bookOneCover 
+{
+  position: relative; 
+  z-index: 3;         
+  transform: scale(1.25) translateX(0) translateY(0);
+}
+
+.bookTwoCover 
+{
+  position: absolute;
+  z-index: 2;
+  transform: scale(1.25) translateX(0) translateY(0);
+}
+
+.bookThreeCover 
+{
+  position: absolute;
+  z-index: 1;
+  transform: scale(1.25) translateX(0) translateY(0);
+}
+
+.bookStack:hover .bookOneCover 
+{
+  transform: scale(1.25) translateX(-7rem) translateY(0);
+}
+
+.bookStack:hover .bookTwoCover 
+{
+  transform: scale(1.15) translateX(0) translateY(0.3125rem);
+}
+
+.bookStack:hover .bookThreeCover 
+{
+  transform: scale(1.05) translateX(7rem) translateY(0.625rem);
+}
+
+.bookStack img 
+{
+  width: 100%;
+  display: block;
+}
+
+/* Main Story */
+.bookStack
+{
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+/* Silent Stories */
+.bookStack.ss 
+{
+  grid-column: 3/5;
+  grid-row: 2/3;
+}
+
+.msText
+{
+  grid-column: 1/3;
+  grid-row: 3/4; 
+}
+
+.ssText
+{
+  grid-column: 3/5;
+  grid-row: 3/4; 
+}
+
+.ssText, .msText
+{ 
+  text-align: left;
+  color:white;
+  text-decoration: none;
+  font-size: 1.75rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-bottom: 1rem;
+}
+
+.ssText h2, .msText h2
+{ 
   text-align: center;
-  font-size: 2rem;
+  padding-top: 2rem;
+  text-decoration: none;
   font-weight: normal;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  font-size: 2.25rem;
+  letter-spacing: 0.05em;
+}
+
+
+.ssText a, 
+.msText a
+{
+  font-size: 1.75rem;
+}
+
+.ssText a, 
+.msText a,
+.sneakPeekLink a
+{ 
+  text-align: left;
+  color:white;
+  text-decoration:none;
+  padding-bottom: 2rem;
+  position: relative;
+  display: inline-block;  
+  justify-self: center;
+}
+
+.ssText a::after, 
+.msText a::after,
+.sneakPeekLink a::after
+{
+  content: "";
+  left: 50%;
+  bottom: 2rem;
+  position: absolute;
+
+  width: 0;
+  height: 0.1rem;
+  background-color: white;
+
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.ssText a:hover::after,
+.msText a:hover::after,
+.sneakPeekLink a:hover::after
+{
+  width: 100%;
+  left: 0;
+}
+
+.sneakPeekLink
+{
+  font-size: 2.25rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  grid-column: 2/4;
+  grid-row: 4/5;
 }
 
 footer
@@ -570,6 +484,11 @@ footer
   {
     font-size: 3rem;
   }
+  
+  .lpText, .ssText, .msText 
+  {
+    font-size: 2.25rem;
+  }
 
   .middleBlock 
   {
@@ -577,6 +496,27 @@ footer
     flex-direction: column;  
     gap: 2rem;             
     align-items: center;
+  }
+
+  .bookTwoCover,
+  .bookThreeCover 
+  {
+    display: none;
+  }
+
+  .bookStack 
+  {
+    display: block;
+    width: 80%;
+    margin: 2rem auto;
+    position: relative;
+  }
+
+  .bookStack a.bookOneCover 
+  {
+    position: relative;
+    width: 100%;
+    transform: none;
   }
 
   header 
@@ -631,82 +571,7 @@ footer
     letter-spacing: 0;
     padding-top: 0.5rem;
   }
-
-  .filterTitle
-  {
-    font-size: 1.5rem;
-  }
-
-  .filterOption
-  {
-    font-size: 1rem;
-  }
-
-  #books, #roles
-  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #books span, #roles span
-  {
-    margin: 0.2rem 0;
-  }
-
-  #books span:not(.filterOption), #roles span:not(.filterOption)
-  {
-    display: none;
-  }
-
-  .letters
-  {
-    font-size: 1rem;
-  }
-
-  .nationDropdownMenu 
-  {
-    grid-template-columns: repeat(2, auto);
-  }
-
-  .nationDropdownMenu li
-  {
-    font-size: 1rem;
-  }
-
-  .character 
-  { 
-    font-size: 1rem; 
-    padding: 1rem 0.25rem;
-  }
-
-  .charGrid 
-  { 
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.25rem; 
-    padding: 0.5rem;
-    min-height: 250px;
-  } 
-
-  .characterInfo 
-  {
-    width: 7rem;
-    padding: 0.5rem;
-    border: 1px solid white;
-  }
-
-  .characterInfo h4
-  {
-    font-weight: normal;
-    font-size: 1rem;
-    margin: 0.5rem 0rem;
-  }
-
-  .characterInfo p
-  {
-    font-size: 0.5rem;
-  }
-
+ 
   .dcLogo 
   {
     height: 2rem;

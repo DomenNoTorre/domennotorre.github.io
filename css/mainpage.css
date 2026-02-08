@@ -201,7 +201,7 @@ header
   }
 }
 
-/* Open-state (mobiel) */
+/* Open-state (mobile) */
 .dropdownMenu.open 
 {
   transform: translate(-50%, 0);
@@ -292,29 +292,29 @@ header.hidden
 {
   position: absolute;
   z-index: 2;
-  transform: scale(0.9) translateX(0) translateY(0);
+  transform: scale(1) translateX(0) translateY(0);
 }
 
 .bookThreeCover 
 {
   position: absolute;
   z-index: 1;
-  transform: scale(0.8) translateX(0) translateY(0);
+  transform: scale(1) translateX(0) translateY(0);
 }
 
 .bookStack:hover .bookOneCover 
 {
-  transform: scale(1) translateX(0) translateY(0);
+  transform: scale(1) translateX(-7rem) translateY(0);
 }
 
 .bookStack:hover .bookTwoCover 
 {
-  transform: scale(0.85) translateX(5rem) translateY(0.3125rem);
+  transform: scale(0.90) translateX(0) translateY(0.3125rem);
 }
 
 .bookStack:hover .bookThreeCover 
 {
-  transform: scale(0.75) translateX(10rem) translateY(0.625rem);
+  transform: scale(0.80) translateX(7rem) translateY(0.625rem);
 }
 
 .bookStack img 

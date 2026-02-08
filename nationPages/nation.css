@@ -787,6 +787,7 @@ footer
   .secondTitle
   {
     font-size: 3rem;
+    margin: 1rem 0;
   }
 
   .secondTitleRiimut
@@ -799,6 +800,7 @@ footer
   .mentionsTitle
   {
     font-size: 3rem;
+    margin: 1rem 0;
   }
 
   .middleBlock 
@@ -816,8 +818,7 @@ footer
     column-gap: 3rem; 
     row-gap: 1rem;            
     align-items: center;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin: 0 1.5rem;
   }
 
   .middleBlockTwoDivinity,
@@ -829,8 +830,7 @@ footer
     column-gap: 3rem; 
     row-gap: 1rem;            
     align-items: center;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin: 0 1.5rem;
   }
 
   .mentions
@@ -918,7 +918,9 @@ footer
 
   .nationText
   {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0 1rem;
   }
 
   .castCoverOne img, 
@@ -1111,6 +1113,55 @@ footer
   {
     grid-column: 2/3;
     grid-row: 12/13;
+  }
+
+  /* 1 by 2 alignment Divinity*/
+  .divinityOneCover
+  {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .divinityOneText
+  {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .divinityTwoCover
+  {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .divinityTwoText
+  {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .divinityThreeCover
+  {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .divinityThreeText
+  {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .divinityFourCover
+  {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .divinityFourText
+  {
+    grid-column: 2/3;
+    grid-row: 4/5;
   }
   
   .dcLogo 
