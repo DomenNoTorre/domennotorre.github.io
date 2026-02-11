@@ -382,6 +382,13 @@ header.hidden
   position: relative;
 }
 
+.redactedText
+{
+  background-color: rgb(191, 191, 191);
+  color: transparent;
+  user-select: none;
+}
+
 .character:hover .characterInfo:not(.active),
 .characterInfo.active 
 {
@@ -495,18 +502,6 @@ header.hidden
   letter-spacing: 0.15em;
   text-decoration: none;
   text-align: center;
-}
-
-.charTable
-{
-  grid-column: 1/5;
-  grid-row: 3/4;
-  color: white;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: normal;
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 footer
