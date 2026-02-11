@@ -430,6 +430,14 @@ header.hidden
   font-weight: normal;
   padding-left: 3rem;
   padding-right: 3rem;
+  line-height: 2.75rem;
+}
+
+.redactedText
+{
+  background-color: rgb(191, 191, 191);
+  color: transparent;
+  user-select: none;
 }
 
 .thirdTitle
@@ -921,6 +929,7 @@ footer
     font-size: 1.25rem;
     margin: 0;
     padding: 0 1rem;
+    line-height: 1.75rem;
   }
 
   .castCoverOne img, 
