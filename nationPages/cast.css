@@ -281,6 +281,124 @@ header.hidden
   margin-bottom: 0;
 }
 
+.thirdTitle
+{
+  grid-column: 1/3;
+  grid-row: 5/6;
+  color: white;
+  text-align: center;
+  font-size: 6.25rem;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  margin-bottom: 0;
+}
+
+.artDisplay
+{
+  grid-column: 1/5; 
+  grid-row: 6/7;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1.5rem 2rem;
+  column-gap: 1.5rem;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.artDisplay img
+{
+  display: block;
+  margin-left: auto; 
+  margin-right: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  max-width: 50%;
+  height: auto;
+}
+
+.artDisplay img:hover 
+{
+  transform: scale(1.05);
+}
+
+.lightbox 
+{
+  display: none;
+  position: fixed;
+  z-index: 1150;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  justify-items: center;
+}
+
+.lightbox-content 
+{
+  margin-top: 5rem;
+  max-width: 80%;
+  max-height: 80vh;
+}
+
+.close 
+{
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.artOne
+{
+  grid-column: 1/2; 
+  grid-row: 1/2;
+}
+
+.creditOne
+{
+  grid-column: 1/2; 
+  grid-row: 2/3;
+}
+
+.artTwo
+{
+  grid-column: 2/3; 
+  grid-row: 1/2;
+}
+
+.creditTwo
+{
+  grid-column: 2/3; 
+  grid-row: 2/3;
+}
+
+.artThree
+{
+  grid-column: 3/4; 
+  grid-row: 1/2;
+}
+
+.creditThree
+{
+  grid-column: 3/4; 
+  grid-row: 2/3;
+}
+
+.artFour
+{
+  grid-column: 4/5; 
+  grid-row: 1/2;
+}
+
+.creditFour
+{
+  grid-column: 4/5; 
+  grid-row: 2/3;
+}
+
 .infoSlider 
 {
   grid-column: 2/3;
@@ -546,13 +664,6 @@ header.hidden
   z-index: 10;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
-}
-
-.footerCastImg
-{
-  grid-column: 1/5; 
-  grid-row: 5/6;
-  width: 100%;
 }
 
 footer

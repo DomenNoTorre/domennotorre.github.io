@@ -61,10 +61,10 @@
                   </div>
 
                   <div>
-                    <p><b>Orientation:</b> Heteroflexible</p>
+                    <p><b>Personality:</b> Numb</p>
                     <p><b>Occupation:</b> Ruka</p>
                     <p><b>Residence:</b> Unknown</p>
-                    <p><b>Relationship status:</b> Unknown</p>
+                    <p><b>Love life:</b> Heteroflexible/Unknown</p>
                   </div>
                 </div>
 
@@ -87,11 +87,17 @@
 
           </div>
 
-          <p class="castText">(WIP)</p>
+          <p class="castText">(WIP)
+          </p>
 
           <a href="javascript:history.back()" class="backButton">&lt;Back</a>
 
-          <img src="../zloyvorImg/castFooterPlaceholder.png" alt="footerCastImage" class="footerCastImg">
+          <h2 class="thirdTitle">Art Collection</h2>
+
+          <div class="artDisplay">
+            <!-- <img src="../zloyvorImg/.png" class="artOne" alt=""> -->
+            <p class="creditOne">Nothing to see here yet</p>
+          </div>
 
         </div>
 
@@ -106,6 +112,11 @@
             </div>
         </footer>
     </main>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">X</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
 
 <script src="../../../functions/searchMap.js"></script>
 
@@ -231,6 +242,32 @@ nextBtn.addEventListener('click', () =>
   current = (current + 1) % slides.length;
   showSlide(current);
 });
+
+// ====================
+// Art view
+// ====================
+
+const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const images = document.querySelectorAll(".artDisplay img");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
 </script>
 </body>
 </html>
