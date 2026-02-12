@@ -346,7 +346,7 @@ header.hidden
 
 .mentionInfo p
 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .mention:hover .mentionInfo:not(.active),
