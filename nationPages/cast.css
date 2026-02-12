@@ -1,6 +1,7 @@
 html 
 {
   font-size: 16px; /* 1rem = 16px */
+  scroll-behavior: smooth;
 }
 
 @font-face
@@ -293,7 +294,7 @@ header.hidden
   margin-bottom: 0;
 }
 
-.artDisplay
+#artDisplay
 {
   grid-column: 1/5; 
   grid-row: 6/7;
@@ -306,7 +307,7 @@ header.hidden
   font-size: 1.5rem;
 }
 
-.artDisplay img
+#artDisplay img
 {
   display: block;
   margin-left: auto; 
@@ -317,7 +318,7 @@ header.hidden
   height: auto;
 }
 
-.artDisplay img:hover 
+#artDisplay img:hover 
 {
   transform: scale(1.05);
 }
@@ -328,7 +329,7 @@ header.hidden
   position: fixed;
   z-index: 1150;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.10);
+  background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
   justify-items: center;
 }
@@ -436,7 +437,7 @@ header.hidden
   margin-top: 0;
 }
 
-.slide.songs a
+.slide a
 {
   margin-top: 0;
   margin-bottom: 0.75rem;
@@ -447,7 +448,7 @@ header.hidden
   position: relative;  
 }
 
-.slide.songs a::after
+.slide a::after
 {
   content: "";
   left: 50%;
@@ -461,7 +462,7 @@ header.hidden
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-.slide.songs a:hover::after
+.slide a:hover::after
 {
   width: 100%;
   left: 0;
