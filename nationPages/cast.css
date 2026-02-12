@@ -328,7 +328,7 @@ header.hidden
   position: fixed;
   z-index: 1150;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.10);
   justify-content: center;
   justify-items: center;
 }
@@ -747,6 +747,17 @@ footer
     font-size: 0.75rem;
   }
 
+  .lightbox-content 
+  {
+    max-width: 90vw;
+    max-height: 85vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+  }
+
   .middleBlock 
   {
     display: flex;
@@ -844,7 +855,7 @@ footer
     grid-template-columns: 1fr 1fr;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.80rem;
   }
 
   .slide.extraInfo p 
