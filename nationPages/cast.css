@@ -734,9 +734,17 @@ footer
     color: white !important;     
   }
 
-  .secondTitle 
+  .secondTitle, .thirdTitle 
   {
     font-size: 3rem;
+  }
+
+  .creditOne,
+  .creditTwo,
+  .creditThree,
+  .creditFour
+  {
+    font-size: 0.75rem;
   }
 
   .middleBlock 
