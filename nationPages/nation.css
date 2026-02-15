@@ -541,21 +541,16 @@ header.hidden
 
 /* Covers */
 
-.castCoverOne, 
-.castCoverTwo, 
-.castCoverThree, 
-.castCoverFour,
-.castCoverFive,
-.castCoverSix,
-.castCoverSeven,
-.castCoverEight,
-.castCoverNine,
-.castCoverTen,
-.castCoverEleven,
-.castCoverTwelve
+[class^="castCover"]
 {
   display: flex;
   justify-content: center;
+}
+
+[class^="castCover"] img
+{
+  width: clamp(180px, 20vw, 200px);
+  height: auto;
 }
 
 .castCoverOne
@@ -632,18 +627,7 @@ header.hidden
 
 /* Text */
 
-.castTextOne, 
-.castTextTwo, 
-.castTextThree, 
-.castTextFour,
-.castTextFive,
-.castTextSix,
-.castTextSeven,
-.castTextEight,
-.castTextNine,
-.castTextTen,
-.castTextEleven,
-.castTextTwelve
+[class^="castText"]
 {
   text-decoration: none;
   text-align: center;
@@ -932,18 +916,7 @@ footer
     line-height: 1.75rem;
   }
 
-  .castCoverOne img, 
-  .castCoverTwo img, 
-  .castCoverThree img, 
-  .castCoverFour img,
-  .castCoverFive img,
-  .castCoverSix img,
-  .castCoverSeven img,
-  .castCoverEight img,
-  .castCoverNine img,
-  .castCoverTen img,
-  .castCoverEleven img,
-  .castCoverTwelve img,
+  [class^="castCover"] img,
   /* Divinity */
   .divinityOneCover img,
   .divinityTwoCover img,
@@ -954,18 +927,7 @@ footer
     height: auto;
   }
 
-  .castTextOne, 
-  .castTextTwo, 
-  .castTextThree, 
-  .castTextFour,
-  .castTextFive,
-  .castTextSix,
-  .castTextSeven,
-  .castTextEight,
-  .castTextNine,
-  .castTextTen,
-  .castTextEleven,
-  .castTextTwelve,
+[class^="castText"],
   /* Divinity */
   .divinityOneText,
   .divinityTwoText,
