@@ -549,8 +549,9 @@ header.hidden
 
 [class^="castCover"] img
 {
-  width: clamp(180px, 20vw, 200px);
+  width: min(200px, 100%);
   height: auto;
+  object-fit: contain;
 }
 
 .castCoverOne

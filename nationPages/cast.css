@@ -260,6 +260,7 @@ header.hidden
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: auto auto auto auto;
+  align-items: center;
 }
 
 .sideCastImg
@@ -268,7 +269,6 @@ header.hidden
   grid-row: 1/5;
   height: 75%;
   width: auto;
-  margin: 5rem 0;
 }
 
 .secondTitle
@@ -747,6 +747,21 @@ footer
   .creditFour
   {
     font-size: 0.75rem;
+  }
+
+  .artOne img,
+  .artTwo img,
+  .artThree img,
+  .artFour img
+  {
+    height: auto;
+    object-fit: contain;
+  }
+
+  #artDisplay
+  {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
 
   .lightbox-content 
