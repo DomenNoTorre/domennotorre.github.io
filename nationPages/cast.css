@@ -295,33 +295,94 @@ header.hidden
   margin-bottom: 0;
 }
 
-#artDisplay
+#artDisplay 
 {
-  grid-column: 1/5; 
+  grid-column: 1/5;
   grid-row: 6/7;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   padding: 1.5rem 2rem;
-  column-gap: 1.5rem;
-  text-align: center;
   color: white;
-  font-size: 1.5rem;
+  position: relative;
 }
 
-#artDisplay img
+.artSlides 
 {
-  display: block;
-  margin-left: auto; 
-  margin-right: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  max-width: 50%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
   height: auto;
 }
 
-#artDisplay img:hover 
+.artSlide 
+{
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.artSlide.active 
+{
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+.artItem 
+{
+  flex: 1;    
+  font-size: 1.25rem;
+  min-width: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; 
+  padding-top: 5rem;
+}
+
+.artItem img 
+{
+  width: 100%;
+  max-width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block; 
+}
+
+.artItem img:hover 
 {
   transform: scale(1.05);
+}
+
+.artBtn 
+{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.75rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.artBtn:hover 
+{
+  opacity: 0.6;
 }
 
 .lightbox 
@@ -351,54 +412,6 @@ header.hidden
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-}
-
-.artOne
-{
-  grid-column: 1/2; 
-  grid-row: 1/2;
-}
-
-.creditOne
-{
-  grid-column: 1/2; 
-  grid-row: 2/3;
-}
-
-.artTwo
-{
-  grid-column: 2/3; 
-  grid-row: 1/2;
-}
-
-.creditTwo
-{
-  grid-column: 2/3; 
-  grid-row: 2/3;
-}
-
-.artThree
-{
-  grid-column: 3/4; 
-  grid-row: 1/2;
-}
-
-.creditThree
-{
-  grid-column: 3/4; 
-  grid-row: 2/3;
-}
-
-.artFour
-{
-  grid-column: 4/5; 
-  grid-row: 1/2;
-}
-
-.creditFour
-{
-  grid-column: 4/5; 
-  grid-row: 2/3;
 }
 
 .infoSlider 
@@ -569,7 +582,7 @@ header.hidden
   font-size: 1.75rem;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
   z-index: 10;
 }
 
@@ -671,7 +684,7 @@ header.hidden
 footer
 {
   grid-column: 1/5;
-  grid-row: 5/6;
+  grid-row: 7/8;
   color: white;
   text-align: right;
   grid-template-columns: 1fr 1fr 1fr 1fr;

@@ -101,11 +101,24 @@
 
           <h2 class="thirdTitle">Art Collection</h2>
 
-          <div id="artDisplay">
-            <img src="../altipianiImg/bigCario.png" class="artOne" alt="carioHeadShot">
-            <p class="creditOne">@Ur_Local_Potato_Kai</p>
-          </div>
+          <div id="artDisplay" class="artSlider">
 
+            <!-- <button class="artBtn" onclick="prevSlide()">&lt;</button> -->
+
+            <div class="artSlides">
+
+                <div class="artSlide active">
+                    <div class="artItem">
+                        <img src="../altipianiImg/bigCario.png" alt="carioHeadshot">
+                        <p>@Ur_Local_Potato_Kai</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <button class="artBtn" onclick="nextSlide()">&gt;</button> -->
+
+          </div>
         </div>
 
         <footer>
@@ -232,7 +245,7 @@ const nextBtn = document.querySelector('.next');
 
 let current = 0;
 
-function showSlide(index) 
+function showInfoSlide(index) 
 {
   slides.forEach(slide => slide.classList.remove('active'));
   slides[index].classList.add('active');
@@ -241,13 +254,13 @@ function showSlide(index)
 prevBtn.addEventListener('click', () => 
 {
   current = (current - 1 + slides.length) % slides.length;
-  showSlide(current);
+  showInfoSlide(current);
 });
 
 nextBtn.addEventListener('click', () => 
 {
   current = (current + 1) % slides.length;
-  showSlide(current);
+  showInfoSlide(current);
 });
 
 // ====================
@@ -275,6 +288,30 @@ const lightbox = document.getElementById("lightbox");
       lightbox.style.display = "none";
     }
   });
+
+// ====================
+// Art view slider
+// ====================
+let currentArtSlide = 0;
+const artSlides = document.querySelectorAll(".artSlide");
+
+function showArtSlide(index) 
+{
+  artSlides.forEach(slide => slide.classList.remove("active"));
+  artSlides[index].classList.add("active");
+}
+
+function nextSlide() 
+{
+  currentArtSlide = (currentArtSlide + 1) % artSlides.length;
+  showArtSlide(currentArtSlide);
+}
+
+function prevSlide() 
+{
+  currentArtSlide = (currentArtSlide - 1 + artSlides.length) % artSlides.length;
+  showArtSlide(currentArtSlide);
+}
 </script>
 </body>
 </html>
