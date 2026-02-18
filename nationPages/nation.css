@@ -760,7 +760,7 @@ footer
     left: auto;
     transform: none;
     text-align: center;
-    font-size: clamp(4rem, 6vw, 6rem);      
+    font-size: clamp(2rem, 6vw, 6rem);      
     margin: 3rem 0;  
     color: black !important;     
   }
@@ -772,7 +772,7 @@ footer
     left: auto;
     transform: none;
     text-align: center;
-    font-size: clamp(4rem, 6vw, 6rem);        
+    font-size: clamp(2rem, 6vw, 6rem);        
     margin: 3rem 0;  
     color: white !important;     
   }
