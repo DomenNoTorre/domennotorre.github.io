@@ -510,6 +510,11 @@ footer
     padding: 0;
   }
 
+  .backButton
+  { 
+    padding-top: 2rem;
+  }
+
   .footerText 
   {
     max-width: 100%;

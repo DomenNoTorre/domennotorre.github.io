@@ -252,17 +252,8 @@ header.hidden
   grid-column: 1/5;
   grid-row: 3/4;
   display: grid;
-  grid-template-columns: auto 2fr;
+  grid-template-columns: auto;
   grid-template-rows: auto auto auto auto auto;
-}
-
-.bookCoverImgOne
-{
-  grid-column: 1/2;
-  grid-row: 2/6;
-  height: 100%;
-  width: auto;
-  padding-left: 2rem;
 }
 
 .secondTitle
@@ -314,10 +305,28 @@ header.hidden
   left: 0;
 }
 
+.bookContentOne
+{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: auto 2fr;
+  grid-template-rows: auto auto;
+}
+
+.bookCoverImgOne
+{
+  grid-column: 1/2;
+  grid-row: 1/4;
+  height: 100%;
+  width: auto;
+  padding-left: 2rem;
+}
+
 .bookTitleOne
 {
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 1/2;
   color: white;
   text-align: center;
   margin: 0;
@@ -329,7 +338,7 @@ header.hidden
 .infoTextOne
 {
   grid-column: 2/3;
-  grid-row: 3/4;
+  grid-row: 2/3;
   color: white;
   text-align: left;
   font-size: 2rem;
@@ -341,7 +350,7 @@ header.hidden
 .whereToReadOne
 {
   grid-column: 2/3;
-  grid-row: 5/6;
+  grid-row: 3/4;
   color: white;
   text-align: left;
   font-size: 1.5rem;
@@ -361,6 +370,78 @@ header.hidden
 .whereToReadOne a:hover
 {
   color: #FF500A;
+}
+
+hr
+{
+  border: 0;
+  border-top: 0.1rem solid white;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bookProgressOne
+{
+  grid-column: 1;
+  grid-row: 2/3;
+  font-size: 1.5rem;
+  color: white;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  padding: 5rem;
+}
+
+.chapterTable
+{
+  width: 100%;
+}
+
+.progressBox
+{
+  border: 0.1rem white solid;
+  padding: 1rem 5rem;
+}
+
+.progressBox h2
+{
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.progressBox h3
+{
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.progressBox th
+{
+  width: 25%;
+  font-weight: normal;
+  font-size: 2rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.progressBox td
+{
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.updateInfo
+{
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.25rem;
 }
 
 .backButton
@@ -447,11 +528,6 @@ footer
     font-size: 3rem;
   }
 
-  .bookTitleOne
-  {
-    font-size: 3rem;
-  }
-
   .middleBlock 
   {
     display: flex;
@@ -526,23 +602,89 @@ footer
     font-size: 1.25rem;
   }
 
+  .bookContentOne
+  {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .bookCoverImgOne
+  {
+    grid-row: 1/4;
+    grid-column: 1/2;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .bookTitleOne
+  {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 3rem;
+  }
+
   .infoTextOne
   {
+    grid-column: 2/3;
+    grid-row: 2/3;
     font-size: 1rem;
   }
 
   .whereToReadOne
   {
+    grid-column: 2/3;
+    grid-row: 3/4;
     font-size: 1rem;
   }
 
-  .bookCoverImgOne
+  .bookProgressOne
   {
-    height: auto;
-    width: 50%;
-    padding: 0;
+    padding: 1rem;
+  }
+
+  .progressBox
+  {
+    padding: 1rem 2rem;
+    padding-top: 0;
+    max-height: 20rem;
+    overflow-y: auto;
+  }
+
+  .progressBox h2
+  {
+    padding-top: 1rem;
+  }
+
+  .progressBox th
+  {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    background: black;
+  }
+
+  .progressBox td
+  {
+    font-size: 1.25rem;
+    padding: 0.25rem 0;
   }
   
+  ::-webkit-scrollbar 
+  {
+    width: 0.2rem;
+  }
+
+  .backButton
+  { 
+    padding-top: 2rem;
+  }
+
   .dcLogo 
   {
     height: 2rem;
