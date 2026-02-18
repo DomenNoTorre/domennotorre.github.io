@@ -773,8 +773,27 @@ footer
 
   #artDisplay
   {
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    grid-template-columns: auto auto auto;
+    display: grid;
+    grid-template-rows: auto;
+  }
+
+  .artSlide 
+  {
+    grid-column: 2/3;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .artItem 
+  {
+    align-self: center;
+    justify-self: center;
+    max-width: 50%;
+    padding-top: 2rem;
   }
 
   .lightbox-content 
