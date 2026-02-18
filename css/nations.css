@@ -485,7 +485,7 @@ footer
     left: auto;
     transform: none;
     text-align: center;
-    font-size: 3rem;        
+    font-size: clamp(4rem, 6vw, 6rem);   
     margin: 3rem 0;  
     color: black !important;     
   }
