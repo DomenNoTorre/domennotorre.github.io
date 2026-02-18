@@ -528,13 +528,18 @@ footer
 
   .infoTextOne
   {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .whereToReadOne
+  {
+    font-size: 1rem;
   }
 
   .bookCoverImgOne
   {
     height: auto;
-    width: 75%;
+    width: 50%;
     padding: 0;
   }
   
