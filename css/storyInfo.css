@@ -605,16 +605,16 @@ footer
   .bookContentOne
   {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
   }
 
   .bookCoverImgOne
   {
-    grid-row: 1/4;
+    grid-row: 1/2;
     grid-column: 1/2;
     height: auto;
-    width: 100%;
+    width: 50%;
     padding: 0;
     align-self: center;
     justify-self: center;
@@ -622,22 +622,22 @@ footer
 
   .bookTitleOne
   {
-    grid-column: 2/3;
-    grid-row: 1/2;
+    grid-column: 1/2;
+    grid-row: 2/3;
     font-size: 3rem;
   }
 
   .infoTextOne
   {
-    grid-column: 2/3;
-    grid-row: 2/3;
+    grid-column: 1/2;
+    grid-row: 3/4;
     font-size: 1rem;
   }
 
   .whereToReadOne
   {
-    grid-column: 2/3;
-    grid-row: 3/4;
+    grid-column: 1/2;
+    grid-row: 4/5;
     font-size: 1rem;
   }
 
@@ -656,12 +656,18 @@ footer
 
   .progressBox h2
   {
+    font-size: 1.5rem;
     padding-top: 1rem;
+  }
+
+  .progressBox h3
+  {
+    font-size: 1.25rem;
   }
 
   .progressBox th
   {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1rem 0;
     position: sticky;
     z-index: 2;
@@ -671,8 +677,13 @@ footer
 
   .progressBox td
   {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 0.25rem 0;
+  }
+
+  .updateInfo
+  {
+    font-size: 1rem;
   }
   
   ::-webkit-scrollbar 
