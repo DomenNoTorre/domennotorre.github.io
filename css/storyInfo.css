@@ -597,6 +597,14 @@ footer
     padding-top: 0.5rem;
   }
 
+  .bookOneDirector::after, .bookTwoDirector::after
+  {
+    top: 1.25rem;
+
+    width: 0;
+    height: 0.1rem;
+  }
+
   .bookDirectors, .bookDirectors a
   {
     font-size: 1.25rem;
@@ -624,7 +632,7 @@ footer
   {
     grid-column: 1/2;
     grid-row: 2/3;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .infoTextOne

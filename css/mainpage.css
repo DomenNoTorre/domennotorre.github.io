@@ -277,7 +277,7 @@ header.hidden
   grid-column: 1;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   column-gap: 2rem;
   align-items: center;
@@ -301,7 +301,7 @@ header.hidden
 
 .silentStoryLink
 {
-  grid-column: 3/5;
+  grid-column: 4/6;
   grid-row: 3/4;
 }
 
@@ -318,7 +318,7 @@ header.hidden
 
 .bookText
 {
-  grid-column: 2/5;
+  grid-column: 2/6;
   grid-row: 2/3;
   color: white;
   text-align: left;

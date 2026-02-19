@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Stories - Mindbound</title>
+    <link rel="stylesheet" href="../css/storyInfo.css" type="text/css">
+     <link rel="icon" type="image/x-icon" href="../img/favi.png">
+</head>
+<body>
+   <main>
+        <header> 
+            <ul class="headerList">
+                <li class="dropdown">
+                    <a class="info" href="#">Info</a>
+                    <ul class="dropdownMenu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../nationPages/nations.html">Nations</a></li>
+                    </ul>
+                </li>
+                <li class="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                    <ul id="suggestions" class="suggestions"></ul>
+                </li>
+                <li><a class="aboutUs" href="../webpages/aboutUs.html">About Us</a></li>  
+            </ul>
+        </header>
+
+        <h1 class="mainTitle">Mindbound</h1>
+        
+        <img src="../img/headerImg.png" alt="headerImage" class="headerImg">
+
+            <div class="middleBlock">
+
+                <a href="../index.html" class="backButton">&lt;Back</a>
+                    
+                <h2 class="secondTitle">Silent Stories</h2>
+                <span class="bookDirectors">
+
+                  <hr style="border: 0; border-top: 0.1rem solid white; width: 90%; margin: 0px auto;">
+
+                  <p>Find book:</p>
+
+                  <a class="bookOneDirector" href="#bookOne">Silent Stories</a> <span> - </span>
+                  <a class="bookTwoDirector" href="#">More will be added later!</a>
+
+                  <hr style="border: 0; border-top: 0.1rem solid white; width: 80%; margin: 2rem auto;">
+                </span> 
+
+                <div class="middleBlockLowerContent">
+                  <div class="bookContentOne">
+
+                    <h3 class="bookTitleOne" id="bookOne">Silent Stories</h3>
+
+                    <img src="../img/storyInfoBookCover.png" alt="bookCoverImg" class="bookCoverImgOne">
+
+                    <div class="infoTextOne">
+                        <p>
+                            This book covers the lore that wasn't talked about in the main story, but is still canon 
+                        </p>
+                    </div>
+
+                    <p class="whereToReadOne">Read on: <a href="https://www.wattpad.com/story/370999206-mindbound-silent-stories" target="_blank" rel="noopener noreferrer">Wattpad</a></p>
+                  </div>
+
+                  <div class="bookProgressOne">
+                    <div class="progressBox">
+                      <h2>Chapter Progress</h2>
+                      <h3>Silent Stories</h3>
+
+                      <hr>
+
+                      <table class="chapterTable">
+                        <thead>
+                            <tr>
+                                <th>Chapter</th>
+                                <th>Started writing</th>
+                                <th>Status</th>
+                                <th>Finished</th>
+                            </tr>
+                        </thead>
+                        <hr>
+                        <tbody>
+                            <tr>
+                                <td>The Rune War</td>
+                                <td>✓</td>
+                                <td>Finished</td>
+                                <td>✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                      
+                      <p class="updateInfo">Updated: 18/2/2025</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerText">
+                    <a href="https://discord.gg/Aw5rpJ3DN6" target="_blank" rel="noopener noreferrer">
+                        <img src="../img/dcLogo.png" alt="discordLogo" class="dcLogo">
+                    </a>
+                </div>
+                <img src="../img/footerImg.png" alt="footerImage" class="footerImg">
+            </div>
+        </footer>
+    </main>
+
+<script src="../functions/searchMap.js"></script>
+
+<script>
+// ====================
+// Scroll hide header
+// ====================
+const header = document.querySelector("header");
+if (header) 
+{
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => 
+  {
+    if (window.scrollY > lastScrollY) 
+    {
+      header.classList.add("hidden");
+    } 
+    
+    else 
+    {
+      header.classList.remove("hidden");
+    }
+    lastScrollY = window.scrollY;
+  });
+}
+
+// ====================
+// Dropdown menu
+// ====================
+document.querySelectorAll('.dropdown > a').forEach(link => 
+{
+  link.addEventListener('click', e => 
+  {
+    e.preventDefault();
+    const menu = link.nextElementSibling;
+    if (menu) menu.classList.toggle('open');
+  });
+});
+
+document.addEventListener('click', e => 
+{
+  document.querySelectorAll('.dropdownMenu.open').forEach(menu => 
+  {
+    if (!menu.parentElement.contains(e.target)) 
+    {
+      menu.classList.remove('open');
+    }
+  });
+});
+
+// ====================
+// Search input
+// ====================
+searchInput.addEventListener("keydown", function(e) 
+{
+  if (e.key === "Enter") 
+  {
+    e.preventDefault();
+    const query = this.value.toLowerCase().trim();
+
+    if (searchMap[query]) 
+    {
+      window.location.href = searchMap[query];
+    } 
+    
+    else 
+    {
+      alert("No results found for: " + query);
+    }
+  }
+});
+
+// ====================
+// Search suggestions
+// ====================
+
+const input = document.getElementById('searchInput');
+const suggestions = document.getElementById('suggestions');
+
+input.addEventListener('input', () => 
+{
+    const value = input.value.toLowerCase();
+    suggestions.innerHTML = '';
+    if (value) 
+    {
+        const filtered = Object.keys(searchMap).filter(name => name.startsWith(value));
+        filtered.forEach(name => 
+        {
+            const li = document.createElement('li');
+            li.textContent = name;
+            li.addEventListener('click', () => {
+                window.location.href = searchMap[name];
+            });
+            suggestions.appendChild(li);
+        });
+    }
+});
+</script>
+</body>
+</html>

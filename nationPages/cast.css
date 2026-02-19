@@ -777,6 +777,7 @@ footer
     justify-self: center;
     max-width: 50%;
     padding-top: 2rem;
+    font-size: 0.75rem;
   }
 
   .lightbox-content 
