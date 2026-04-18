@@ -458,6 +458,38 @@ hr
   justify-self: center;
   align-self: center; 
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevron 
+{
+  display: inline-block;
+  border-right: 0.15rem solid white;
+  border-bottom: 0.15rem solid white;
+  width: 1rem;
+  height: 1rem;
+}
+
+#chevron-arrow-left 
+{
+  transform: rotate(135deg);
+}
+
+#chevron-arrow-right 
+{
+  transform: rotate(-45deg);
+}
+
+#chevron-arrow-up 
+{
+  transform: rotate(-135deg);
+}
+
+#chevron-arrow-down 
+{
+  transform: rotate(45deg);
 }
 
 .footerCastImg
@@ -703,6 +735,15 @@ footer
   .backButton
   { 
     padding-top: 2rem;
+  }
+
+  .chevron 
+  {
+    display: inline-block;
+    border-right: 0.1rem solid white;
+    border-bottom: 0.1rem solid white;
+    width: 0.5rem;
+    height: 0.5rem;
   }
 
   .dcLogo 

@@ -465,18 +465,20 @@ hr
   overflow: hidden;
 }
 
-.characterSlide {
+.characterSlide 
+{
   position: absolute;
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;   /* tekst onderaan */
+  justify-content: flex-end;
   align-items: center;
   opacity: 0;
   transition: opacity 0.8s ease;
 }
 
-.characterSlide.active {
+.characterSlide.active 
+{
   opacity: 1;
 }
 
@@ -638,6 +640,34 @@ hr
 {
   font-size: 1.5rem;
   padding: 2rem 0;
+}
+
+.chevron 
+{
+  display: inline-block;
+  border-right: 0.15rem solid white;
+  border-bottom: 0.15rem solid white;
+  width: 1rem;
+  height: 1rem;
+}
+
+#chevron-arrow-left 
+{
+  transform: rotate(135deg);
+}
+#chevron-arrow-right 
+{
+  transform: rotate(-45deg);
+}
+
+#chevron-arrow-up 
+{
+  transform: rotate(-135deg);
+}
+
+#chevron-arrow-down 
+{
+  transform: rotate(45deg);
 }
 
 .backButton
@@ -982,6 +1012,15 @@ footer
     padding-right: 0;
     letter-spacing: 0;
     padding-top: 0.5rem;
+  }
+
+  .chevron 
+  {
+    display: inline-block;
+    border-right: 0.1rem solid white;
+    border-bottom: 0.1rem solid white;
+    width: 0.5rem;
+    height: 0.5rem;
   }
  
   .dcLogo 
