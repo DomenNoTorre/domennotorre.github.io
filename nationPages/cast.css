@@ -354,6 +354,11 @@ header.hidden
   padding-top: 5rem;
 }
 
+.artItem .creditLink
+{
+  margin: 1.25rem 0;
+}
+
 .artItem img 
 {
   width: 100%;
@@ -366,6 +371,37 @@ header.hidden
 .artItem img:hover 
 {
   transform: scale(1.05);
+}
+
+.artItem a
+{
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: white;
+  text-decoration: none;
+  justify-self: center;
+  display: inline-block;
+  position: relative;  
+}
+
+.artItem a::after
+{
+  content: "";
+  left: 50%;
+  bottom: 0rem;
+  position: absolute;
+
+  width: 0;
+  height: 0.1rem;
+  background-color: white;
+
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.artItem a:hover::after
+{
+  width: 100%;
+  left: 0;
 }
 
 .artBtn 
@@ -449,6 +485,11 @@ header.hidden
 .slide.songs ul
 {
   margin-top: 0;
+}
+
+.slide .creditLink
+{
+  margin: 0;
 }
 
 .slide a
