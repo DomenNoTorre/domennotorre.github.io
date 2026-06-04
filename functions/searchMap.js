@@ -50,6 +50,7 @@ const searchMap =
 
   // Vriesland characters
   "julia": "/nationPages/vrieslandPages/castPages/julia.html",
+  "l8nyt": "/nationPages/nesgenPages/castPages/l8nyt.html",
 
   // Zloyvor characters
   "anastasia": "/nationPages/zloyvorPages/castPages/anastasia.html",
