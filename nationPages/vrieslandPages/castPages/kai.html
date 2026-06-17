@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai - Mindbound</title>
+    <link rel="stylesheet" href="../../cast.css" type="text/css">
+     <link rel="icon" type="image/x-icon" href="../../../img/favi.png">
+</head>
+<body>
+    <main>
+        <header> 
+            <ul class="headerList">
+                <li class="dropdown">
+                    <a class="info" href="#">Info</a>
+                    <ul class="dropdownMenu">
+                        <li><a href="../../../index.html">Home</a></li>
+                        <li><a href="../../nations.html">Nations</a></li>
+                        <li><a href="../../../webpages/allCharacters.html">Characters</a></li>
+                    </ul>
+                </li>
+              <li class="searchBar">
+                    <input type="text" id="searchInput" placeholder="Search..." />
+                    <ul id="suggestions" class="suggestions"></ul>
+                </li>
+                <li><a class="aboutUs" href="../../../webpages/aboutUs.html">About Us</a></li>  
+            </ul>
+        </header>
+
+        <h1 class="mainTitleWhite">Mindbound</h1>
+        
+        <img src="../vrieslandImg/vrieslandHeader.png" alt="headerImage" class="headerImg">
+
+        <div class="middleBlock">
+
+          <img src="../vrieslandImg/castImg/kaiImg/fullKai.png" alt="castImage" class="sideCastImg">
+            
+          <h2 class="secondTitle">Kai the Potato</h2>
+
+          <div class="infoSlider">
+
+            <button class="sliderBtn prev"><div id="chevron-arrow-left" class="chevron"></div></button>
+
+            <div class="sliderContent">
+              <hr class="upperHr">
+
+              <div class="slides">
+
+                <div class="slide active">
+                  <p class="creditText">Headshot by: <a class="creditLink" href="https://www.instagram.com/ur_artsy_potato_kai/" target="_blank" rel="noopener noreferrer">@Ur_Artsy_Potato_Kai</a></p>
+                  <p class="creditText">Full body by: <a class="creditLink" href="https://www.instagram.com/ur_artsy_potato_kai/" target="_blank" rel="noopener noreferrer">@Ur_Artsy_Potato_Kai</a></p>
+                  <a href="#artDisplay" class="creditText">
+                    <div id="small-chevron-arrow-down" class="chevron"></div>
+                     See more 
+                    <div id="small-chevron-arrow-down" class="chevron"></div>
+                  </a>
+                </div>
+
+                <div class="slide extraInfo">
+                  <div>
+                    <p><b>Age:</b> 18</p>
+                    <p><b>Gender:</b> Male</p>
+                    <p><b>Species:</b> Hybrid</p>
+                    <p><b>Birthday:</b>  October 19th</p>
+                  </div>
+
+                  <div>
+                    <p><b>Personality:</b> Introverted</p>
+                    <p><b>Occupation:</b> Chill guy</p>
+                    <p><b>Residence:</b> Holversing</p>
+                    <p><b>Love life:</b> Asexual/single</p>
+                  </div>
+                </div>
+
+                <div class="slide songs">
+                  <h2>Playlist</h2>
+                  <hr class="playlistHr">
+                  <div class="scrollWrapper">
+                    <ul class="scrollable">
+                      <li><a href="https://www.youtube.com/watch?v=_F_21CVJiTE" target="_blank" rel="noopener noreferrer">Scatterbrain - Emei</a></li>
+                  </div>
+                </div>
+
+              </div>
+
+              <hr class="lowerHr">
+            </div>
+
+            <button class="sliderBtn next"><div id="chevron-arrow-right" class="chevron"></div></button>
+
+          </div>
+
+          <p class="castText">
+            (WIP)
+          </p>
+
+          <a href="javascript:history.back()" class="backButton"><div id="chevron-arrow-left" class="chevron"></div> Back</a>
+
+          <h2 class="thirdTitle">Art Collection</h2>
+
+          <div id="artDisplay" class="artSlider">
+
+            <!-- <button class="artBtn" onclick="prevSlide()"><div id="chevron-arrow-left" class="chevron"></div></button> -->
+
+            <div class="artSlides">
+
+                <div class="artSlide active">
+                    <div class="artItem">
+                        <img src="../vrieslandImg/castImg/kaiImg/fullKai.png" alt="kaiFullBody">
+                        <a class="creditLink" href="https://www.instagram.com/ur_artsy_potato_kai/" target="_blank" rel="noopener noreferrer">@Ur_Artsy_Potato_Kai</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <button class="artBtn" onclick="nextSlide()"><div id="chevron-arrow-right" class="chevron"></div></button> -->
+
+          </div>
+        </div>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerText">
+                    <a href="https://discord.gg/Aw5rpJ3DN6" target="_blank" rel="noopener noreferrer">
+                        <img src="../../../img/dcLogo.png" alt="discordLogo" class="dcLogo">
+                    </a>
+                </div>
+                <img src="../vrieslandImg/vrieslandFooter.png" alt="footerImage" class="footerImg">
+            </div>
+        </footer>
+    </main>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">X</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<script src="../../../functions/searchMap.js"></script>
+
+<script>
+// ====================
+// Scroll hide header
+// ====================
+const header = document.querySelector("header");
+if (header) 
+{
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => 
+  {
+    if (window.scrollY > lastScrollY) 
+    {
+      header.classList.add("hidden");
+    } 
+    
+    else 
+    {
+      header.classList.remove("hidden");
+    }
+    lastScrollY = window.scrollY;
+  });
+}
+
+// ====================
+// Dropdown menu
+// ====================
+document.querySelectorAll('.dropdown > a').forEach(link => 
+{
+  link.addEventListener('click', e => 
+  {
+    e.preventDefault();
+    const menu = link.nextElementSibling;
+    if (menu) menu.classList.toggle('open');
+  });
+});
+
+document.addEventListener('click', e => 
+{
+  document.querySelectorAll('.dropdownMenu.open').forEach(menu => 
+  {
+    if (!menu.parentElement.contains(e.target)) 
+    {
+      menu.classList.remove('open');
+    }
+  });
+});
+
+// ====================
+// Search input
+// ====================
+searchInput.addEventListener("keydown", function(e) 
+{
+  if (e.key === "Enter") 
+  {
+    e.preventDefault();
+    const query = this.value.toLowerCase().trim();
+
+    if (searchMap[query]) 
+    {
+      window.location.href = searchMap[query];
+    } 
+    
+    else 
+    {
+      alert("No results found for: " + query);
+    }
+  }
+});
+
+// ====================
+// Search suggestions
+// ====================
+
+const input = document.getElementById('searchInput');
+const suggestions = document.getElementById('suggestions');
+
+input.addEventListener('input', () => 
+{
+    const value = input.value.toLowerCase();
+    suggestions.innerHTML = '';
+    if (value) 
+    {
+        const filtered = Object.keys(searchMap).filter(name => name.startsWith(value));
+        filtered.forEach(name => 
+        {
+            const li = document.createElement('li');
+            li.textContent = name;
+            li.addEventListener('click', () => {
+                window.location.href = searchMap[name];
+            });
+            suggestions.appendChild(li);
+        });
+    }
+});
+
+// ====================
+// Slider
+// ====================
+
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let current = 0;
+
+function showInfoSlide(index) 
+{
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => 
+{
+  current = (current - 1 + slides.length) % slides.length;
+  showInfoSlide(current);
+});
+
+nextBtn.addEventListener('click', () => 
+{
+  current = (current + 1) % slides.length;
+  showInfoSlide(current);
+});
+
+// ====================
+// Art view
+// ====================
+
+const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const images = document.querySelectorAll("#artDisplay img");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>
