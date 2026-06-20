@@ -135,6 +135,16 @@
             <!-- <button class="artBtn" onclick="nextSlide()"><div id="chevron-arrow-right" class="chevron"></div></button> -->
 
           </div>
+
+          <h2 class="fanGalleryTitle">Fanart Gallery</h2>
+          
+          <div id="fanDisplay" class="fanDisplay">
+            <div class="artItem">
+              <!-- <img src="../altipianiImg/castImg/cosmoImg/fullCosmo.png" alt="cosmoFullBody"> -->
+              <!-- <a class="creditLink" href="https://www.instagram.com/ur_artsy_potato_kai/" target="_blank" rel="noopener noreferrer">@Ur_Artsy_Potato_Kai</a> -->
+               <p>Nothing to see here yet</p>
+            </div>
+          </div>
         </div>
 
         <footer>
@@ -285,7 +295,7 @@ nextBtn.addEventListener('click', () =>
 
 const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-  const images = document.querySelectorAll("#artDisplay img");
+  const images = document.querySelectorAll("#artDisplay img, #fanDisplay img");
   const closeBtn = document.querySelector(".close");
 
   images.forEach(img => {

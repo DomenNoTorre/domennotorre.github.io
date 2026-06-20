@@ -259,7 +259,7 @@ header.hidden
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   align-items: center;
 }
 
@@ -293,6 +293,29 @@ header.hidden
   font-weight: normal;
   letter-spacing: 0.15em;
   margin-bottom: 0;
+}
+
+.fanGalleryTitle
+{
+  grid-column: 1/3;
+  grid-row: 7/8;
+  color: white;
+  text-align: center;
+  font-size: 6.25rem;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  margin-bottom: 0;
+}
+
+.fanDisplay
+{
+  color: white;
+  grid-column: 1/3;
+  grid-row: 8/9;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 2rem;
 }
 
 #artDisplay 
