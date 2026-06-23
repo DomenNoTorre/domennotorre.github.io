@@ -307,7 +307,7 @@ header.hidden
   margin-bottom: 0;
 }
 
-.fanDisplay
+#fanDisplay
 {
   color: white;
   grid-column: 1/3;
@@ -853,12 +853,12 @@ footer
     color: white !important;     
   }
 
-  .secondTitle, .thirdTitle 
+  .secondTitle, .thirdTitle, .fanGalleryTitle
   {
     font-size: 3rem;
   }
 
-  #artDisplay
+  #artDisplay, #fanDisplay
   {
     align-items: center;
     grid-template-columns: auto auto auto;
