@@ -553,7 +553,7 @@ header.hidden
 [class^="castCover"] img
 {
   width: min(200px, 100%);
-  height: auto;
+  height: 312px;
   object-fit: contain;
 }
 
