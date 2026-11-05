@@ -104,7 +104,7 @@
 
           <div id="artDisplay" class="artSlider">
 
-            <!-- <button class="artBtn" onclick="prevSlide()"><div id="chevron-arrow-left" class="chevron"></div></button> -->
+            <button class="artBtn" onclick="prevSlide()"><div id="chevron-arrow-left" class="chevron"></div></button>
 
             <div class="artSlides">
 
@@ -130,9 +130,16 @@
                     </div>
                 </div>
 
+                <div class="artSlide">
+                  <div class="artItem">
+                      <img src="../altipianiImg/castImg/valerioImg/valerioAndYoungRocco.png" alt="valAndRocco">
+                      <a class="creditLink" href="https://www.instagram.com/ur_artsy_potato_kai/" target="_blank" rel="noopener noreferrer">@Ur_Artsy_Potato_Kai</a>
+                  </div>
+                </div>
+
             </div>
 
-            <!-- <button class="artBtn" onclick="nextSlide()"><div id="chevron-arrow-right" class="chevron"></div></button> -->
+            <button class="artBtn" onclick="nextSlide()"><div id="chevron-arrow-right" class="chevron"></div></button>
 
           </div>
 
@@ -314,6 +321,30 @@ const lightbox = document.getElementById("lightbox");
       lightbox.style.display = "none";
     }
   });
+
+// ====================
+// Art view slider
+// ====================
+let currentArtSlide = 0;
+const artSlides = document.querySelectorAll(".artSlide");
+
+function showArtSlide(index) 
+{
+  artSlides.forEach(slide => slide.classList.remove("active"));
+  artSlides[index].classList.add("active");
+}
+
+function nextSlide() 
+{
+  currentArtSlide = (currentArtSlide + 1) % artSlides.length;
+  showArtSlide(currentArtSlide);
+}
+
+function prevSlide() 
+{
+  currentArtSlide = (currentArtSlide - 1 + artSlides.length) % artSlides.length;
+  showArtSlide(currentArtSlide);
+}
 </script>
 </body>
 </html>
